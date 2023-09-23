@@ -2,6 +2,7 @@
 package testing;
 
 import logic.*;
+import start.Start;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,110 +11,65 @@ public class Testing {
 
 
     public static void main(String[] args) {
-        starteTest();
-    }
-    public static void starteTest() {
-
-
         
+         Field field00t3 = new Field(0, 0, 2);
+        Field field01t3 = new Field(0, 1, 4);
+        Field field02t3 = new Field(0, 2, 5);
+        Field field03t3 = new Field(0, 3, 6);
+        Field field04t3 = new Field(0, 4, 1);
+        Field[] row0 = new Field[]{field00t3, field01t3, field02t3, field03t3, field04t3};
 
-        Field field00t3 = new Field(0,0,2);
-        Field field01t3 = new Field(0,1,4);
-        Field field02t3 = new Field(0,2,5);
-        Field field03t3 = new Field(0,3,6);
-        Field field04t3 = new Field(0,4,1);
-        Field[] row0 = new Field[]{field00t3,field01t3,field02t3,field03t3,field04t3};
+        Field field10t3 = new Field(1, 0, 1);
+        Field field11t3 = new Field(1, 1, 3);
+        Field field12t3 = new Field(1, 2, 4);
+        Field field13t3 = new Field(1, 3, 5);
+        Field field14t3 = new Field(1, 4, 2);
+        Field[] row1 = new Field[]{field10t3, field11t3, field12t3, field13t3, field14t3};
 
-        Field field10t3 = new Field(1,0,1);
-        Field field11t3 = new Field(1,1,3);
-        Field field12t3 = new Field(1,2,4);
-        Field field13t3 = new Field(1,3,5);
-        Field field14t3 = new Field(1,4,2);
-        Field[] row1 = new Field[]{field10t3,field11t3,field12t3,field13t3,field14t3};
+        Field field20t3 = new Field(2, 0, 4);
+        Field field21t3 = new Field(2, 1, 2);
+        Field field22t3 = new Field(2, 2, 1);
+        Field field23t3 = new Field(2, 3, 6);
+        Field field24t3 = new Field(2, 4, 1);
+        Field[] row2 = new Field[]{field20t3, field21t3, field22t3, field23t3, field24t3};
 
-        Field field20t3 = new Field(2,0,4);
-        Field field21t3 = new Field(2,1,2);
-        Field field22t3 = new Field(2,2,1);
-        Field field23t3 = new Field(2,3,6);
-        Field field24t3 = new Field(2,4,1);
-        Field[] row2 = new Field[]{field20t3,field21t3,field22t3,field23t3,field24t3};
+        Field field30t3 = new Field(3, 0, 3);
+        Field field31t3 = new Field(3, 1, 5);
+        Field field32t3 = new Field(3, 2, 2);
+        Field field33t3 = new Field(3, 3, 1);
+        Field field34t3 = new Field(3, 4, 4);
+        Field[] row3 = new Field[]{field30t3, field31t3, field32t3, field33t3, field34t3};
 
-        Field field30t3 = new Field(3,0,3);
-        Field field31t3 = new Field(3,1,5);
-        Field field32t3 = new Field(3,2,2);
-        Field field33t3 = new Field(3,3,1);
-        Field field34t3 = new Field(3,4,4);
-        Field[] row3 = new Field[]{field30t3,field31t3,field32t3,field33t3,field34t3};
+        Field field40t3 = new Field(4, 0, 1);
+        Field field41t3 = new Field(4, 1, 2);
+        Field field42t3 = new Field(4, 2, 1);
+        Field field43t3 = new Field(4, 3, 3);
+        Field field44t3 = new Field(4, 4, 2);
+        Field[] row4 = new Field[]{field40t3, field41t3, field42t3, field43t3, field44t3};
 
-        Field field40t3 = new Field(4,0,1);
-        Field field41t3 = new Field(4,1,2);
-        Field field42t3 = new Field(4,2,1);
-        Field field43t3 = new Field(4,3,3);
-        Field field44t3 = new Field(4,4,2);
-        Field[] row4 = new Field[]{field40t3,field41t3,field42t3,field43t3,field44t3};
-
-        Field field50t3 = new Field(5,0,2);
-        Field field51t3 = new Field(5,1,3);
-        Field field52t3 = new Field(5,2,2);
-        Field field53t3 = new Field(5,3,4);
-        Field field54t3 = new Field(5,4,1);
-        Field[] row5 = new Field[]{field50t3,field51t3,field52t3,field53t3,field54t3};
-
+        Field field50t3 = new Field(5, 0, 2);
+        Field field51t3 = new Field(5, 1, 3);
+        Field field52t3 = new Field(5, 2, 2);
+        Field field53t3 = new Field(5, 3, 4);
+        Field field54t3 = new Field(5, 4, 1);
+        Field[] row5 = new Field[]{field50t3, field51t3, field52t3, field53t3, field54t3};
         
-        
-        //  Field field00t3 = new Field(0,0,2);
-        //        Field field01t3 = new Field(1,0,4);
-        //        Field field02t3 = new Field(2,0,5);
-        //        Field field03t3 = new Field(3,0,6);
-        //        Field field04t3 = new Field(4,0,1);
-        //        Field[] row0 = new Field[]{field00t3,field01t3,field02t3,field03t3,field04t3};
-        //
-        //        Field field10t3 = new Field(0,1,1);
-        //        Field field11t3 = new Field(1,1,3);
-        //        Field field12t3 = new Field(2,1,4);
-        //        Field field13t3 = new Field(3,1,5);
-        //        Field field14t3 = new Field(4,1,2);
-        //        Field[] row1 = new Field[]{field10t3,field11t3,field12t3,field13t3,field14t3};
-        //
-        //        Field field20t3 = new Field(0,2,4);
-        //        Field field21t3 = new Field(1,2,2);
-        //        Field field22t3 = new Field(2,2,1);
-        //        Field field23t3 = new Field(3,2,6);
-        //        Field field24t3 = new Field(4,2,1);
-        //        Field[] row2 = new Field[]{field20t3,field21t3,field22t3,field23t3,field24t3};
-        //
-        //        Field field30t3 = new Field(0,3,3);
-        //        Field field31t3 = new Field(1,3,5);
-        //        Field field32t3 = new Field(2,3,2);
-        //        Field field33t3 = new Field(3,3,1);
-        //        Field field34t3 = new Field(4,3,4);
-        //        Field[] row3 = new Field[]{field30t3,field31t3,field32t3,field33t3,field34t3};
-        //
-        //        Field field40t3 = new Field(0,4,1);
-        //        Field field41t3 = new Field(1,4,2);
-        //        Field field42t3 = new Field(2,4,1);
-        //        Field field43t3 = new Field(3,4,3);
-        //        Field field44t3 = new Field(4,4,2);
-        //        Field[] row4 = new Field[]{field40t3,field41t3,field42t3,field43t3,field44t3};
-        //
-        //        Field field50t3 = new Field(0,5,2);
-        //        Field field51t3 = new Field(1,5,3);
-        //        Field field52t3 = new Field(2,5,2);
-        //        Field field53t3 = new Field(3,5,4);
-        //        Field field54t3 = new Field(4,5,1);
+     
 
-        
-        
-        Field[][] board3 = new Field[][]{row0,row1,row2,row3,row4,row5};
-        System.out.println("col:" + board3.length);
+        var board3 = new Field[][]{row0,row1,row2,row3,row4,row5};
+
         Testing testingObject3 = new Testing(board3);
         System.out.println(testingObject3.isStartklar());
-    
-        
-
-        
 
     }
+
+    /*
+     *
+     * initialisierung von Field bei Tests:
+     *
+     * Field(row, column, color) -> neu: Field(column, row, color)
+     *
+     * */
 
     /**
      * Represents a game board consisting of fields.
@@ -127,12 +83,8 @@ public class Testing {
      */
     public Testing(Field[][] board) {
         this.board = board;
-        game = new Game();
-        game.setBoard(board);
     }
 
-    private Game game;
-    
     /**
      * Checks if the game board is startklar.
      * <p>
@@ -142,6 +94,8 @@ public class Testing {
      * @return {@code true} if the board is startklar, {@code false} otherwise.
      */
     public boolean isStartklar() {
+        var game = new Game();
+        game.setBoard(board);
         //check if the board is startklar
 
         //a board ist startklar when the field top right and bottomLeft are in a different color than each other
@@ -152,13 +106,12 @@ public class Testing {
             return false;
         }
         //check if the fieldColor does not have any adjacent fields with the same color
-        for (var columns : board) {
-            for (var field : columns) {
-                System.out.println("field color "+field.getColor() + " col " +field.getColumn() + " row " + field.getRow());
-                var sourroundingColors = field.getAdjacentFields(game, field);
-                for (var neighbour : sourroundingColors) {
-                  //  System.out.println("neighbour, pos "+neighbour.getColor() + " " +neighbour.getColumn() + " " + neighbour.getRow());
-                    if (neighbour.getColor() == field.getColor()) {
+        for (Field[] fields : board) {
+            for (int j = 0; j < board.length - 1; j++) {
+            //KORREKT: for (int j = 0; j < board[0].length - 1; j++) {
+                var sourroundingColors = fields[j].getAdjacentFields(game, fields[j]);
+                for (var color : sourroundingColors) {
+                    if (color.getColor() == fields[j].getColor()) {
                         return false;
                     }
                 }
@@ -192,8 +145,8 @@ public class Testing {
     public int testStrategy01() {
         var game = new Game();
         game.setBoard(board);
-        game.setPlayer1(new Player(new Component().addField(board[board.length - 1][0]), "S1"));
-        game.setPlayer2(new AIPlayer(new Component().addField(board[0][board[0].length - 1]), "S2", Strategies.STAGNATION));
+        game.setPlayer1(new Player(new Component().addField(board[0][board[0].length - 1]), "S1"));
+        game.setPlayer2(new AIPlayer(new Component().addField(board[board.length - 1][0]), "S2", Strategies.STAGNATION));
         game.getPlayer1().setGame(game);
         game.getPlayer2().setGame(game);
         game.getPlayer1().getComponent().tracePath(game, game.getPlayer1());
@@ -216,8 +169,8 @@ public class Testing {
     public int testStrategy02() {
         var game = new Game();
         game.setBoard(board);
-        game.setPlayer1(new Player(new Component().addField(board[board.length - 1][0]), "S1"));
-        game.setPlayer2(new AIPlayer(new Component().addField(board[0][board[0].length - 1]), "S2", Strategies.GREEDY));
+        game.setPlayer1(new Player(new Component().addField(board[0][board[0].length - 1]), "S1"));
+        game.setPlayer2(new AIPlayer(new Component().addField(board[board.length - 1][0]), "S2", Strategies.GREEDY));
         game.getPlayer1().setGame(game);
         game.getPlayer2().setGame(game);
         game.getPlayer1().getComponent().tracePath(game, game.getPlayer1());
@@ -238,8 +191,8 @@ public class Testing {
     public int testStrategy03() {
         var game = new Game();
         game.setBoard(board);
-        game.setPlayer1(new Player(new Component().addField(board[board.length - 1][0]), "S1"));
-        game.setPlayer2(new AIPlayer(new Component().addField(board[0][board[0].length - 1]), "S2", Strategies.BLOCKING));
+        game.setPlayer1(new Player(new Component().addField(board[0][board[0].length - 1]), "S1"));
+        game.setPlayer2(new AIPlayer(new Component().addField(board[board.length - 1][0]), "S2", Strategies.BLOCKING));
         game.getPlayer1().setGame(game);
         game.getPlayer2().setGame(game);
         game.getPlayer1().getComponent().tracePath(game, game.getPlayer1());
@@ -312,13 +265,17 @@ public class Testing {
      */
     public boolean boardsAreEqual(Field[][] board1, Field[][] board2) {
         //Check if these boards are identical to each other
+        if (board1.length != board2.length || board1[0].length != board2[0].length) {
+            return false;
+        }
         for (int i = 0; i < board1.length; i++) {
-            for (int j = 0; j < board2.length; j++) {
+            for (int j = 0; j < board2[0].length; j++) {
                 if (board1[i][j].getColor() != board2[i][j].getColor()) {
                     return false;
                 }
             }
         }
+
         return true;
     }
 
@@ -361,8 +318,8 @@ public class Testing {
 
         for (var field : game.getCurrentPlayer().getComponent().adjacentFieldsOfComponent(game)) {
             //check if a field with the x and y are part of the component of the player
-            var result = game.getCurrentPlayer().getComponent().getFields().stream().filter(Point -> Point.getRow() == row && Point.getColumn() == column);
-            if (result.findAny().isPresent() || field.getColumn() == column && field.getRow() == row) {
+            var result = game.getCurrentPlayer().getComponent().getFields().stream().filter(Point -> Point.getRow() == row && Point.getCol() == column);
+            if (result.findAny().isPresent() || field.getCol() == column && field.getRow() == row) {
                 moves.add(counter);
                 return moves;
             }
@@ -384,6 +341,7 @@ public class Testing {
      */
     private List<Integer> minMovesOver(Field[][] currentBoard, int counter, List<Integer> moves) {
         var game = new Game();
+        System.out.println("counter"+counter);
         game.setBoard(currentBoard);
         var lowLeft = game.getBoard()[game.getColumns() - 1][0];
         game.setPlayer1(new Player(new Component().addField(lowLeft), "S1"));
@@ -396,7 +354,6 @@ public class Testing {
         counter++;
         //calulcate all possible moves within the given moves
         var fakeGameBoard = game.cloneField();
-        var adjFields = game.getCurrentPlayer().getComponent().adjacentFieldsOfComponent(game);
 
         for (var field : game.getCurrentPlayer().getComponent().adjacentFieldsOfComponent(game)) {
             //check if a field with the x and y are part of the component of the player

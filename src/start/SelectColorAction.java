@@ -23,15 +23,10 @@ public class SelectColorAction extends MouseAdapter {
 
         var field = Utility.findFieldBasedOnPanel(Game.getGame(), panel);
 
-        System.out.println("Clicked on: " + field.getColumn() +" "+ field.getRow());
-
-
-        
-        System.out.println(Game.getGame().printBoard(Game.getGame().getBoard()));        
         //get the color of the field
         //get current Player
         var row = Objects.requireNonNull(field).getRow();
-        var col = field.getColumn();
+        var col = field.getCol();
         if (!Game.getGame().isInitialized()) return;
 
         var currentPlayer = Game.getGame().getCurrentPlayer();
@@ -40,3 +35,4 @@ public class SelectColorAction extends MouseAdapter {
 
     }
 }
+

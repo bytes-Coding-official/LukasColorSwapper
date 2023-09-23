@@ -1,6 +1,8 @@
 //Niklas Nesseler 7367375
 package logic;
 
+import start.PopUpCreator;
+
 import java.awt.*;
 import java.util.HashMap;
 
@@ -62,7 +64,7 @@ public class AIPlayer extends Player implements Strategy {
         var boardCopy = board.clone();
         var color = field.getColor();
         for (var fieldElement : player.getComponent().getFields()) {
-            boardCopy[fieldElement.getColumn()][fieldElement.getRow()].setColor(color);
+            boardCopy[fieldElement.getCol()][fieldElement.getRow()].setColor(color);
         }
         return boardCopy;
     }
@@ -93,9 +95,9 @@ public class AIPlayer extends Player implements Strategy {
      */
     private int calculateColorAmount(Field[][] board, Color color) {
         var amount = 0;
-        for (Field[] fields : board) {
-            for (Field field : fields) {
-                if (field.getRGBColor().equals(color)) {
+        for (var row = 0; row < board.length; row++) {
+            for (var col = 0; col < board[row].length; col++) {
+                if (board[col][row].getRGBColor().equals(color)) {
                     amount++;
                 }
             }
@@ -114,7 +116,7 @@ public class AIPlayer extends Player implements Strategy {
         //get the field with the highest amount
         var max = map.values().stream().max(Integer::compareTo).orElseThrow();
         var field = map.entrySet().stream().filter(entry -> entry.getValue().equals(max)).findFirst().orElseThrow().getKey();
-        return new int[]{field.getRow(), field.getColumn()};
+        return new int[]{field.getRow(), field.getCol()};
     }
 
     /**
@@ -141,7 +143,7 @@ public class AIPlayer extends Player implements Strategy {
         //get the field with the highest amount
         var min = map.values().stream().min(Integer::compareTo).orElseThrow();
         var field = map.entrySet().stream().filter(entry -> entry.getValue().equals(min)).findFirst().orElseThrow().getKey();
-        return new int[]{field.getRow(), field.getColumn()};
+        return new int[]{field.getRow(), field.getCol()};
 
     }
 
@@ -157,7 +159,7 @@ public class AIPlayer extends Player implements Strategy {
         var boardCopy = game.cloneField();
         var map = new HashMap<Field, Integer>();
         for (var adjacentField : player.getComponent().adjacentFieldsOfComponent(game)) {
-            var field = boardCopy[adjacentField.getColumn()][adjacentField.getRow()];
+            var field = boardCopy[adjacentField.getCol()][adjacentField.getRow()];
             if (field.getColorRGB().equals(getColor()) || field.getRGBColor().equals(game.getOpponent(this).getColor())) continue;
             var fakeBoard = performFakeMove(boardCopy, field, player);
             var amount = calculateColorAmount(fakeBoard, field.getColorRGB());
@@ -184,7 +186,7 @@ public class AIPlayer extends Player implements Strategy {
 
         for (var fields : adjacentFields) {
             if (field.getColorRGB().equals(fields.getColorRGB())) {
-                return new int[]{fields.getRow(), fields.getColumn()};
+                return new int[]{fields.getRow(), fields.getCol()};
             }
         }
         return greedyStrategy(game);
@@ -194,3 +196,4 @@ public class AIPlayer extends Player implements Strategy {
         return strategy;
     }
 }
+

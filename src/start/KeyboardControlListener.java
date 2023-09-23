@@ -35,7 +35,7 @@ public class KeyboardControlListener extends AbstractAction {
             return;
         }
         var row = field.getRow();
-        var col = field.getColumn();
+        var col = field.getCol();
         if (player instanceof AIPlayer) return;
         player.makeMove(row, col);
 
@@ -43,3 +43,5 @@ public class KeyboardControlListener extends AbstractAction {
     }
 
 }
+
+

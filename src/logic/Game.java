@@ -435,8 +435,8 @@ public class Game {
      */
     public List<Field> getNeighbors(Field field) {
         var neighbors = new ArrayList<Field>();
-        var up = field.getColumn() - 1;
-        var down = field.getColumn() + 1;
+        var up = field.getCol() - 1;
+        var down = field.getCol() + 1;
         var left = field.getRow() - 1;
         var right = field.getRow() + 1;
         if (up >= 0)
@@ -444,9 +444,9 @@ public class Game {
         if (down < board.length)
             neighbors.add(board[down][field.getRow()]);
         if (left >= 0)
-            neighbors.add(board[field.getColumn()][left]);
+            neighbors.add(board[field.getCol()][left]);
         if (right < board[0].length)
-            neighbors.add(board[field.getColumn()][right]);
+            neighbors.add(board[field.getCol()][right]);
         return neighbors;
     }
 
@@ -494,21 +494,19 @@ public class Game {
      * @param board a 2D array of Field objects representing the game board.
      * @return a String representation of the board with colors.
      */
-    public String printBoard(Field[][] board) {
+    public static String printBoard(Field[][] board) {
         var builder = new StringBuilder();
         //print the board with its colors
 
-        for (int col = 0; col < getColumns(); col++) {
-            for (int row = 0; row < getRows(); row++) {
-                var field = board[col][row];
-                System.out.println("col: " + col + " row: " + row);
-                System.out.println("(column:" + field.getColumn() + ";row:" + field.getRow() + ";color:" + field.getColor() + ")");
-                builder
-                        .append("(column:" + field.getColumn() + ";row:" + field.getRow() + ";color:" + field.getColor() + ")")
-                        .append(", ");
+        for (Field[] fields : board) {
+            for (var row = 0; row < board[0].length; row++) {
+                var field = fields[row];
+                builder.append("Color:"+field.getRGBColor() +" Row:"+field.getRow() +" Col:"+field.getCol()).append(", ");
             }
+
             //remove the last comma
             builder.deleteCharAt(builder.length() - 2);
+
             builder.append("\n");
         }
         return builder.toString();

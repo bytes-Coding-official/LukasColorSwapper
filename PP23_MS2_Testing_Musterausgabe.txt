@@ -1,0 +1,5187 @@
+
+
+---------------------------------------Aufgabe 1--------------------------------------------
+TestInfo [taskNumber=01; testNumber=01; points=10; description=Funktion der Methode isStartklar - startklar sowie nicht startklar aufgrund gleichfarbiger Nachbarn]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.isStartklar() -> Methode ist public
+
+Field field00t1 = new Field(0,0,1)
+Field field01t1 = new Field(0,1,2)
+Field field02t1 = new Field(0,2,3)
+Field field03t1 = new Field(0,3,4)
+Field[] row0 = [field00t1,field01t1,field02t1,field03t1]
+
+Field field10t1 = new Field(1,0,2)
+Field field11t1 = new Field(1,1,3)
+Field field12t1 = new Field(1,2,4)
+Field field13t1 = new Field(1,3,5)
+Field[] row1 = [field10t1,field11t1,field12t1,field13t1]
+
+Field field20t1 = new Field(2,0,3)
+Field field21t1 = new Field(2,1,4)
+Field field22t1 = new Field(2,2,5)
+Field field23t1 = new Field(2,3,6)
+Field[] row2 = [field20t1,field21t1,field22t1,field23t1]
+
+Field field30t1 = new Field(3,0,1)
+Field field31t1 = new Field(3,1,2)
+Field field32t1 = new Field(3,2,3)
+Field field33t1 = new Field(3,3,4)
+Field[] row3 = [field30t1,field31t1,field32t1,field33t1]
+
+Field[][] board1 = [row0,row1,row2,row3]
+Testing testingObject1 = new Testing(board1)
+
+board1 hat folgende Form:
+1 2 3 4
+2 3 4 5
+3 4 5 6
+1 2 3 4
+
+testingObject1.isStartklar() -> returns true
+
+Field field00t2 = new Field(0,0,1)
+Field field01t2 = new Field(0,1,2)
+Field field02t2 = new Field(0,2,3)
+Field[] row0 = [field00t2,field01t2,field02t2]
+
+Field field10t2 = new Field(1,0,4)
+Field field11t2 = new Field(1,1,5)
+Field field12t2 = new Field(1,2,6)
+Field[] row1 = [field10t2,field11t2,field12t2]
+
+Field field20t2 = new Field(2,0,1)
+Field field21t2 = new Field(2,1,2)
+Field field22t2 = new Field(2,2,6)
+Field[] row2 = [field20t2,field21t2,field22t2]
+
+Field[][] board2 = [row0,row1,row2]
+Testing testingObject2 = new Testing(board2)
+
+board2 hat folgende Form:
+1 2 3
+4 5 6
+1 2 6
+
+testingObject2.isStartklar() -> returns false
+
+Field field00t3 = new Field(0,0,2)
+Field field01t3 = new Field(0,1,4)
+Field field02t3 = new Field(0,2,5)
+Field field03t3 = new Field(0,3,6)
+Field field04t3 = new Field(0,4,1)
+Field[] row0 = [field00t3,field01t3,field02t3,field03t3,field04t3]
+
+Field field10t3 = new Field(1,0,1)
+Field field11t3 = new Field(1,1,3)
+Field field12t3 = new Field(1,2,4)
+Field field13t3 = new Field(1,3,5)
+Field field14t3 = new Field(1,4,2)
+Field[] row1 = [field10t3,field11t3,field12t3,field13t3,field14t3]
+
+Field field20t3 = new Field(2,0,4)
+Field field21t3 = new Field(2,1,2)
+Field field22t3 = new Field(2,2,1)
+Field field23t3 = new Field(2,3,6)
+Field field24t3 = new Field(2,4,1)
+Field[] row2 = [field20t3,field21t3,field22t3,field23t3,field24t3]
+
+Field field30t3 = new Field(3,0,3)
+Field field31t3 = new Field(3,1,5)
+Field field32t3 = new Field(3,2,2)
+Field field33t3 = new Field(3,3,1)
+Field field34t3 = new Field(3,4,4)
+Field[] row3 = [field30t3,field31t3,field32t3,field33t3,field34t3]
+
+Field field40t3 = new Field(4,0,1)
+Field field41t3 = new Field(4,1,2)
+Field field42t3 = new Field(4,2,1)
+Field field43t3 = new Field(4,3,3)
+Field field44t3 = new Field(4,4,2)
+Field[] row4 = [field40t3,field41t3,field42t3,field43t3,field44t3]
+
+Field field50t3 = new Field(5,0,2)
+Field field51t3 = new Field(5,1,3)
+Field field52t3 = new Field(5,2,2)
+Field field53t3 = new Field(5,3,4)
+Field field54t3 = new Field(5,4,1)
+Field[] row5 = [field50t3,field51t3,field52t3,field53t3,field54t3]
+
+Field[][] board3 = [row0,row1,row2,row3,row4,row5]
+Testing testingObject3 = new Testing(board3)
+
+board3 hat folgende Form:
+2 4 5 6 1
+1 3 4 5 2
+4 2 1 6 1
+3 5 2 1 4
+1 2 1 3 2
+2 3 2 4 1
+
+testingObject3.isStartklar() -> returns true
+
+Field field00t4 = new Field(0,0,4)
+Field field01t4 = new Field(0,1,2)
+Field field02t4 = new Field(0,2,3)
+Field field03t4 = new Field(0,3,6)
+Field[] row0 = [field00t4,field01t4,field02t4,field03t4]
+
+Field field10t4 = new Field(1,0,1)
+Field field11t4 = new Field(1,1,5)
+Field field12t4 = new Field(1,2,5)
+Field field13t4 = new Field(1,3,2)
+Field[] row1 = [field10t4,field11t4,field12t4,field13t4]
+
+Field field20t4 = new Field(2,0,3)
+Field field21t4 = new Field(2,1,2)
+Field field22t4 = new Field(2,2,6)
+Field field23t4 = new Field(2,3,1)
+Field[] row2 = [field20t4,field21t4,field22t4,field23t4]
+
+Field[][] board4 = [row0,row1,row2]
+Testing testingObject4 = new Testing(board4)
+
+board4 hat folgende Form:
+4 2 3 6
+1 5 5 2
+3 2 6 1
+
+testingObject4.isStartklar() -> returns false
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=01; testNumber=02; points=10; description=Funktion der Methode isStartklar - startklar sowie nicht startklar aufgrund fehlender Farben]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.isStartklar() -> Methode ist public
+
+Field field00t5 = new Field(0,0,2)
+Field field01t5 = new Field(0,1,3)
+Field field02t5 = new Field(0,2,4)
+Field field03t5 = new Field(0,3,5)
+Field[] row0 = [field00t5,field01t5,field02t5,field03t5]
+
+Field field10t5 = new Field(1,0,1)
+Field field11t5 = new Field(1,1,2)
+Field field12t5 = new Field(1,2,1)
+Field field13t5 = new Field(1,3,4)
+Field[] row1 = [field10t5,field11t5,field12t5,field13t5]
+
+Field field20t5 = new Field(2,0,2)
+Field field21t5 = new Field(2,1,1)
+Field field22t5 = new Field(2,2,4)
+Field field23t5 = new Field(2,3,3)
+Field[] row2 = [field20t5,field21t5,field22t5,field23t5]
+
+Field field30t5 = new Field(3,0,3)
+Field field31t5 = new Field(3,1,4)
+Field field32t5 = new Field(3,2,5)
+Field field33t5 = new Field(3,3,6)
+Field[] row3 = [field30t5,field31t5,field32t5,field33t5]
+
+Field[][] board5 = [row0,row1,row2,row3]
+Testing testingObject5 = new Testing(board5)
+
+board5 hat folgende Form:
+2 3 4 5
+1 2 1 4
+2 1 4 3
+3 4 5 6
+
+testingObject5.isStartklar() -> returns true
+
+Field field00t6 = new Field(0,0,1)
+Field field01t6 = new Field(0,1,2)
+Field field02t6 = new Field(0,2,3)
+Field[] row0 = [field00t6,field01t6,field02t6]
+
+Field field10t6 = new Field(1,0,4)
+Field field11t6 = new Field(1,1,5)
+Field field12t6 = new Field(1,2,4)
+Field[] row1 = [field10t6,field11t6,field12t6]
+
+Field field20t6 = new Field(2,0,1)
+Field field21t6 = new Field(2,1,2)
+Field field22t6 = new Field(2,2,1)
+Field[] row2 = [field20t6,field21t6,field22t6]
+
+Field[][] board6 = [row0,row1,row2]
+Testing testingObject6 = new Testing(board6)
+
+board6 hat folgende Form:
+1 2 3
+4 5 4
+1 2 1
+
+testingObject6.isStartklar() -> returns false
+
+Field field00t7 = new Field(0,0,1)
+Field field01t7 = new Field(0,1,2)
+Field field02t7 = new Field(0,2,1)
+Field field03t7 = new Field(0,3,3)
+Field field04t7 = new Field(0,4,2)
+Field[] row0 = [field00t7,field01t7,field02t7,field03t7,field04t7]
+
+Field field10t7 = new Field(1,0,2)
+Field field11t7 = new Field(1,1,4)
+Field field12t7 = new Field(1,2,5)
+Field field13t7 = new Field(1,3,6)
+Field field14t7 = new Field(1,4,1)
+Field[] row1 = [field10t7,field11t7,field12t7,field13t7,field14t7]
+
+Field field20t7 = new Field(2,0,3)
+Field field21t7 = new Field(2,1,5)
+Field field22t7 = new Field(2,2,2)
+Field field23t7 = new Field(2,3,1)
+Field field24t7 = new Field(2,4,4)
+Field[] row2 = [field20t7,field21t7,field22t7,field23t7,field24t7]
+
+Field field30t7 = new Field(3,0,4)
+Field field31t7 = new Field(3,1,2)
+Field field32t7 = new Field(3,2,1)
+Field field33t7 = new Field(3,3,6)
+Field field34t7 = new Field(3,4,1)
+Field[] row3 = [field30t7,field31t7,field32t7,field33t7,field34t7]
+
+Field field40t7 = new Field(4,0,1)
+Field field41t7 = new Field(4,1,3)
+Field field42t7 = new Field(4,2,4)
+Field field43t7 = new Field(4,3,5)
+Field field44t7 = new Field(4,4,2)
+Field[] row4 = [field40t7,field41t7,field42t7,field43t7,field44t7]
+
+Field field50t7 = new Field(5,0,6)
+Field field51t7 = new Field(5,1,4)
+Field field52t7 = new Field(5,2,2)
+Field field53t7 = new Field(5,3,3)
+Field field54t7 = new Field(5,4,5)
+Field[] row5 = [field50t7,field51t7,field52t7,field53t7,field54t7]
+
+Field[][] board7 = [row0,row1,row2,row3,row4,row5]
+Testing testingObject7 = new Testing(board7)
+
+board7 hat folgende Form:
+1 2 1 3 2
+2 4 5 6 1
+3 5 2 1 4
+4 2 1 6 1
+1 3 4 5 2
+6 4 2 3 5
+
+testingObject7.isStartklar() -> returns true
+
+Field field00t8 = new Field(0,0,3)
+Field field01t8 = new Field(0,1,4)
+Field field02t8 = new Field(0,2,5)
+Field field03t8 = new Field(0,3,6)
+Field[] row0 = [field00t8,field01t8,field02t8,field03t8]
+
+Field field10t8 = new Field(1,0,4)
+Field field11t8 = new Field(1,1,5)
+Field field12t8 = new Field(1,2,4)
+Field field13t8 = new Field(1,3,3)
+Field[] row1 = [field10t8,field11t8,field12t8,field13t8]
+
+Field field20t8 = new Field(2,0,5)
+Field field21t8 = new Field(2,1,3)
+Field field22t8 = new Field(2,2,6)
+Field field23t8 = new Field(2,3,4)
+Field[] row2 = [field20t8,field21t8,field22t8,field23t8]
+
+Field[][] board8 = [row0,row1,row2]
+Testing testingObject8 = new Testing(board8)
+
+board8 hat folgende Form:
+3 4 5 6
+4 5 4 3
+5 3 6 4
+
+testingObject8.isStartklar() -> returns false
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=01; testNumber=03; points=10; description=Funktion der Methode isStartklar - startklar sowie nicht startklar aufgrund gleicher Startfarben fuer S1 und S2]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.isStartklar() -> Methode ist public
+
+Field field00t9 = new Field(0,0,2)
+Field field01t9 = new Field(0,1,4)
+Field field02t9 = new Field(0,2,1)
+Field field03t9 = new Field(0,3,3)
+Field field04t9 = new Field(0,4,5)
+Field[] row0 = [field00t9,field01t9,field02t9,field03t9,field04t9]
+
+Field field10t9 = new Field(1,0,6)
+Field field11t9 = new Field(1,1,2)
+Field field12t9 = new Field(1,2,4)
+Field field13t9 = new Field(1,3,2)
+Field field14t9 = new Field(1,4,1)
+Field[] row1 = [field10t9,field11t9,field12t9,field13t9,field14t9]
+
+Field field20t9 = new Field(2,0,1)
+Field field21t9 = new Field(2,1,3)
+Field field22t9 = new Field(2,2,2)
+Field field23t9 = new Field(2,3,5)
+Field field24t9 = new Field(2,4,6)
+Field[] row2 = [field20t9,field21t9,field22t9,field23t9,field24t9]
+
+Field field30t9 = new Field(3,0,4)
+Field field31t9 = new Field(3,1,5)
+Field field32t9 = new Field(3,2,1)
+Field field33t9 = new Field(3,3,4)
+Field field34t9 = new Field(3,4,3)
+Field[] row3 = [field30t9,field31t9,field32t9,field33t9,field34t9]
+
+Field field40t9 = new Field(4,0,2)
+Field field41t9 = new Field(4,1,1)
+Field field42t9 = new Field(4,2,2)
+Field field43t9 = new Field(4,3,1)
+Field field44t9 = new Field(4,4,2)
+Field[] row4 = [field40t9,field41t9,field42t9,field43t9,field44t9]
+
+Field[][] board9 = [row0,row1,row2,row3,row4]
+Testing testingObject9 = new Testing(board9)
+
+board9 hat folgende Form:
+2 4 1 3 5
+6 2 4 2 1
+1 3 2 5 6
+4 5 1 4 3
+2 1 2 1 2
+
+testingObject9.isStartklar() -> returns true
+
+Field field00t10 = new Field(0,0,1)
+Field field01t10 = new Field(0,1,2)
+Field field02t10 = new Field(0,2,3)
+Field field03t10 = new Field(0,3,4)
+Field[] row0 = [field00t10,field01t10,field02t10,field03t10]
+
+Field field10t10 = new Field(1,0,4)
+Field field11t10 = new Field(1,1,5)
+Field field12t10 = new Field(1,2,4)
+Field field13t10 = new Field(1,3,2)
+Field[] row1 = [field10t10,field11t10,field12t10,field13t10]
+
+Field field20t10 = new Field(2,0,1)
+Field field21t10 = new Field(2,1,2)
+Field field22t10 = new Field(2,2,1)
+Field field23t10 = new Field(2,3,6)
+Field[] row2 = [field20t10,field21t10,field22t10,field23t10]
+
+Field field30t10 = new Field(3,0,4)
+Field field31t10 = new Field(3,1,1)
+Field field32t10 = new Field(3,2,2)
+Field field33t10 = new Field(3,3,3)
+Field[] row3 = [field30t10,field31t10,field32t10,field33t10]
+
+Field[][] board10 = [row0,row1,row2,row3]
+Testing testingObject10 = new Testing(board10)
+
+board10 hat folgende Form:
+1 2 3 4
+4 5 4 2
+1 2 1 6
+4 1 2 3
+
+testingObject10.isStartklar() -> returns false
+
+Field field00t11 = new Field(0,0,6)
+Field field01t11 = new Field(0,1,2)
+Field field02t11 = new Field(0,2,1)
+Field field03t11 = new Field(0,3,3)
+Field field04t11 = new Field(0,4,2)
+Field[] row0 = [field00t11,field01t11,field02t11,field03t11,field04t11]
+
+Field field10t11 = new Field(1,0,2)
+Field field11t11 = new Field(1,1,6)
+Field field12t11 = new Field(1,2,5)
+Field field13t11 = new Field(1,3,6)
+Field field14t11 = new Field(1,4,1)
+Field[] row1 = [field10t11,field11t11,field12t11,field13t11,field14t11]
+
+Field field20t11 = new Field(2,0,3)
+Field field21t11 = new Field(2,1,5)
+Field field22t11 = new Field(2,2,2)
+Field field23t11 = new Field(2,3,1)
+Field field24t11 = new Field(2,4,4)
+Field[] row2 = [field20t11,field21t11,field22t11,field23t11,field24t11]
+
+Field[][] board11 = [row0,row1,row2]
+Testing testingObject11 = new Testing(board11)
+
+board11 hat folgende Form:
+6 2 1 3 2
+2 6 5 6 1
+3 5 2 1 4
+
+testingObject11.isStartklar() -> returns true
+
+Field field00t12 = new Field(0,0,3)
+Field field01t12 = new Field(0,1,4)
+Field field02t12 = new Field(0,2,5)
+Field field03t12 = new Field(0,3,6)
+Field[] row0 = [field00t12,field01t12,field02t12,field03t12]
+
+Field field10t12 = new Field(1,0,5)
+Field field11t12 = new Field(1,1,3)
+Field field12t12 = new Field(1,2,6)
+Field field13t12 = new Field(1,3,4)
+Field[] row1 = [field10t12,field11t12,field12t12,field13t12]
+
+Field field20t12 = new Field(2,0,1)
+Field field21t12 = new Field(2,1,2)
+Field field22t12 = new Field(2,2,3)
+Field field23t12 = new Field(2,3,5)
+Field[] row2 = [field20t12,field21t12,field22t12,field23t12]
+
+Field field30t12 = new Field(3,0,2)
+Field field31t12 = new Field(3,1,3)
+Field field32t12 = new Field(3,2,5)
+Field field33t12 = new Field(3,3,4)
+Field[] row3 = [field30t12,field31t12,field32t12,field33t12]
+
+Field field40t12 = new Field(4,0,6)
+Field field41t12 = new Field(4,1,5)
+Field field42t12 = new Field(4,2,4)
+Field field43t12 = new Field(4,3,2)
+Field[] row4 = [field40t12,field41t12,field42t12,field43t12]
+
+Field[][] board12 = [row0,row1,row2,row3,row4]
+Testing testingObject12 = new Testing(board12)
+
+board12 hat folgende Form:
+3 4 5 6
+5 3 6 4
+1 2 3 5
+2 3 5 4
+6 5 4 2
+
+testingObject12.isStartklar() -> returns false
+
+--- Der Test endet hier. ---
+
+
+
+---------------------------------------Aufgabe 2--------------------------------------------
+TestInfo [taskNumber=02; testNumber=01; points=35; description=Funktion der Methode isEndConfig - endconfig sowie keine endconfig (beide Komponenten vergroesserbar)]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.isEndConfig() -> Methode ist public
+
+Field field00t13 = new Field(0,0,1)
+Field field01t13 = new Field(0,1,2)
+Field field02t13 = new Field(0,2,2)
+Field[] row0 = [field00t13,field01t13,field02t13]
+
+Field field10t13 = new Field(1,0,1)
+Field field11t13 = new Field(1,1,1)
+Field field12t13 = new Field(1,2,1)
+Field[] row1 = [field10t13,field11t13,field12t13]
+
+Field field20t13 = new Field(2,0,1)
+Field field21t13 = new Field(2,1,1)
+Field field22t13 = new Field(2,2,1)
+Field[] row2 = [field20t13,field21t13,field22t13]
+
+Field[][] board13 = [row0,row1,row2]
+Testing testingObject13 = new Testing(board13)
+
+board13 hat folgende Form:
+1 2 2
+1 1 1
+1 1 1
+
+testingObject13.isEndConfig() -> returns true
+
+Field field00t14 = new Field(0,0,2)
+Field field01t14 = new Field(0,1,3)
+Field field02t14 = new Field(0,2,1)
+Field field03t14 = new Field(0,3,4)
+Field[] row0 = [field00t14,field01t14,field02t14,field03t14]
+
+Field field10t14 = new Field(1,0,5)
+Field field11t14 = new Field(1,1,6)
+Field field12t14 = new Field(1,2,2)
+Field field13t14 = new Field(1,3,4)
+Field[] row1 = [field10t14,field11t14,field12t14,field13t14]
+
+Field field20t14 = new Field(2,0,1)
+Field field21t14 = new Field(2,1,2)
+Field field22t14 = new Field(2,2,3)
+Field field23t14 = new Field(2,3,4)
+Field[] row2 = [field20t14,field21t14,field22t14,field23t14]
+
+Field field30t14 = new Field(3,0,1)
+Field field31t14 = new Field(3,1,1)
+Field field32t14 = new Field(3,2,4)
+Field field33t14 = new Field(3,3,5)
+Field[] row3 = [field30t14,field31t14,field32t14,field33t14]
+
+Field[][] board14 = [row0,row1,row2,row3]
+Testing testingObject14 = new Testing(board14)
+
+board14 hat folgende Form:
+2 3 1 4
+5 6 2 4
+1 2 3 4
+1 1 4 5
+
+testingObject14.isEndConfig() -> returns false
+
+Field field00t15 = new Field(0,0,4)
+Field field01t15 = new Field(0,1,4)
+Field field02t15 = new Field(0,2,4)
+Field field03t15 = new Field(0,3,4)
+Field field04t15 = new Field(0,4,4)
+Field field05t15 = new Field(0,5,4)
+Field field06t15 = new Field(0,6,3)
+Field[] row0 = [field00t15,field01t15,field02t15,field03t15,field04t15,field05t15,field06t15]
+
+Field field10t15 = new Field(1,0,4)
+Field field11t15 = new Field(1,1,4)
+Field field12t15 = new Field(1,2,4)
+Field field13t15 = new Field(1,3,4)
+Field field14t15 = new Field(1,4,4)
+Field field15t15 = new Field(1,5,4)
+Field field16t15 = new Field(1,6,4)
+Field[] row1 = [field10t15,field11t15,field12t15,field13t15,field14t15,field15t15,field16t15]
+
+Field field20t15 = new Field(2,0,4)
+Field field21t15 = new Field(2,1,4)
+Field field22t15 = new Field(2,2,4)
+Field field23t15 = new Field(2,3,4)
+Field field24t15 = new Field(2,4,4)
+Field field25t15 = new Field(2,5,4)
+Field field26t15 = new Field(2,6,4)
+Field[] row2 = [field20t15,field21t15,field22t15,field23t15,field24t15,field25t15,field26t15]
+
+Field field30t15 = new Field(3,0,4)
+Field field31t15 = new Field(3,1,4)
+Field field32t15 = new Field(3,2,4)
+Field field33t15 = new Field(3,3,4)
+Field field34t15 = new Field(3,4,4)
+Field field35t15 = new Field(3,5,4)
+Field field36t15 = new Field(3,6,4)
+Field[] row3 = [field30t15,field31t15,field32t15,field33t15,field34t15,field35t15,field36t15]
+
+Field field40t15 = new Field(4,0,4)
+Field field41t15 = new Field(4,1,4)
+Field field42t15 = new Field(4,2,4)
+Field field43t15 = new Field(4,3,4)
+Field field44t15 = new Field(4,4,4)
+Field field45t15 = new Field(4,5,4)
+Field field46t15 = new Field(4,6,4)
+Field[] row4 = [field40t15,field41t15,field42t15,field43t15,field44t15,field45t15,field46t15]
+
+Field[][] board15 = [row0,row1,row2,row3,row4]
+Testing testingObject15 = new Testing(board15)
+
+board15 hat folgende Form:
+4 4 4 4 4 4 3
+4 4 4 4 4 4 4
+4 4 4 4 4 4 4
+4 4 4 4 4 4 4
+4 4 4 4 4 4 4
+
+testingObject15.isEndConfig() -> returns true
+
+Field field00t16 = new Field(0,0,3)
+Field field01t16 = new Field(0,1,4)
+Field field02t16 = new Field(0,2,5)
+Field field03t16 = new Field(0,3,6)
+Field[] row0 = [field00t16,field01t16,field02t16,field03t16]
+
+Field field10t16 = new Field(1,0,5)
+Field field11t16 = new Field(1,1,3)
+Field field12t16 = new Field(1,2,6)
+Field field13t16 = new Field(1,3,4)
+Field[] row1 = [field10t16,field11t16,field12t16,field13t16]
+
+Field field20t16 = new Field(2,0,1)
+Field field21t16 = new Field(2,1,2)
+Field field22t16 = new Field(2,2,3)
+Field field23t16 = new Field(2,3,5)
+Field[] row2 = [field20t16,field21t16,field22t16,field23t16]
+
+Field field30t16 = new Field(3,0,2)
+Field field31t16 = new Field(3,1,3)
+Field field32t16 = new Field(3,2,5)
+Field field33t16 = new Field(3,3,4)
+Field[] row3 = [field30t16,field31t16,field32t16,field33t16]
+
+Field field40t16 = new Field(4,0,2)
+Field field41t16 = new Field(4,1,5)
+Field field42t16 = new Field(4,2,4)
+Field field43t16 = new Field(4,3,2)
+Field[] row4 = [field40t16,field41t16,field42t16,field43t16]
+
+Field[][] board16 = [row0,row1,row2,row3,row4]
+Testing testingObject16 = new Testing(board16)
+
+board16 hat folgende Form:
+3 4 5 6
+5 3 6 4
+1 2 3 5
+2 3 5 4
+2 5 4 2
+
+testingObject16.isEndConfig() -> returns false
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=02; testNumber=02; points=10; description=Funktion der Methode isEndConfig - endconfig sowie keine endconfig (nur eine Komponente vergroesserbar, Inseln)]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.isEndConfig() -> Methode ist public
+
+Field field00t17 = new Field(0,0,4)
+Field field01t17 = new Field(0,1,4)
+Field field02t17 = new Field(0,2,4)
+Field field03t17 = new Field(0,3,4)
+Field field04t17 = new Field(0,4,4)
+Field[] row0 = [field00t17,field01t17,field02t17,field03t17,field04t17]
+
+Field field10t17 = new Field(1,0,2)
+Field field11t17 = new Field(1,1,2)
+Field field12t17 = new Field(1,2,2)
+Field field13t17 = new Field(1,3,2)
+Field field14t17 = new Field(1,4,4)
+Field[] row1 = [field10t17,field11t17,field12t17,field13t17,field14t17]
+
+Field field20t17 = new Field(2,0,2)
+Field field21t17 = new Field(2,1,2)
+Field field22t17 = new Field(2,2,4)
+Field field23t17 = new Field(2,3,4)
+Field field24t17 = new Field(2,4,4)
+Field[] row2 = [field20t17,field21t17,field22t17,field23t17,field24t17]
+
+Field field30t17 = new Field(3,0,2)
+Field field31t17 = new Field(3,1,2)
+Field field32t17 = new Field(3,2,2)
+Field field33t17 = new Field(3,3,4)
+Field field34t17 = new Field(3,4,4)
+Field[] row3 = [field30t17,field31t17,field32t17,field33t17,field34t17]
+
+Field field40t17 = new Field(4,0,2)
+Field field41t17 = new Field(4,1,2)
+Field field42t17 = new Field(4,2,4)
+Field field43t17 = new Field(4,3,4)
+Field field44t17 = new Field(4,4,4)
+Field[] row4 = [field40t17,field41t17,field42t17,field43t17,field44t17]
+
+Field[][] board17 = [row0,row1,row2,row3,row4]
+Testing testingObject17 = new Testing(board17)
+
+board17 hat folgende Form:
+4 4 4 4 4
+2 2 2 2 4
+2 2 4 4 4
+2 2 2 4 4
+2 2 4 4 4
+
+testingObject17.isEndConfig() -> returns true
+
+Field field00t18 = new Field(0,0,5)
+Field field01t18 = new Field(0,1,5)
+Field field02t18 = new Field(0,2,5)
+Field field03t18 = new Field(0,3,5)
+Field[] row0 = [field00t18,field01t18,field02t18,field03t18]
+
+Field field10t18 = new Field(1,0,3)
+Field field11t18 = new Field(1,1,3)
+Field field12t18 = new Field(1,2,3)
+Field field13t18 = new Field(1,3,5)
+Field[] row1 = [field10t18,field11t18,field12t18,field13t18]
+
+Field field20t18 = new Field(2,0,3)
+Field field21t18 = new Field(2,1,5)
+Field field22t18 = new Field(2,2,3)
+Field field23t18 = new Field(2,3,5)
+Field[] row2 = [field20t18,field21t18,field22t18,field23t18]
+
+Field field30t18 = new Field(3,0,3)
+Field field31t18 = new Field(3,1,3)
+Field field32t18 = new Field(3,2,5)
+Field field33t18 = new Field(3,3,5)
+Field[] row3 = [field30t18,field31t18,field32t18,field33t18]
+
+Field[][] board18 = [row0,row1,row2,row3]
+Testing testingObject18 = new Testing(board18)
+
+board18 hat folgende Form:
+5 5 5 5
+3 3 3 5
+3 5 3 5
+3 3 5 5
+
+testingObject18.isEndConfig() -> returns false
+
+Field field00t19 = new Field(0,0,4)
+Field field01t19 = new Field(0,1,4)
+Field field02t19 = new Field(0,2,4)
+Field field03t19 = new Field(0,3,4)
+Field field04t19 = new Field(0,4,4)
+Field[] row0 = [field00t19,field01t19,field02t19,field03t19,field04t19]
+
+Field field10t19 = new Field(1,0,4)
+Field field11t19 = new Field(1,1,6)
+Field field12t19 = new Field(1,2,6)
+Field field13t19 = new Field(1,3,6)
+Field field14t19 = new Field(1,4,4)
+Field[] row1 = [field10t19,field11t19,field12t19,field13t19,field14t19]
+
+Field field20t19 = new Field(2,0,4)
+Field field21t19 = new Field(2,1,4)
+Field field22t19 = new Field(2,2,4)
+Field field23t19 = new Field(2,3,6)
+Field field24t19 = new Field(2,4,4)
+Field[] row2 = [field20t19,field21t19,field22t19,field23t19,field24t19]
+
+Field field30t19 = new Field(3,0,6)
+Field field31t19 = new Field(3,1,6)
+Field field32t19 = new Field(3,2,6)
+Field field33t19 = new Field(3,3,6)
+Field field34t19 = new Field(3,4,4)
+Field[] row3 = [field30t19,field31t19,field32t19,field33t19,field34t19]
+
+Field field40t19 = new Field(4,0,6)
+Field field41t19 = new Field(4,1,6)
+Field field42t19 = new Field(4,2,6)
+Field field43t19 = new Field(4,3,6)
+Field field44t19 = new Field(4,4,6)
+Field[] row4 = [field40t19,field41t19,field42t19,field43t19,field44t19]
+
+Field field50t19 = new Field(5,0,6)
+Field field51t19 = new Field(5,1,6)
+Field field52t19 = new Field(5,2,6)
+Field field53t19 = new Field(5,3,6)
+Field field54t19 = new Field(5,4,6)
+Field[] row5 = [field50t19,field51t19,field52t19,field53t19,field54t19]
+
+Field[][] board19 = [row0,row1,row2,row3,row4,row5]
+Testing testingObject19 = new Testing(board19)
+
+board19 hat folgende Form:
+4 4 4 4 4
+4 6 6 6 4
+4 4 4 6 4
+6 6 6 6 4
+6 6 6 6 6
+6 6 6 6 6
+
+testingObject19.isEndConfig() -> returns true
+
+Field field00t20 = new Field(0,0,2)
+Field field01t20 = new Field(0,1,2)
+Field field02t20 = new Field(0,2,2)
+Field field03t20 = new Field(0,3,1)
+Field field04t20 = new Field(0,4,1)
+Field field05t20 = new Field(0,5,1)
+Field field06t20 = new Field(0,6,1)
+Field[] row0 = [field00t20,field01t20,field02t20,field03t20,field04t20,field05t20,field06t20]
+
+Field field10t20 = new Field(1,0,2)
+Field field11t20 = new Field(1,1,2)
+Field field12t20 = new Field(1,2,1)
+Field field13t20 = new Field(1,3,1)
+Field field14t20 = new Field(1,4,1)
+Field field15t20 = new Field(1,5,1)
+Field field16t20 = new Field(1,6,1)
+Field[] row1 = [field10t20,field11t20,field12t20,field13t20,field14t20,field15t20,field16t20]
+
+Field field20t20 = new Field(2,0,2)
+Field field21t20 = new Field(2,1,2)
+Field field22t20 = new Field(2,2,1)
+Field field23t20 = new Field(2,3,2)
+Field field24t20 = new Field(2,4,1)
+Field field25t20 = new Field(2,5,1)
+Field field26t20 = new Field(2,6,1)
+Field[] row2 = [field20t20,field21t20,field22t20,field23t20,field24t20,field25t20,field26t20]
+
+Field field30t20 = new Field(3,0,2)
+Field field31t20 = new Field(3,1,2)
+Field field32t20 = new Field(3,2,1)
+Field field33t20 = new Field(3,3,1)
+Field field34t20 = new Field(3,4,1)
+Field field35t20 = new Field(3,5,2)
+Field field36t20 = new Field(3,6,1)
+Field[] row3 = [field30t20,field31t20,field32t20,field33t20,field34t20,field35t20,field36t20]
+
+Field field40t20 = new Field(4,0,2)
+Field field41t20 = new Field(4,1,2)
+Field field42t20 = new Field(4,2,2)
+Field field43t20 = new Field(4,3,2)
+Field field44t20 = new Field(4,4,2)
+Field field45t20 = new Field(4,5,2)
+Field field46t20 = new Field(4,6,1)
+Field[] row4 = [field40t20,field41t20,field42t20,field43t20,field44t20,field45t20,field46t20]
+
+Field[][] board20 = [row0,row1,row2,row3,row4]
+Testing testingObject20 = new Testing(board20)
+
+board20 hat folgende Form:
+2 2 2 1 1 1 1
+2 2 1 1 1 1 1
+2 2 1 2 1 1 1
+2 2 1 1 1 2 1
+2 2 2 2 2 2 1
+
+testingObject20.isEndConfig() -> returns false
+
+--- Der Test endet hier. ---
+
+
+
+---------------------------------------Aufgabe 3--------------------------------------------
+TestInfo [taskNumber=03; testNumber=01; points=25; description=Funktion der Methode testStrategy01 - Nur genau eine Farbe waehlbar (Zahlenwert irrelevant)]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.testStrategy01() -> Methode ist public
+
+Field field00t21 = new Field(0,0,3)
+Field field01t21 = new Field(0,1,1)
+Field field02t21 = new Field(0,2,1)
+Field field03t21 = new Field(0,3,1)
+Field[] row0 = [field00t21,field01t21,field02t21,field03t21]
+
+Field field10t21 = new Field(1,0,4)
+Field field11t21 = new Field(1,1,2)
+Field field12t21 = new Field(1,2,6)
+Field field13t21 = new Field(1,3,1)
+Field[] row1 = [field10t21,field11t21,field12t21,field13t21]
+
+Field field20t21 = new Field(2,0,1)
+Field field21t21 = new Field(2,1,3)
+Field field22t21 = new Field(2,2,2)
+Field field23t21 = new Field(2,3,5)
+Field[] row2 = [field20t21,field21t21,field22t21,field23t21]
+
+Field field30t21 = new Field(3,0,6)
+Field field31t21 = new Field(3,1,4)
+Field field32t21 = new Field(3,2,6)
+Field field33t21 = new Field(3,3,1)
+Field[] row3 = [field30t21,field31t21,field32t21,field33t21]
+
+Field[][] board21 = [row0,row1,row2,row3]
+Testing testingObject21 = new Testing(board21)
+
+board21 hat folgende Form:
+3 1 1 1
+4 2 6 1
+1 3 2 5
+6 4 6 1
+
+testingObject21.testStrategy01() -> returns 4
+
+Field field00t22 = new Field(0,0,2)
+Field field01t22 = new Field(0,1,1)
+Field field02t22 = new Field(0,2,1)
+Field[] row0 = [field00t22,field01t22,field02t22]
+
+Field field10t22 = new Field(1,0,6)
+Field field11t22 = new Field(1,1,1)
+Field field12t22 = new Field(1,2,4)
+Field[] row1 = [field10t22,field11t22,field12t22]
+
+Field field20t22 = new Field(2,0,6)
+Field field21t22 = new Field(2,1,3)
+Field field22t22 = new Field(2,2,2)
+Field[] row2 = [field20t22,field21t22,field22t22]
+
+Field[][] board22 = [row0,row1,row2]
+Testing testingObject22 = new Testing(board22)
+
+board22 hat folgende Form:
+2 1 1
+6 1 4
+6 3 2
+
+testingObject22.testStrategy01() -> returns 5
+
+Field field00t23 = new Field(0,0,2)
+Field field01t23 = new Field(0,1,1)
+Field field02t23 = new Field(0,2,1)
+Field field03t23 = new Field(0,3,1)
+Field field04t23 = new Field(0,4,1)
+Field[] row0 = [field00t23,field01t23,field02t23,field03t23,field04t23]
+
+Field field10t23 = new Field(1,0,5)
+Field field11t23 = new Field(1,1,1)
+Field field12t23 = new Field(1,2,1)
+Field field13t23 = new Field(1,3,1)
+Field field14t23 = new Field(1,4,1)
+Field[] row1 = [field10t23,field11t23,field12t23,field13t23,field14t23]
+
+Field field20t23 = new Field(2,0,1)
+Field field21t23 = new Field(2,1,3)
+Field field22t23 = new Field(2,2,2)
+Field field23t23 = new Field(2,3,1)
+Field field24t23 = new Field(2,4,1)
+Field[] row2 = [field20t23,field21t23,field22t23,field23t23,field24t23]
+
+Field field30t23 = new Field(3,0,6)
+Field field31t23 = new Field(3,1,5)
+Field field32t23 = new Field(3,2,6)
+Field field33t23 = new Field(3,3,1)
+Field field34t23 = new Field(3,4,4)
+Field[] row3 = [field30t23,field31t23,field32t23,field33t23,field34t23]
+
+Field field40t23 = new Field(4,0,6)
+Field field41t23 = new Field(4,1,4)
+Field field42t23 = new Field(4,2,3)
+Field field43t23 = new Field(4,3,1)
+Field field44t23 = new Field(4,4,6)
+Field[] row4 = [field40t23,field41t23,field42t23,field43t23,field44t23]
+
+Field field50t23 = new Field(5,0,6)
+Field field51t23 = new Field(5,1,6)
+Field field52t23 = new Field(5,2,6)
+Field field53t23 = new Field(5,3,4)
+Field field54t23 = new Field(5,4,3)
+Field[] row5 = [field50t23,field51t23,field52t23,field53t23,field54t23]
+
+Field[][] board23 = [row0,row1,row2,row3,row4,row5]
+Testing testingObject23 = new Testing(board23)
+
+board23 hat folgende Form:
+2 1 1 1 1
+5 1 1 1 1
+1 3 2 1 1
+6 5 6 1 4
+6 4 3 1 6
+6 6 6 4 3
+
+testingObject23.testStrategy01() -> returns 5
+
+Field field00t24 = new Field(0,0,3)
+Field field01t24 = new Field(0,1,1)
+Field field02t24 = new Field(0,2,1)
+Field field03t24 = new Field(0,3,1)
+Field[] row0 = [field00t24,field01t24,field02t24,field03t24]
+
+Field field10t24 = new Field(1,0,4)
+Field field11t24 = new Field(1,1,5)
+Field field12t24 = new Field(1,2,6)
+Field field13t24 = new Field(1,3,1)
+Field[] row1 = [field10t24,field11t24,field12t24,field13t24]
+
+Field field20t24 = new Field(2,0,6)
+Field field21t24 = new Field(2,1,3)
+Field field22t24 = new Field(2,2,5)
+Field field23t24 = new Field(2,3,4)
+Field[] row2 = [field20t24,field21t24,field22t24,field23t24]
+
+Field[][] board24 = [row0,row1,row2]
+Testing testingObject24 = new Testing(board24)
+
+board24 hat folgende Form:
+3 1 1 1
+4 5 6 1
+6 3 5 4
+
+testingObject24.testStrategy01() -> returns 2
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=03; testNumber=02; points=15; description=Funktion der Methode testStrategy01 - Mehrere Farben waehlbar (Zahlenwert relevant)]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.testStrategy01() -> Methode ist public
+
+Field field00t25 = new Field(0,0,3)
+Field field01t25 = new Field(0,1,1)
+Field field02t25 = new Field(0,2,1)
+Field field03t25 = new Field(0,3,1)
+Field[] row0 = [field00t25,field01t25,field02t25,field03t25]
+
+Field field10t25 = new Field(1,0,4)
+Field field11t25 = new Field(1,1,2)
+Field field12t25 = new Field(1,2,6)
+Field field13t25 = new Field(1,3,1)
+Field[] row1 = [field10t25,field11t25,field12t25,field13t25]
+
+Field field20t25 = new Field(2,0,1)
+Field field21t25 = new Field(2,1,3)
+Field field22t25 = new Field(2,2,4)
+Field field23t25 = new Field(2,3,1)
+Field[] row2 = [field20t25,field21t25,field22t25,field23t25]
+
+Field field30t25 = new Field(3,0,6)
+Field field31t25 = new Field(3,1,4)
+Field field32t25 = new Field(3,2,6)
+Field field33t25 = new Field(3,3,5)
+Field[] row3 = [field30t25,field31t25,field32t25,field33t25]
+
+Field[][] board25 = [row0,row1,row2,row3]
+Testing testingObject25 = new Testing(board25)
+
+board25 hat folgende Form:
+3 1 1 1
+4 2 6 1
+1 3 4 1
+6 4 6 5
+
+testingObject25.testStrategy01() -> returns 2
+
+Field field00t26 = new Field(0,0,2)
+Field field01t26 = new Field(0,1,1)
+Field field02t26 = new Field(0,2,1)
+Field[] row0 = [field00t26,field01t26,field02t26]
+
+Field field10t26 = new Field(1,0,6)
+Field field11t26 = new Field(1,1,1)
+Field field12t26 = new Field(1,2,4)
+Field[] row1 = [field10t26,field11t26,field12t26]
+
+Field field20t26 = new Field(2,0,6)
+Field field21t26 = new Field(2,1,4)
+Field field22t26 = new Field(2,2,2)
+Field[] row2 = [field20t26,field21t26,field22t26]
+
+Field[][] board26 = [row0,row1,row2]
+Testing testingObject26 = new Testing(board26)
+
+board26 hat folgende Form:
+2 1 1
+6 1 4
+6 4 2
+
+testingObject26.testStrategy01() -> returns 3
+
+Field field00t27 = new Field(0,0,2)
+Field field01t27 = new Field(0,1,1)
+Field field02t27 = new Field(0,2,1)
+Field field03t27 = new Field(0,3,1)
+Field field04t27 = new Field(0,4,1)
+Field[] row0 = [field00t27,field01t27,field02t27,field03t27,field04t27]
+
+Field field10t27 = new Field(1,0,5)
+Field field11t27 = new Field(1,1,1)
+Field field12t27 = new Field(1,2,1)
+Field field13t27 = new Field(1,3,1)
+Field field14t27 = new Field(1,4,1)
+Field[] row1 = [field10t27,field11t27,field12t27,field13t27,field14t27]
+
+Field field20t27 = new Field(2,0,1)
+Field field21t27 = new Field(2,1,3)
+Field field22t27 = new Field(2,2,2)
+Field field23t27 = new Field(2,3,1)
+Field field24t27 = new Field(2,4,1)
+Field[] row2 = [field20t27,field21t27,field22t27,field23t27,field24t27]
+
+Field field30t27 = new Field(3,0,6)
+Field field31t27 = new Field(3,1,5)
+Field field32t27 = new Field(3,2,6)
+Field field33t27 = new Field(3,3,1)
+Field field34t27 = new Field(3,4,4)
+Field[] row3 = [field30t27,field31t27,field32t27,field33t27,field34t27]
+
+Field field40t27 = new Field(4,0,6)
+Field field41t27 = new Field(4,1,6)
+Field field42t27 = new Field(4,2,3)
+Field field43t27 = new Field(4,3,1)
+Field field44t27 = new Field(4,4,6)
+Field[] row4 = [field40t27,field41t27,field42t27,field43t27,field44t27]
+
+Field field50t27 = new Field(5,0,6)
+Field field51t27 = new Field(5,1,6)
+Field field52t27 = new Field(5,2,6)
+Field field53t27 = new Field(5,3,6)
+Field field54t27 = new Field(5,4,3)
+Field[] row5 = [field50t27,field51t27,field52t27,field53t27,field54t27]
+
+Field[][] board27 = [row0,row1,row2,row3,row4,row5]
+Testing testingObject27 = new Testing(board27)
+
+board27 hat folgende Form:
+2 1 1 1 1
+5 1 1 1 1
+1 3 2 1 1
+6 5 6 1 4
+6 6 3 1 6
+6 6 6 6 3
+
+testingObject27.testStrategy01() -> returns 4
+
+Field field00t28 = new Field(0,0,3)
+Field field01t28 = new Field(0,1,1)
+Field field02t28 = new Field(0,2,1)
+Field field03t28 = new Field(0,3,1)
+Field[] row0 = [field00t28,field01t28,field02t28,field03t28]
+
+Field field10t28 = new Field(1,0,4)
+Field field11t28 = new Field(1,1,5)
+Field field12t28 = new Field(1,2,6)
+Field field13t28 = new Field(1,3,1)
+Field[] row1 = [field10t28,field11t28,field12t28,field13t28]
+
+Field field20t28 = new Field(2,0,6)
+Field field21t28 = new Field(2,1,3)
+Field field22t28 = new Field(2,2,5)
+Field field23t28 = new Field(2,3,3)
+Field[] row2 = [field20t28,field21t28,field22t28,field23t28]
+
+Field[][] board28 = [row0,row1,row2]
+Testing testingObject28 = new Testing(board28)
+
+board28 hat folgende Form:
+3 1 1 1
+4 5 6 1
+6 3 5 3
+
+testingObject28.testStrategy01() -> returns 2
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=03; testNumber=03; points=10; description=Funktion der Methode testStrategy01 - Mehrere Farben waehlbar, kleinste Farbe von S1 (Zahlenwert relevant)]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.testStrategy01() -> Methode ist public
+
+Field field00t29 = new Field(0,0,3)
+Field field01t29 = new Field(0,1,1)
+Field field02t29 = new Field(0,2,1)
+Field field03t29 = new Field(0,3,1)
+Field[] row0 = [field00t29,field01t29,field02t29,field03t29]
+
+Field field10t29 = new Field(1,0,4)
+Field field11t29 = new Field(1,1,6)
+Field field12t29 = new Field(1,2,2)
+Field field13t29 = new Field(1,3,1)
+Field[] row1 = [field10t29,field11t29,field12t29,field13t29]
+
+Field field20t29 = new Field(2,0,1)
+Field field21t29 = new Field(2,1,3)
+Field field22t29 = new Field(2,2,4)
+Field field23t29 = new Field(2,3,1)
+Field[] row2 = [field20t29,field21t29,field22t29,field23t29]
+
+Field field30t29 = new Field(3,0,2)
+Field field31t29 = new Field(3,1,4)
+Field field32t29 = new Field(3,2,2)
+Field field33t29 = new Field(3,3,5)
+Field[] row3 = [field30t29,field31t29,field32t29,field33t29]
+
+Field[][] board29 = [row0,row1,row2,row3]
+Testing testingObject29 = new Testing(board29)
+
+board29 hat folgende Form:
+3 1 1 1
+4 6 2 1
+1 3 4 1
+2 4 2 5
+
+testingObject29.testStrategy01() -> returns 3
+
+Field field00t30 = new Field(0,0,2)
+Field field01t30 = new Field(0,1,1)
+Field field02t30 = new Field(0,2,1)
+Field[] row0 = [field00t30,field01t30,field02t30]
+
+Field field10t30 = new Field(1,0,3)
+Field field11t30 = new Field(1,1,1)
+Field field12t30 = new Field(1,2,4)
+Field[] row1 = [field10t30,field11t30,field12t30]
+
+Field field20t30 = new Field(2,0,3)
+Field field21t30 = new Field(2,1,4)
+Field field22t30 = new Field(2,2,2)
+Field[] row2 = [field20t30,field21t30,field22t30]
+
+Field[][] board30 = [row0,row1,row2]
+Testing testingObject30 = new Testing(board30)
+
+board30 hat folgende Form:
+2 1 1
+3 1 4
+3 4 2
+
+testingObject30.testStrategy01() -> returns 5
+
+Field field00t31 = new Field(0,0,2)
+Field field01t31 = new Field(0,1,1)
+Field field02t31 = new Field(0,2,1)
+Field field03t31 = new Field(0,3,1)
+Field field04t31 = new Field(0,4,1)
+Field[] row0 = [field00t31,field01t31,field02t31,field03t31,field04t31]
+
+Field field10t31 = new Field(1,0,5)
+Field field11t31 = new Field(1,1,1)
+Field field12t31 = new Field(1,2,1)
+Field field13t31 = new Field(1,3,1)
+Field field14t31 = new Field(1,4,1)
+Field[] row1 = [field10t31,field11t31,field12t31,field13t31,field14t31]
+
+Field field20t31 = new Field(2,0,1)
+Field field21t31 = new Field(2,1,3)
+Field field22t31 = new Field(2,2,2)
+Field field23t31 = new Field(2,3,1)
+Field field24t31 = new Field(2,4,1)
+Field[] row2 = [field20t31,field21t31,field22t31,field23t31,field24t31]
+
+Field field30t31 = new Field(3,0,4)
+Field field31t31 = new Field(3,1,5)
+Field field32t31 = new Field(3,2,4)
+Field field33t31 = new Field(3,3,1)
+Field field34t31 = new Field(3,4,6)
+Field[] row3 = [field30t31,field31t31,field32t31,field33t31,field34t31]
+
+Field field40t31 = new Field(4,0,4)
+Field field41t31 = new Field(4,1,4)
+Field field42t31 = new Field(4,2,3)
+Field field43t31 = new Field(4,3,1)
+Field field44t31 = new Field(4,4,4)
+Field[] row4 = [field40t31,field41t31,field42t31,field43t31,field44t31]
+
+Field field50t31 = new Field(5,0,4)
+Field field51t31 = new Field(5,1,4)
+Field field52t31 = new Field(5,2,4)
+Field field53t31 = new Field(5,3,4)
+Field field54t31 = new Field(5,4,3)
+Field[] row5 = [field50t31,field51t31,field52t31,field53t31,field54t31]
+
+Field[][] board31 = [row0,row1,row2,row3,row4,row5]
+Testing testingObject31 = new Testing(board31)
+
+board31 hat folgende Form:
+2 1 1 1 1
+5 1 1 1 1
+1 3 2 1 1
+4 5 4 1 6
+4 4 3 1 4
+4 4 4 4 3
+
+testingObject31.testStrategy01() -> returns 5
+
+Field field00t32 = new Field(0,0,3)
+Field field01t32 = new Field(0,1,1)
+Field field02t32 = new Field(0,2,1)
+Field field03t32 = new Field(0,3,1)
+Field[] row0 = [field00t32,field01t32,field02t32,field03t32]
+
+Field field10t32 = new Field(1,0,4)
+Field field11t32 = new Field(1,1,5)
+Field field12t32 = new Field(1,2,2)
+Field field13t32 = new Field(1,3,1)
+Field[] row1 = [field10t32,field11t32,field12t32,field13t32]
+
+Field field20t32 = new Field(2,0,2)
+Field field21t32 = new Field(2,1,3)
+Field field22t32 = new Field(2,2,5)
+Field field23t32 = new Field(2,3,3)
+Field[] row2 = [field20t32,field21t32,field22t32,field23t32]
+
+Field[][] board32 = [row0,row1,row2]
+Testing testingObject32 = new Testing(board32)
+
+board32 hat folgende Form:
+3 1 1 1
+4 5 2 1
+2 3 5 3
+
+testingObject32.testStrategy01() -> returns 4
+
+--- Der Test endet hier. ---
+
+
+
+---------------------------------------Aufgabe 4--------------------------------------------
+TestInfo [taskNumber=04; testNumber=01; points=25; description=Funktion der Methode testStrategy02 - Nur genau eine Farbe waehlbar (Zahlenwert irrelevant)]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.testStrategy02() -> Methode ist public
+
+Field field00t33 = new Field(0,0,3)
+Field field01t33 = new Field(0,1,1)
+Field field02t33 = new Field(0,2,1)
+Field field03t33 = new Field(0,3,1)
+Field[] row0 = [field00t33,field01t33,field02t33,field03t33]
+
+Field field10t33 = new Field(1,0,4)
+Field field11t33 = new Field(1,1,1)
+Field field12t33 = new Field(1,2,6)
+Field field13t33 = new Field(1,3,1)
+Field[] row1 = [field10t33,field11t33,field12t33,field13t33]
+
+Field field20t33 = new Field(2,0,1)
+Field field21t33 = new Field(2,1,3)
+Field field22t33 = new Field(2,2,2)
+Field field23t33 = new Field(2,3,5)
+Field[] row2 = [field20t33,field21t33,field22t33,field23t33]
+
+Field field30t33 = new Field(3,0,6)
+Field field31t33 = new Field(3,1,4)
+Field field32t33 = new Field(3,2,6)
+Field field33t33 = new Field(3,3,1)
+Field[] row3 = [field30t33,field31t33,field32t33,field33t33]
+
+Field[][] board33 = [row0,row1,row2,row3]
+Testing testingObject33 = new Testing(board33)
+
+board33 hat folgende Form:
+3 1 1 1
+4 1 6 1
+1 3 2 5
+6 4 6 1
+
+testingObject33.testStrategy02() -> returns 3
+
+Field field00t34 = new Field(0,0,2)
+Field field01t34 = new Field(0,1,1)
+Field field02t34 = new Field(0,2,1)
+Field[] row0 = [field00t34,field01t34,field02t34]
+
+Field field10t34 = new Field(1,0,6)
+Field field11t34 = new Field(1,1,1)
+Field field12t34 = new Field(1,2,1)
+Field[] row1 = [field10t34,field11t34,field12t34]
+
+Field field20t34 = new Field(2,0,6)
+Field field21t34 = new Field(2,1,3)
+Field field22t34 = new Field(2,2,2)
+Field[] row2 = [field20t34,field21t34,field22t34]
+
+Field[][] board34 = [row0,row1,row2]
+Testing testingObject34 = new Testing(board34)
+
+board34 hat folgende Form:
+2 1 1
+6 1 1
+6 3 2
+
+testingObject34.testStrategy02() -> returns 2
+
+Field field00t35 = new Field(0,0,2)
+Field field01t35 = new Field(0,1,1)
+Field field02t35 = new Field(0,2,1)
+Field field03t35 = new Field(0,3,1)
+Field field04t35 = new Field(0,4,1)
+Field[] row0 = [field00t35,field01t35,field02t35,field03t35,field04t35]
+
+Field field10t35 = new Field(1,0,5)
+Field field11t35 = new Field(1,1,1)
+Field field12t35 = new Field(1,2,1)
+Field field13t35 = new Field(1,3,1)
+Field field14t35 = new Field(1,4,1)
+Field[] row1 = [field10t35,field11t35,field12t35,field13t35,field14t35]
+
+Field field20t35 = new Field(2,0,1)
+Field field21t35 = new Field(2,1,3)
+Field field22t35 = new Field(2,2,2)
+Field field23t35 = new Field(2,3,1)
+Field field24t35 = new Field(2,4,1)
+Field[] row2 = [field20t35,field21t35,field22t35,field23t35,field24t35]
+
+Field field30t35 = new Field(3,0,6)
+Field field31t35 = new Field(3,1,5)
+Field field32t35 = new Field(3,2,6)
+Field field33t35 = new Field(3,3,1)
+Field field34t35 = new Field(3,4,4)
+Field[] row3 = [field30t35,field31t35,field32t35,field33t35,field34t35]
+
+Field field40t35 = new Field(4,0,6)
+Field field41t35 = new Field(4,1,4)
+Field field42t35 = new Field(4,2,3)
+Field field43t35 = new Field(4,3,1)
+Field field44t35 = new Field(4,4,2)
+Field[] row4 = [field40t35,field41t35,field42t35,field43t35,field44t35]
+
+Field field50t35 = new Field(5,0,6)
+Field field51t35 = new Field(5,1,6)
+Field field52t35 = new Field(5,2,6)
+Field field53t35 = new Field(5,3,4)
+Field field54t35 = new Field(5,4,3)
+Field[] row5 = [field50t35,field51t35,field52t35,field53t35,field54t35]
+
+Field[][] board35 = [row0,row1,row2,row3,row4,row5]
+Testing testingObject35 = new Testing(board35)
+
+board35 hat folgende Form:
+2 1 1 1 1
+5 1 1 1 1
+1 3 2 1 1
+6 5 6 1 4
+6 4 3 1 2
+6 6 6 4 3
+
+testingObject35.testStrategy02() -> returns 2
+
+Field field00t36 = new Field(0,0,3)
+Field field01t36 = new Field(0,1,1)
+Field field02t36 = new Field(0,2,1)
+Field field03t36 = new Field(0,3,1)
+Field field04t36 = new Field(0,4,1)
+Field[] row0 = [field00t36,field01t36,field02t36,field03t36,field04t36]
+
+Field field10t36 = new Field(1,0,4)
+Field field11t36 = new Field(1,1,5)
+Field field12t36 = new Field(1,2,6)
+Field field13t36 = new Field(1,3,1)
+Field field14t36 = new Field(1,4,1)
+Field[] row1 = [field10t36,field11t36,field12t36,field13t36,field14t36]
+
+Field field20t36 = new Field(2,0,6)
+Field field21t36 = new Field(2,1,3)
+Field field22t36 = new Field(2,2,5)
+Field field23t36 = new Field(2,3,4)
+Field field24t36 = new Field(2,4,3)
+Field[] row2 = [field20t36,field21t36,field22t36,field23t36,field24t36]
+
+Field[][] board36 = [row0,row1,row2]
+Testing testingObject36 = new Testing(board36)
+
+board36 hat folgende Form:
+3 1 1 1 1
+4 5 6 1 1
+6 3 5 4 3
+
+testingObject36.testStrategy02() -> returns 3
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=04; testNumber=02; points=15; description=Funktion der Methode testStrategy02 - Mehrere Farben waehlbar (Zahlenwert relevant)]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.testStrategy02() -> Methode ist public
+
+Field field00t37 = new Field(0,0,2)
+Field field01t37 = new Field(0,1,1)
+Field field02t37 = new Field(0,2,1)
+Field field03t37 = new Field(0,3,1)
+Field field04t37 = new Field(0,4,1)
+Field[] row0 = [field00t37,field01t37,field02t37,field03t37,field04t37]
+
+Field field10t37 = new Field(1,0,3)
+Field field11t37 = new Field(1,1,4)
+Field field12t37 = new Field(1,2,2)
+Field field13t37 = new Field(1,3,1)
+Field field14t37 = new Field(1,4,1)
+Field[] row1 = [field10t37,field11t37,field12t37,field13t37,field14t37]
+
+Field field20t37 = new Field(2,0,5)
+Field field21t37 = new Field(2,1,1)
+Field field22t37 = new Field(2,2,3)
+Field field23t37 = new Field(2,3,4)
+Field field24t37 = new Field(2,4,1)
+Field[] row2 = [field20t37,field21t37,field22t37,field23t37,field24t37]
+
+Field field30t37 = new Field(3,0,6)
+Field field31t37 = new Field(3,1,6)
+Field field32t37 = new Field(3,2,4)
+Field field33t37 = new Field(3,3,6)
+Field field34t37 = new Field(3,4,5)
+Field[] row3 = [field30t37,field31t37,field32t37,field33t37,field34t37]
+
+Field[][] board37 = [row0,row1,row2,row3]
+Testing testingObject37 = new Testing(board37)
+
+board37 hat folgende Form:
+2 1 1 1 1
+3 4 2 1 1
+5 1 3 4 1
+6 6 4 6 5
+
+testingObject37.testStrategy02() -> returns 2
+
+Field field00t38 = new Field(0,0,2)
+Field field01t38 = new Field(0,1,1)
+Field field02t38 = new Field(0,2,1)
+Field[] row0 = [field00t38,field01t38,field02t38]
+
+Field field10t38 = new Field(1,0,4)
+Field field11t38 = new Field(1,1,1)
+Field field12t38 = new Field(1,2,4)
+Field[] row1 = [field10t38,field11t38,field12t38]
+
+Field field20t38 = new Field(2,0,6)
+Field field21t38 = new Field(2,1,2)
+Field field22t38 = new Field(2,2,3)
+Field[] row2 = [field20t38,field21t38,field22t38]
+
+Field[][] board38 = [row0,row1,row2]
+Testing testingObject38 = new Testing(board38)
+
+board38 hat folgende Form:
+2 1 1
+4 1 4
+6 2 3
+
+testingObject38.testStrategy02() -> returns 2
+
+Field field00t39 = new Field(0,0,2)
+Field field01t39 = new Field(0,1,1)
+Field field02t39 = new Field(0,2,1)
+Field field03t39 = new Field(0,3,1)
+Field field04t39 = new Field(0,4,1)
+Field[] row0 = [field00t39,field01t39,field02t39,field03t39,field04t39]
+
+Field field10t39 = new Field(1,0,5)
+Field field11t39 = new Field(1,1,1)
+Field field12t39 = new Field(1,2,1)
+Field field13t39 = new Field(1,3,1)
+Field field14t39 = new Field(1,4,1)
+Field[] row1 = [field10t39,field11t39,field12t39,field13t39,field14t39]
+
+Field field20t39 = new Field(2,0,1)
+Field field21t39 = new Field(2,1,3)
+Field field22t39 = new Field(2,2,2)
+Field field23t39 = new Field(2,3,1)
+Field field24t39 = new Field(2,4,1)
+Field[] row2 = [field20t39,field21t39,field22t39,field23t39,field24t39]
+
+Field field30t39 = new Field(3,0,6)
+Field field31t39 = new Field(3,1,5)
+Field field32t39 = new Field(3,2,6)
+Field field33t39 = new Field(3,3,1)
+Field field34t39 = new Field(3,4,3)
+Field[] row3 = [field30t39,field31t39,field32t39,field33t39,field34t39]
+
+Field field40t39 = new Field(4,0,6)
+Field field41t39 = new Field(4,1,6)
+Field field42t39 = new Field(4,2,3)
+Field field43t39 = new Field(4,3,1)
+Field field44t39 = new Field(4,4,6)
+Field[] row4 = [field40t39,field41t39,field42t39,field43t39,field44t39]
+
+Field field50t39 = new Field(5,0,6)
+Field field51t39 = new Field(5,1,6)
+Field field52t39 = new Field(5,2,6)
+Field field53t39 = new Field(5,3,2)
+Field field54t39 = new Field(5,4,3)
+Field[] row5 = [field50t39,field51t39,field52t39,field53t39,field54t39]
+
+Field[][] board39 = [row0,row1,row2,row3,row4,row5]
+Testing testingObject39 = new Testing(board39)
+
+board39 hat folgende Form:
+2 1 1 1 1
+5 1 1 1 1
+1 3 2 1 1
+6 5 6 1 3
+6 6 3 1 6
+6 6 6 2 3
+
+testingObject39.testStrategy02() -> returns 2
+
+Field field00t40 = new Field(0,0,5)
+Field field01t40 = new Field(0,1,1)
+Field field02t40 = new Field(0,2,1)
+Field field03t40 = new Field(0,3,1)
+Field field04t40 = new Field(0,4,1)
+Field[] row0 = [field00t40,field01t40,field02t40,field03t40,field04t40]
+
+Field field10t40 = new Field(1,0,6)
+Field field11t40 = new Field(1,1,5)
+Field field12t40 = new Field(1,2,3)
+Field field13t40 = new Field(1,3,1)
+Field field14t40 = new Field(1,4,1)
+Field[] row1 = [field10t40,field11t40,field12t40,field13t40,field14t40]
+
+Field field20t40 = new Field(2,0,6)
+Field field21t40 = new Field(2,1,3)
+Field field22t40 = new Field(2,2,5)
+Field field23t40 = new Field(2,3,3)
+Field field24t40 = new Field(2,4,1)
+Field[] row2 = [field20t40,field21t40,field22t40,field23t40,field24t40]
+
+Field[][] board40 = [row0,row1,row2]
+Testing testingObject40 = new Testing(board40)
+
+board40 hat folgende Form:
+5 1 1 1 1
+6 5 3 1 1
+6 3 5 3 1
+
+testingObject40.testStrategy02() -> returns 3
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=04; testNumber=03; points=10; description=Funktion der Methode testStrategy02 - Mehrere Farben waehlbar, kleinste Farbe von S1 (Zahlenwert relevant)]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.testStrategy02() -> Methode ist public
+
+Field field00t41 = new Field(0,0,2)
+Field field01t41 = new Field(0,1,1)
+Field field02t41 = new Field(0,2,1)
+Field field03t41 = new Field(0,3,1)
+Field field04t41 = new Field(0,4,1)
+Field[] row0 = [field00t41,field01t41,field02t41,field03t41,field04t41]
+
+Field field10t41 = new Field(1,0,3)
+Field field11t41 = new Field(1,1,4)
+Field field12t41 = new Field(1,2,2)
+Field field13t41 = new Field(1,3,1)
+Field field14t41 = new Field(1,4,1)
+Field[] row1 = [field10t41,field11t41,field12t41,field13t41,field14t41]
+
+Field field20t41 = new Field(2,0,5)
+Field field21t41 = new Field(2,1,6)
+Field field22t41 = new Field(2,2,3)
+Field field23t41 = new Field(2,3,4)
+Field field24t41 = new Field(2,4,1)
+Field[] row2 = [field20t41,field21t41,field22t41,field23t41,field24t41]
+
+Field field30t41 = new Field(3,0,2)
+Field field31t41 = new Field(3,1,2)
+Field field32t41 = new Field(3,2,4)
+Field field33t41 = new Field(3,3,6)
+Field field34t41 = new Field(3,4,5)
+Field[] row3 = [field30t41,field31t41,field32t41,field33t41,field34t41]
+
+Field[][] board41 = [row0,row1,row2,row3]
+Testing testingObject41 = new Testing(board41)
+
+board41 hat folgende Form:
+2 1 1 1 1
+3 4 2 1 1
+5 6 3 4 1
+2 2 4 6 5
+
+testingObject41.testStrategy02() -> returns 4
+
+Field field00t42 = new Field(0,0,2)
+Field field01t42 = new Field(0,1,1)
+Field field02t42 = new Field(0,2,1)
+Field[] row0 = [field00t42,field01t42,field02t42]
+
+Field field10t42 = new Field(1,0,4)
+Field field11t42 = new Field(1,1,1)
+Field field12t42 = new Field(1,2,4)
+Field[] row1 = [field10t42,field11t42,field12t42]
+
+Field field20t42 = new Field(2,0,2)
+Field field21t42 = new Field(2,1,2)
+Field field22t42 = new Field(2,2,3)
+Field[] row2 = [field20t42,field21t42,field22t42]
+
+Field[][] board42 = [row0,row1,row2]
+Testing testingObject42 = new Testing(board42)
+
+board42 hat folgende Form:
+2 1 1
+4 1 4
+2 2 3
+
+testingObject42.testStrategy02() -> returns 4
+
+Field field00t43 = new Field(0,0,2)
+Field field01t43 = new Field(0,1,1)
+Field field02t43 = new Field(0,2,1)
+Field field03t43 = new Field(0,3,1)
+Field field04t43 = new Field(0,4,1)
+Field[] row0 = [field00t43,field01t43,field02t43,field03t43,field04t43]
+
+Field field10t43 = new Field(1,0,5)
+Field field11t43 = new Field(1,1,1)
+Field field12t43 = new Field(1,2,1)
+Field field13t43 = new Field(1,3,1)
+Field field14t43 = new Field(1,4,1)
+Field[] row1 = [field10t43,field11t43,field12t43,field13t43,field14t43]
+
+Field field20t43 = new Field(2,0,1)
+Field field21t43 = new Field(2,1,3)
+Field field22t43 = new Field(2,2,2)
+Field field23t43 = new Field(2,3,1)
+Field field24t43 = new Field(2,4,1)
+Field[] row2 = [field20t43,field21t43,field22t43,field23t43,field24t43]
+
+Field field30t43 = new Field(3,0,2)
+Field field31t43 = new Field(3,1,5)
+Field field32t43 = new Field(3,2,6)
+Field field33t43 = new Field(3,3,1)
+Field field34t43 = new Field(3,4,3)
+Field[] row3 = [field30t43,field31t43,field32t43,field33t43,field34t43]
+
+Field field40t43 = new Field(4,0,2)
+Field field41t43 = new Field(4,1,2)
+Field field42t43 = new Field(4,2,3)
+Field field43t43 = new Field(4,3,1)
+Field field44t43 = new Field(4,4,6)
+Field[] row4 = [field40t43,field41t43,field42t43,field43t43,field44t43]
+
+Field field50t43 = new Field(5,0,2)
+Field field51t43 = new Field(5,1,2)
+Field field52t43 = new Field(5,2,2)
+Field field53t43 = new Field(5,3,2)
+Field field54t43 = new Field(5,4,3)
+Field[] row5 = [field50t43,field51t43,field52t43,field53t43,field54t43]
+
+Field[][] board43 = [row0,row1,row2,row3,row4,row5]
+Testing testingObject43 = new Testing(board43)
+
+board43 hat folgende Form:
+2 1 1 1 1
+5 1 1 1 1
+1 3 2 1 1
+2 5 6 1 3
+2 2 3 1 6
+2 2 2 2 3
+
+testingObject43.testStrategy02() -> returns 3
+
+Field field00t44 = new Field(0,0,5)
+Field field01t44 = new Field(0,1,1)
+Field field02t44 = new Field(0,2,1)
+Field field03t44 = new Field(0,3,1)
+Field field04t44 = new Field(0,4,1)
+Field[] row0 = [field00t44,field01t44,field02t44,field03t44,field04t44]
+
+Field field10t44 = new Field(1,0,3)
+Field field11t44 = new Field(1,1,5)
+Field field12t44 = new Field(1,2,3)
+Field field13t44 = new Field(1,3,1)
+Field field14t44 = new Field(1,4,1)
+Field[] row1 = [field10t44,field11t44,field12t44,field13t44,field14t44]
+
+Field field20t44 = new Field(2,0,3)
+Field field21t44 = new Field(2,1,3)
+Field field22t44 = new Field(2,2,5)
+Field field23t44 = new Field(2,3,3)
+Field field24t44 = new Field(2,4,1)
+Field[] row2 = [field20t44,field21t44,field22t44,field23t44,field24t44]
+
+Field[][] board44 = [row0,row1,row2]
+Testing testingObject44 = new Testing(board44)
+
+board44 hat folgende Form:
+5 1 1 1 1
+3 5 3 1 1
+3 3 5 3 1
+
+testingObject44.testStrategy02() -> returns 5
+
+--- Der Test endet hier. ---
+
+
+
+---------------------------------------Aufgabe 5--------------------------------------------
+TestInfo [taskNumber=04; testNumber=01; points=25; description=Funktion der Methode testStrategy03 - Nur genau eine Farbe waehlbar (Zahlenwert irrelevant)]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.testStrategy03() -> Methode ist public
+
+Field field00t45 = new Field(0,0,3)
+Field field01t45 = new Field(0,1,4)
+Field field02t45 = new Field(0,2,1)
+Field field03t45 = new Field(0,3,6)
+Field[] row0 = [field00t45,field01t45,field02t45,field03t45]
+
+Field field10t45 = new Field(1,0,1)
+Field field11t45 = new Field(1,1,1)
+Field field12t45 = new Field(1,2,3)
+Field field13t45 = new Field(1,3,4)
+Field[] row1 = [field10t45,field11t45,field12t45,field13t45]
+
+Field field20t45 = new Field(2,0,1)
+Field field21t45 = new Field(2,1,6)
+Field field22t45 = new Field(2,2,2)
+Field field23t45 = new Field(2,3,6)
+Field[] row2 = [field20t45,field21t45,field22t45,field23t45]
+
+Field field30t45 = new Field(3,0,1)
+Field field31t45 = new Field(3,1,1)
+Field field32t45 = new Field(3,2,5)
+Field field33t45 = new Field(3,3,1)
+Field[] row3 = [field30t45,field31t45,field32t45,field33t45]
+
+Field[][] board45 = [row0,row1,row2,row3]
+Testing testingObject45 = new Testing(board45)
+
+board45 hat folgende Form:
+3 4 1 6
+1 1 3 4
+1 6 2 6
+1 1 5 1
+
+testingObject45.testStrategy03() -> returns 3
+
+Field field00t46 = new Field(0,0,2)
+Field field01t46 = new Field(0,1,6)
+Field field02t46 = new Field(0,2,6)
+Field[] row0 = [field00t46,field01t46,field02t46]
+
+Field field10t46 = new Field(1,0,1)
+Field field11t46 = new Field(1,1,1)
+Field field12t46 = new Field(1,2,3)
+Field[] row1 = [field10t46,field11t46,field12t46]
+
+Field field20t46 = new Field(2,0,1)
+Field field21t46 = new Field(2,1,1)
+Field field22t46 = new Field(2,2,2)
+Field[] row2 = [field20t46,field21t46,field22t46]
+
+Field[][] board46 = [row0,row1,row2]
+Testing testingObject46 = new Testing(board46)
+
+board46 hat folgende Form:
+2 6 6
+1 1 3
+1 1 2
+
+testingObject46.testStrategy03() -> returns 2
+
+Field field00t47 = new Field(0,0,2)
+Field field01t47 = new Field(0,1,5)
+Field field02t47 = new Field(0,2,1)
+Field field03t47 = new Field(0,3,6)
+Field field04t47 = new Field(0,4,6)
+Field field05t47 = new Field(0,5,6)
+Field[] row0 = [field00t47,field01t47,field02t47,field03t47,field04t47,field05t47]
+
+Field field10t47 = new Field(1,0,1)
+Field field11t47 = new Field(1,1,1)
+Field field12t47 = new Field(1,2,3)
+Field field13t47 = new Field(1,3,5)
+Field field14t47 = new Field(1,4,4)
+Field field15t47 = new Field(1,5,6)
+Field[] row1 = [field10t47,field11t47,field12t47,field13t47,field14t47,field15t47]
+
+Field field20t47 = new Field(2,0,1)
+Field field21t47 = new Field(2,1,1)
+Field field22t47 = new Field(2,2,2)
+Field field23t47 = new Field(2,3,6)
+Field field24t47 = new Field(2,4,3)
+Field field25t47 = new Field(2,5,6)
+Field[] row2 = [field20t47,field21t47,field22t47,field23t47,field24t47,field25t47]
+
+Field field30t47 = new Field(3,0,1)
+Field field31t47 = new Field(3,1,1)
+Field field32t47 = new Field(3,2,1)
+Field field33t47 = new Field(3,3,1)
+Field field34t47 = new Field(3,4,1)
+Field field35t47 = new Field(3,5,4)
+Field[] row3 = [field30t47,field31t47,field32t47,field33t47,field34t47,field35t47]
+
+Field field40t47 = new Field(4,0,1)
+Field field41t47 = new Field(4,1,1)
+Field field42t47 = new Field(4,2,1)
+Field field43t47 = new Field(4,3,4)
+Field field44t47 = new Field(4,4,2)
+Field field45t47 = new Field(4,5,3)
+Field[] row4 = [field40t47,field41t47,field42t47,field43t47,field44t47,field45t47]
+
+Field[][] board47 = [row0,row1,row2,row3,row4]
+Testing testingObject47 = new Testing(board47)
+
+board47 hat folgende Form:
+2 5 1 6 6 6
+1 1 3 5 4 6
+1 1 2 6 3 6
+1 1 1 1 1 4
+1 1 1 4 2 3
+
+testingObject47.testStrategy03() -> returns 2
+
+Field field00t48 = new Field(0,0,3)
+Field field01t48 = new Field(0,1,4)
+Field field02t48 = new Field(0,2,6)
+Field[] row0 = [field00t48,field01t48,field02t48]
+
+Field field10t48 = new Field(1,0,1)
+Field field11t48 = new Field(1,1,5)
+Field field12t48 = new Field(1,2,3)
+Field[] row1 = [field10t48,field11t48,field12t48]
+
+Field field20t48 = new Field(2,0,1)
+Field field21t48 = new Field(2,1,6)
+Field field22t48 = new Field(2,2,5)
+Field[] row2 = [field20t48,field21t48,field22t48]
+
+Field field30t48 = new Field(3,0,1)
+Field field31t48 = new Field(3,1,1)
+Field field32t48 = new Field(3,2,4)
+Field[] row3 = [field30t48,field31t48,field32t48]
+
+Field field40t48 = new Field(4,0,1)
+Field field41t48 = new Field(4,1,1)
+Field field42t48 = new Field(4,2,3)
+Field[] row4 = [field40t48,field41t48,field42t48]
+
+Field[][] board48 = [row0,row1,row2,row3,row4]
+Testing testingObject48 = new Testing(board48)
+
+board48 hat folgende Form:
+3 4 6
+1 5 3
+1 6 5
+1 1 4
+1 1 3
+
+testingObject48.testStrategy03() -> returns 3
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=05; testNumber=02; points=15; description=Funktion der Methode testStrategy03 - Mehrere Farben waehlbar (Zahlenwert relevant)]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.testStrategy03() -> Methode ist public
+
+Field field00t49 = new Field(0,0,2)
+Field field01t49 = new Field(0,1,3)
+Field field02t49 = new Field(0,2,5)
+Field field03t49 = new Field(0,3,6)
+Field[] row0 = [field00t49,field01t49,field02t49,field03t49]
+
+Field field10t49 = new Field(1,0,1)
+Field field11t49 = new Field(1,1,4)
+Field field12t49 = new Field(1,2,1)
+Field field13t49 = new Field(1,3,6)
+Field[] row1 = [field10t49,field11t49,field12t49,field13t49]
+
+Field field20t49 = new Field(2,0,1)
+Field field21t49 = new Field(2,1,2)
+Field field22t49 = new Field(2,2,3)
+Field field23t49 = new Field(2,3,4)
+Field[] row2 = [field20t49,field21t49,field22t49,field23t49]
+
+Field field30t49 = new Field(3,0,1)
+Field field31t49 = new Field(3,1,1)
+Field field32t49 = new Field(3,2,4)
+Field field33t49 = new Field(3,3,6)
+Field[] row3 = [field30t49,field31t49,field32t49,field33t49]
+
+Field field40t49 = new Field(4,0,1)
+Field field41t49 = new Field(4,1,1)
+Field field42t49 = new Field(4,2,1)
+Field field43t49 = new Field(4,3,5)
+Field[] row4 = [field40t49,field41t49,field42t49,field43t49]
+
+Field[][] board49 = [row0,row1,row2,row3,row4]
+Testing testingObject49 = new Testing(board49)
+
+board49 hat folgende Form:
+2 3 5 6
+1 4 1 6
+1 2 3 4
+1 1 4 6
+1 1 1 5
+
+testingObject49.testStrategy03() -> returns 2
+
+Field field00t50 = new Field(0,0,2)
+Field field01t50 = new Field(0,1,4)
+Field field02t50 = new Field(0,2,6)
+Field[] row0 = [field00t50,field01t50,field02t50]
+
+Field field10t50 = new Field(1,0,1)
+Field field11t50 = new Field(1,1,1)
+Field field12t50 = new Field(1,2,2)
+Field[] row1 = [field10t50,field11t50,field12t50]
+
+Field field20t50 = new Field(2,0,1)
+Field field21t50 = new Field(2,1,4)
+Field field22t50 = new Field(2,2,3)
+Field[] row2 = [field20t50,field21t50,field22t50]
+
+Field[][] board50 = [row0,row1,row2]
+Testing testingObject50 = new Testing(board50)
+
+board50 hat folgende Form:
+2 4 6
+1 1 2
+1 4 3
+
+testingObject50.testStrategy03() -> returns 2
+
+Field field00t51 = new Field(0,0,2)
+Field field01t51 = new Field(0,1,5)
+Field field02t51 = new Field(0,2,1)
+Field field03t51 = new Field(0,3,6)
+Field field04t51 = new Field(0,4,6)
+Field field05t51 = new Field(0,5,6)
+Field[] row0 = [field00t51,field01t51,field02t51,field03t51,field04t51,field05t51]
+
+Field field10t51 = new Field(1,0,1)
+Field field11t51 = new Field(1,1,1)
+Field field12t51 = new Field(1,2,3)
+Field field13t51 = new Field(1,3,5)
+Field field14t51 = new Field(1,4,6)
+Field field15t51 = new Field(1,5,6)
+Field[] row1 = [field10t51,field11t51,field12t51,field13t51,field14t51,field15t51]
+
+Field field20t51 = new Field(2,0,1)
+Field field21t51 = new Field(2,1,1)
+Field field22t51 = new Field(2,2,2)
+Field field23t51 = new Field(2,3,6)
+Field field24t51 = new Field(2,4,3)
+Field field25t51 = new Field(2,5,6)
+Field[] row2 = [field20t51,field21t51,field22t51,field23t51,field24t51,field25t51]
+
+Field field30t51 = new Field(3,0,1)
+Field field31t51 = new Field(3,1,1)
+Field field32t51 = new Field(3,2,1)
+Field field33t51 = new Field(3,3,1)
+Field field34t51 = new Field(3,4,1)
+Field field35t51 = new Field(3,5,2)
+Field[] row3 = [field30t51,field31t51,field32t51,field33t51,field34t51,field35t51]
+
+Field field40t51 = new Field(4,0,1)
+Field field41t51 = new Field(4,1,1)
+Field field42t51 = new Field(4,2,1)
+Field field43t51 = new Field(4,3,3)
+Field field44t51 = new Field(4,4,6)
+Field field45t51 = new Field(4,5,3)
+Field[] row4 = [field40t51,field41t51,field42t51,field43t51,field44t51,field45t51]
+
+Field[][] board51 = [row0,row1,row2,row3,row4]
+Testing testingObject51 = new Testing(board51)
+
+board51 hat folgende Form:
+2 5 1 6 6 6
+1 1 3 5 6 6
+1 1 2 6 3 6
+1 1 1 1 1 2
+1 1 1 3 6 3
+
+testingObject51.testStrategy03() -> returns 2
+
+Field field00t52 = new Field(0,0,5)
+Field field01t52 = new Field(0,1,6)
+Field field02t52 = new Field(0,2,6)
+Field[] row0 = [field00t52,field01t52,field02t52]
+
+Field field10t52 = new Field(1,0,1)
+Field field11t52 = new Field(1,1,5)
+Field field12t52 = new Field(1,2,3)
+Field[] row1 = [field10t52,field11t52,field12t52]
+
+Field field20t52 = new Field(2,0,1)
+Field field21t52 = new Field(2,1,3)
+Field field22t52 = new Field(2,2,5)
+Field[] row2 = [field20t52,field21t52,field22t52]
+
+Field field30t52 = new Field(3,0,1)
+Field field31t52 = new Field(3,1,1)
+Field field32t52 = new Field(3,2,3)
+Field[] row3 = [field30t52,field31t52,field32t52]
+
+Field field40t52 = new Field(4,0,1)
+Field field41t52 = new Field(4,1,1)
+Field field42t52 = new Field(4,2,1)
+Field[] row4 = [field40t52,field41t52,field42t52]
+
+Field[][] board52 = [row0,row1,row2,row3,row4]
+Testing testingObject52 = new Testing(board52)
+
+board52 hat folgende Form:
+5 6 6
+1 5 3
+1 3 5
+1 1 3
+1 1 1
+
+testingObject52.testStrategy03() -> returns 3
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=05; testNumber=03; points=10; description=Funktion der Methode testStrategy03 - Mehrere Farben waehlbar, kleinste Farbe von S2 (Zahlenwert relevant)]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.testStrategy03() -> Methode ist public
+
+Field field00t53 = new Field(0,0,2)
+Field field01t53 = new Field(0,1,3)
+Field field02t53 = new Field(0,2,5)
+Field field03t53 = new Field(0,3,2)
+Field[] row0 = [field00t53,field01t53,field02t53,field03t53]
+
+Field field10t53 = new Field(1,0,1)
+Field field11t53 = new Field(1,1,4)
+Field field12t53 = new Field(1,2,6)
+Field field13t53 = new Field(1,3,2)
+Field[] row1 = [field10t53,field11t53,field12t53,field13t53]
+
+Field field20t53 = new Field(2,0,1)
+Field field21t53 = new Field(2,1,2)
+Field field22t53 = new Field(2,2,3)
+Field field23t53 = new Field(2,3,4)
+Field[] row2 = [field20t53,field21t53,field22t53,field23t53]
+
+Field field30t53 = new Field(3,0,1)
+Field field31t53 = new Field(3,1,1)
+Field field32t53 = new Field(3,2,4)
+Field field33t53 = new Field(3,3,6)
+Field[] row3 = [field30t53,field31t53,field32t53,field33t53]
+
+Field field40t53 = new Field(4,0,1)
+Field field41t53 = new Field(4,1,1)
+Field field42t53 = new Field(4,2,1)
+Field field43t53 = new Field(4,3,5)
+Field[] row4 = [field40t53,field41t53,field42t53,field43t53]
+
+Field[][] board53 = [row0,row1,row2,row3,row4]
+Testing testingObject53 = new Testing(board53)
+
+board53 hat folgende Form:
+2 3 5 2
+1 4 6 2
+1 2 3 4
+1 1 4 6
+1 1 1 5
+
+testingObject53.testStrategy03() -> returns 4
+
+Field field00t54 = new Field(0,0,2)
+Field field01t54 = new Field(0,1,4)
+Field field02t54 = new Field(0,2,2)
+Field[] row0 = [field00t54,field01t54,field02t54]
+
+Field field10t54 = new Field(1,0,1)
+Field field11t54 = new Field(1,1,1)
+Field field12t54 = new Field(1,2,2)
+Field[] row1 = [field10t54,field11t54,field12t54]
+
+Field field20t54 = new Field(2,0,1)
+Field field21t54 = new Field(2,1,4)
+Field field22t54 = new Field(2,2,3)
+Field[] row2 = [field20t54,field21t54,field22t54]
+
+Field[][] board54 = [row0,row1,row2]
+Testing testingObject54 = new Testing(board54)
+
+board54 hat folgende Form:
+2 4 2
+1 1 2
+1 4 3
+
+testingObject54.testStrategy03() -> returns 4
+
+Field field00t55 = new Field(0,0,2)
+Field field01t55 = new Field(0,1,5)
+Field field02t55 = new Field(0,2,1)
+Field field03t55 = new Field(0,3,2)
+Field field04t55 = new Field(0,4,2)
+Field field05t55 = new Field(0,5,2)
+Field[] row0 = [field00t55,field01t55,field02t55,field03t55,field04t55,field05t55]
+
+Field field10t55 = new Field(1,0,1)
+Field field11t55 = new Field(1,1,1)
+Field field12t55 = new Field(1,2,3)
+Field field13t55 = new Field(1,3,5)
+Field field14t55 = new Field(1,4,2)
+Field field15t55 = new Field(1,5,2)
+Field[] row1 = [field10t55,field11t55,field12t55,field13t55,field14t55,field15t55]
+
+Field field20t55 = new Field(2,0,1)
+Field field21t55 = new Field(2,1,1)
+Field field22t55 = new Field(2,2,2)
+Field field23t55 = new Field(2,3,6)
+Field field24t55 = new Field(2,4,3)
+Field field25t55 = new Field(2,5,2)
+Field[] row2 = [field20t55,field21t55,field22t55,field23t55,field24t55,field25t55]
+
+Field field30t55 = new Field(3,0,1)
+Field field31t55 = new Field(3,1,1)
+Field field32t55 = new Field(3,2,1)
+Field field33t55 = new Field(3,3,1)
+Field field34t55 = new Field(3,4,1)
+Field field35t55 = new Field(3,5,2)
+Field[] row3 = [field30t55,field31t55,field32t55,field33t55,field34t55,field35t55]
+
+Field field40t55 = new Field(4,0,1)
+Field field41t55 = new Field(4,1,1)
+Field field42t55 = new Field(4,2,1)
+Field field43t55 = new Field(4,3,3)
+Field field44t55 = new Field(4,4,6)
+Field field45t55 = new Field(4,5,3)
+Field[] row4 = [field40t55,field41t55,field42t55,field43t55,field44t55,field45t55]
+
+Field[][] board55 = [row0,row1,row2,row3,row4]
+Testing testingObject55 = new Testing(board55)
+
+board55 hat folgende Form:
+2 5 1 2 2 2
+1 1 3 5 2 2
+1 1 2 6 3 2
+1 1 1 1 1 2
+1 1 1 3 6 3
+
+testingObject55.testStrategy03() -> returns 3
+
+Field field00t56 = new Field(0,0,5)
+Field field01t56 = new Field(0,1,3)
+Field field02t56 = new Field(0,2,3)
+Field[] row0 = [field00t56,field01t56,field02t56]
+
+Field field10t56 = new Field(1,0,1)
+Field field11t56 = new Field(1,1,5)
+Field field12t56 = new Field(1,2,3)
+Field[] row1 = [field10t56,field11t56,field12t56]
+
+Field field20t56 = new Field(2,0,1)
+Field field21t56 = new Field(2,1,3)
+Field field22t56 = new Field(2,2,5)
+Field[] row2 = [field20t56,field21t56,field22t56]
+
+Field field30t56 = new Field(3,0,1)
+Field field31t56 = new Field(3,1,1)
+Field field32t56 = new Field(3,2,3)
+Field[] row3 = [field30t56,field31t56,field32t56]
+
+Field field40t56 = new Field(4,0,1)
+Field field41t56 = new Field(4,1,1)
+Field field42t56 = new Field(4,2,1)
+Field[] row4 = [field40t56,field41t56,field42t56]
+
+Field[][] board56 = [row0,row1,row2,row3,row4]
+Testing testingObject56 = new Testing(board56)
+
+board56 hat folgende Form:
+5 3 3
+1 5 3
+1 3 5
+1 1 3
+1 1 1
+
+testingObject56.testStrategy03() -> returns 5
+
+--- Der Test endet hier. ---
+
+
+
+---------------------------------------Aufgabe 6--------------------------------------------
+TestInfo [taskNumber=06; testNumber=01; points=60; description=Funktion der Methode toBoard]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Feld und mache es public: testing.Testing.board
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.toBoard(Field[][],int) -> Methode ist public
+
+Field field00t57 = new Field(0,0,5)
+Field field01t57 = new Field(0,1,6)
+Field field02t57 = new Field(0,2,1)
+Field[] row0 = [field00t57,field01t57,field02t57]
+
+Field field10t57 = new Field(1,0,4)
+Field field11t57 = new Field(1,1,5)
+Field field12t57 = new Field(1,2,6)
+Field[] row1 = [field10t57,field11t57,field12t57]
+
+Field field20t57 = new Field(2,0,2)
+Field field21t57 = new Field(2,1,3)
+Field field22t57 = new Field(2,2,4)
+Field[] row2 = [field20t57,field21t57,field22t57]
+
+Field[][] board57 = [row0,row1,row2]
+Testing testingObject57 = new Testing(board57)
+
+board57 hat folgende Form:
+5 6 1
+4 5 6
+2 3 4
+
+Field field00t58 = new Field(0,0,5)
+Field field01t58 = new Field(0,1,6)
+Field field02t58 = new Field(0,2,1)
+Field[] row0 = [field00t58,field01t58,field02t58]
+
+Field field10t58 = new Field(1,0,4)
+Field field11t58 = new Field(1,1,5)
+Field field12t58 = new Field(1,2,6)
+Field[] row1 = [field10t58,field11t58,field12t58]
+
+Field field20t58 = new Field(2,0,3)
+Field field21t58 = new Field(2,1,3)
+Field field22t58 = new Field(2,2,4)
+Field[] row2 = [field20t58,field21t58,field22t58]
+
+Field[][] board58 = [row0,row1,row2]
+Testing testingObject58 = new Testing(board58)
+
+board58 hat folgende Form:
+5 6 1
+4 5 6
+3 3 4
+
+testingObject57.toBoard(board58,2) -> returns true
+
+
+Field field00t59 = new Field(0,0,1)
+Field field01t59 = new Field(0,1,2)
+Field field02t59 = new Field(0,2,1)
+Field field03t59 = new Field(0,3,1)
+Field[] row0 = [field00t59,field01t59,field02t59,field03t59]
+
+Field field10t59 = new Field(1,0,2)
+Field field11t59 = new Field(1,1,6)
+Field field12t59 = new Field(1,2,4)
+Field field13t59 = new Field(1,3,6)
+Field[] row1 = [field10t59,field11t59,field12t59,field13t59]
+
+Field field20t59 = new Field(2,0,6)
+Field field21t59 = new Field(2,1,3)
+Field field22t59 = new Field(2,2,5)
+Field field23t59 = new Field(2,3,2)
+Field[] row2 = [field20t59,field21t59,field22t59,field23t59]
+
+Field field30t59 = new Field(3,0,4)
+Field field31t59 = new Field(3,1,4)
+Field field32t59 = new Field(3,2,6)
+Field field33t59 = new Field(3,3,1)
+Field[] row3 = [field30t59,field31t59,field32t59,field33t59]
+
+Field[][] board59 = [row0,row1,row2,row3]
+Testing testingObject59 = new Testing(board59)
+
+board59 hat folgende Form:
+1 2 1 1
+2 6 4 6
+6 3 5 2
+4 4 6 1
+
+Field field00t60 = new Field(0,0,1)
+Field field01t60 = new Field(0,1,2)
+Field field02t60 = new Field(0,2,2)
+Field field03t60 = new Field(0,3,2)
+Field[] row0 = [field00t60,field01t60,field02t60,field03t60]
+
+Field field10t60 = new Field(1,0,2)
+Field field11t60 = new Field(1,1,6)
+Field field12t60 = new Field(1,2,4)
+Field field13t60 = new Field(1,3,6)
+Field[] row1 = [field10t60,field11t60,field12t60,field13t60]
+
+Field field20t60 = new Field(2,0,6)
+Field field21t60 = new Field(2,1,6)
+Field field22t60 = new Field(2,2,5)
+Field field23t60 = new Field(2,3,2)
+Field[] row2 = [field20t60,field21t60,field22t60,field23t60]
+
+Field field30t60 = new Field(3,0,6)
+Field field31t60 = new Field(3,1,6)
+Field field32t60 = new Field(3,2,6)
+Field field33t60 = new Field(3,3,1)
+Field[] row3 = [field30t60,field31t60,field32t60,field33t60]
+
+Field[][] board60 = [row0,row1,row2,row3]
+Testing testingObject60 = new Testing(board60)
+
+board60 hat folgende Form:
+1 2 2 2
+2 6 4 6
+6 6 5 2
+6 6 6 1
+
+testingObject59.toBoard(board60,3) -> returns true
+
+
+Field field00t61 = new Field(0,0,4)
+Field field01t61 = new Field(0,1,2)
+Field field02t61 = new Field(0,2,6)
+Field field03t61 = new Field(0,3,5)
+Field field04t61 = new Field(0,4,4)
+Field[] row0 = [field00t61,field01t61,field02t61,field03t61,field04t61]
+
+Field field10t61 = new Field(1,0,6)
+Field field11t61 = new Field(1,1,3)
+Field field12t61 = new Field(1,2,1)
+Field field13t61 = new Field(1,3,2)
+Field field14t61 = new Field(1,4,6)
+Field[] row1 = [field10t61,field11t61,field12t61,field13t61,field14t61]
+
+Field field20t61 = new Field(2,0,4)
+Field field21t61 = new Field(2,1,2)
+Field field22t61 = new Field(2,2,5)
+Field field23t61 = new Field(2,3,1)
+Field field24t61 = new Field(2,4,5)
+Field[] row2 = [field20t61,field21t61,field22t61,field23t61,field24t61]
+
+Field field30t61 = new Field(3,0,2)
+Field field31t61 = new Field(3,1,1)
+Field field32t61 = new Field(3,2,6)
+Field field33t61 = new Field(3,3,4)
+Field field34t61 = new Field(3,4,6)
+Field[] row3 = [field30t61,field31t61,field32t61,field33t61,field34t61]
+
+Field[][] board61 = [row0,row1,row2,row3]
+Testing testingObject61 = new Testing(board61)
+
+board61 hat folgende Form:
+4 2 6 5 4
+6 3 1 2 6
+4 2 5 1 5
+2 1 6 4 6
+
+Field field00t62 = new Field(0,0,4)
+Field field01t62 = new Field(0,1,2)
+Field field02t62 = new Field(0,2,6)
+Field field03t62 = new Field(0,3,6)
+Field field04t62 = new Field(0,4,6)
+Field[] row0 = [field00t62,field01t62,field02t62,field03t62,field04t62]
+
+Field field10t62 = new Field(1,0,6)
+Field field11t62 = new Field(1,1,3)
+Field field12t62 = new Field(1,2,1)
+Field field13t62 = new Field(1,3,2)
+Field field14t62 = new Field(1,4,6)
+Field[] row1 = [field10t62,field11t62,field12t62,field13t62,field14t62]
+
+Field field20t62 = new Field(2,0,4)
+Field field21t62 = new Field(2,1,2)
+Field field22t62 = new Field(2,2,5)
+Field field23t62 = new Field(2,3,1)
+Field field24t62 = new Field(2,4,5)
+Field[] row2 = [field20t62,field21t62,field22t62,field23t62,field24t62]
+
+Field field30t62 = new Field(3,0,2)
+Field field31t62 = new Field(3,1,1)
+Field field32t62 = new Field(3,2,6)
+Field field33t62 = new Field(3,3,4)
+Field field34t62 = new Field(3,4,6)
+Field[] row3 = [field30t62,field31t62,field32t62,field33t62,field34t62]
+
+Field[][] board62 = [row0,row1,row2,row3]
+Testing testingObject62 = new Testing(board62)
+
+board62 hat folgende Form:
+4 2 6 6 6
+6 3 1 2 6
+4 2 5 1 5
+2 1 6 4 6
+
+testingObject61.toBoard(board62,4) -> returns true
+
+
+Field field00t63 = new Field(0,0,2)
+Field field01t63 = new Field(0,1,6)
+Field field02t63 = new Field(0,2,5)
+Field field03t63 = new Field(0,3,4)
+Field[] row0 = [field00t63,field01t63,field02t63,field03t63]
+
+Field field10t63 = new Field(1,0,3)
+Field field11t63 = new Field(1,1,1)
+Field field12t63 = new Field(1,2,2)
+Field field13t63 = new Field(1,3,6)
+Field[] row1 = [field10t63,field11t63,field12t63,field13t63]
+
+Field field20t63 = new Field(2,0,5)
+Field field21t63 = new Field(2,1,2)
+Field field22t63 = new Field(2,2,4)
+Field field23t63 = new Field(2,3,1)
+Field[] row2 = [field20t63,field21t63,field22t63,field23t63]
+
+Field field30t63 = new Field(3,0,2)
+Field field31t63 = new Field(3,1,5)
+Field field32t63 = new Field(3,2,1)
+Field field33t63 = new Field(3,3,5)
+Field[] row3 = [field30t63,field31t63,field32t63,field33t63]
+
+Field field40t63 = new Field(4,0,1)
+Field field41t63 = new Field(4,1,6)
+Field field42t63 = new Field(4,2,4)
+Field field43t63 = new Field(4,3,6)
+Field[] row4 = [field40t63,field41t63,field42t63,field43t63]
+
+Field[][] board63 = [row0,row1,row2,row3,row4]
+Testing testingObject63 = new Testing(board63)
+
+board63 hat folgende Form:
+2 6 5 4
+3 1 2 6
+5 2 4 1
+2 5 1 5
+1 6 4 6
+
+Field field00t64 = new Field(0,0,2)
+Field field01t64 = new Field(0,1,6)
+Field field02t64 = new Field(0,2,6)
+Field field03t64 = new Field(0,3,6)
+Field[] row0 = [field00t64,field01t64,field02t64,field03t64]
+
+Field field10t64 = new Field(1,0,3)
+Field field11t64 = new Field(1,1,1)
+Field field12t64 = new Field(1,2,2)
+Field field13t64 = new Field(1,3,6)
+Field[] row1 = [field10t64,field11t64,field12t64,field13t64]
+
+Field field20t64 = new Field(2,0,5)
+Field field21t64 = new Field(2,1,2)
+Field field22t64 = new Field(2,2,4)
+Field field23t64 = new Field(2,3,1)
+Field[] row2 = [field20t64,field21t64,field22t64,field23t64]
+
+Field field30t64 = new Field(3,0,2)
+Field field31t64 = new Field(3,1,5)
+Field field32t64 = new Field(3,2,1)
+Field field33t64 = new Field(3,3,5)
+Field[] row3 = [field30t64,field31t64,field32t64,field33t64]
+
+Field field40t64 = new Field(4,0,5)
+Field field41t64 = new Field(4,1,5)
+Field field42t64 = new Field(4,2,4)
+Field field43t64 = new Field(4,3,6)
+Field[] row4 = [field40t64,field41t64,field42t64,field43t64]
+
+Field[][] board64 = [row0,row1,row2,row3,row4]
+Testing testingObject64 = new Testing(board64)
+
+board64 hat folgende Form:
+2 6 6 6
+3 1 2 6
+5 2 4 1
+2 5 1 5
+5 5 4 6
+
+testingObject63.toBoard(board64,4) -> returns false
+
+
+Field field00t65 = new Field(0,0,2)
+Field field01t65 = new Field(0,1,6)
+Field field02t65 = new Field(0,2,5)
+Field field03t65 = new Field(0,3,4)
+Field[] row0 = [field00t65,field01t65,field02t65,field03t65]
+
+Field field10t65 = new Field(1,0,3)
+Field field11t65 = new Field(1,1,1)
+Field field12t65 = new Field(1,2,2)
+Field field13t65 = new Field(1,3,6)
+Field[] row1 = [field10t65,field11t65,field12t65,field13t65]
+
+Field field20t65 = new Field(2,0,2)
+Field field21t65 = new Field(2,1,5)
+Field field22t65 = new Field(2,2,1)
+Field field23t65 = new Field(2,3,5)
+Field[] row2 = [field20t65,field21t65,field22t65,field23t65]
+
+Field field30t65 = new Field(3,0,1)
+Field field31t65 = new Field(3,1,6)
+Field field32t65 = new Field(3,2,4)
+Field field33t65 = new Field(3,3,6)
+Field[] row3 = [field30t65,field31t65,field32t65,field33t65]
+
+Field[][] board65 = [row0,row1,row2,row3]
+Testing testingObject65 = new Testing(board65)
+
+board65 hat folgende Form:
+2 6 5 4
+3 1 2 6
+2 5 1 5
+1 6 4 6
+
+Field field00t66 = new Field(0,0,2)
+Field field01t66 = new Field(0,1,6)
+Field field02t66 = new Field(0,2,5)
+Field field03t66 = new Field(0,3,4)
+Field[] row0 = [field00t66,field01t66,field02t66,field03t66]
+
+Field field10t66 = new Field(1,0,3)
+Field field11t66 = new Field(1,1,1)
+Field field12t66 = new Field(1,2,2)
+Field field13t66 = new Field(1,3,6)
+Field[] row1 = [field10t66,field11t66,field12t66,field13t66]
+
+Field field20t66 = new Field(2,0,1)
+Field field21t66 = new Field(2,1,6)
+Field field22t66 = new Field(2,2,3)
+Field field23t66 = new Field(2,3,4)
+Field[] row2 = [field20t66,field21t66,field22t66,field23t66]
+
+Field field30t66 = new Field(3,0,2)
+Field field31t66 = new Field(3,1,5)
+Field field32t66 = new Field(3,2,1)
+Field field33t66 = new Field(3,3,5)
+Field[] row3 = [field30t66,field31t66,field32t66,field33t66]
+
+Field field40t66 = new Field(4,0,1)
+Field field41t66 = new Field(4,1,6)
+Field field42t66 = new Field(4,2,4)
+Field field43t66 = new Field(4,3,6)
+Field[] row4 = [field40t66,field41t66,field42t66,field43t66]
+
+Field[][] board66 = [row0,row1,row2,row3,row4]
+Testing testingObject66 = new Testing(board66)
+
+board66 hat folgende Form:
+2 6 5 4
+3 1 2 6
+1 6 3 4
+2 5 1 5
+1 6 4 6
+
+testingObject65.toBoard(board66,3) -> returns false
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=06; testNumber=02; points=35; description=Funktion der Methode toBoard | moves = 0]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Feld und mache es public: testing.Testing.board
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.toBoard(Field[][],int) -> Methode ist public
+
+Field field00t67 = new Field(0,0,5)
+Field field01t67 = new Field(0,1,6)
+Field field02t67 = new Field(0,2,1)
+Field field03t67 = new Field(0,3,2)
+Field[] row0 = [field00t67,field01t67,field02t67,field03t67]
+
+Field field10t67 = new Field(1,0,4)
+Field field11t67 = new Field(1,1,5)
+Field field12t67 = new Field(1,2,6)
+Field field13t67 = new Field(1,3,1)
+Field[] row1 = [field10t67,field11t67,field12t67,field13t67]
+
+Field field20t67 = new Field(2,0,2)
+Field field21t67 = new Field(2,1,3)
+Field field22t67 = new Field(2,2,4)
+Field field23t67 = new Field(2,3,5)
+Field[] row2 = [field20t67,field21t67,field22t67,field23t67]
+
+Field field30t67 = new Field(3,0,1)
+Field field31t67 = new Field(3,1,4)
+Field field32t67 = new Field(3,2,5)
+Field field33t67 = new Field(3,3,6)
+Field[] row3 = [field30t67,field31t67,field32t67,field33t67]
+
+Field[][] board67 = [row0,row1,row2,row3]
+Testing testingObject67 = new Testing(board67)
+
+board67 hat folgende Form:
+5 6 1 2
+4 5 6 1
+2 3 4 5
+1 4 5 6
+
+Field field00t68 = new Field(0,0,5)
+Field field01t68 = new Field(0,1,6)
+Field field02t68 = new Field(0,2,1)
+Field field03t68 = new Field(0,3,2)
+Field[] row0 = [field00t68,field01t68,field02t68,field03t68]
+
+Field field10t68 = new Field(1,0,4)
+Field field11t68 = new Field(1,1,5)
+Field field12t68 = new Field(1,2,6)
+Field field13t68 = new Field(1,3,1)
+Field[] row1 = [field10t68,field11t68,field12t68,field13t68]
+
+Field field20t68 = new Field(2,0,2)
+Field field21t68 = new Field(2,1,3)
+Field field22t68 = new Field(2,2,4)
+Field field23t68 = new Field(2,3,5)
+Field[] row2 = [field20t68,field21t68,field22t68,field23t68]
+
+Field field30t68 = new Field(3,0,1)
+Field field31t68 = new Field(3,1,4)
+Field field32t68 = new Field(3,2,5)
+Field field33t68 = new Field(3,3,6)
+Field[] row3 = [field30t68,field31t68,field32t68,field33t68]
+
+Field[][] board68 = [row0,row1,row2,row3]
+Testing testingObject68 = new Testing(board68)
+
+board68 hat folgende Form:
+5 6 1 2
+4 5 6 1
+2 3 4 5
+1 4 5 6
+
+testingObject67.toBoard(board68,0) -> returns true
+
+
+Field field00t69 = new Field(0,0,2)
+Field field01t69 = new Field(0,1,6)
+Field field02t69 = new Field(0,2,5)
+Field field03t69 = new Field(0,3,4)
+Field[] row0 = [field00t69,field01t69,field02t69,field03t69]
+
+Field field10t69 = new Field(1,0,3)
+Field field11t69 = new Field(1,1,1)
+Field field12t69 = new Field(1,2,2)
+Field field13t69 = new Field(1,3,6)
+Field[] row1 = [field10t69,field11t69,field12t69,field13t69]
+
+Field field20t69 = new Field(2,0,2)
+Field field21t69 = new Field(2,1,5)
+Field field22t69 = new Field(2,2,1)
+Field field23t69 = new Field(2,3,5)
+Field[] row2 = [field20t69,field21t69,field22t69,field23t69]
+
+Field field30t69 = new Field(3,0,1)
+Field field31t69 = new Field(3,1,6)
+Field field32t69 = new Field(3,2,4)
+Field field33t69 = new Field(3,3,6)
+Field[] row3 = [field30t69,field31t69,field32t69,field33t69]
+
+Field[][] board69 = [row0,row1,row2,row3]
+Testing testingObject69 = new Testing(board69)
+
+board69 hat folgende Form:
+2 6 5 4
+3 1 2 6
+2 5 1 5
+1 6 4 6
+
+Field field00t70 = new Field(0,0,1)
+Field field01t70 = new Field(0,1,6)
+Field field02t70 = new Field(0,2,5)
+Field field03t70 = new Field(0,3,4)
+Field[] row0 = [field00t70,field01t70,field02t70,field03t70]
+
+Field field10t70 = new Field(1,0,3)
+Field field11t70 = new Field(1,1,1)
+Field field12t70 = new Field(1,2,2)
+Field field13t70 = new Field(1,3,6)
+Field[] row1 = [field10t70,field11t70,field12t70,field13t70]
+
+Field field20t70 = new Field(2,0,2)
+Field field21t70 = new Field(2,1,5)
+Field field22t70 = new Field(2,2,1)
+Field field23t70 = new Field(2,3,5)
+Field[] row2 = [field20t70,field21t70,field22t70,field23t70]
+
+Field field30t70 = new Field(3,0,1)
+Field field31t70 = new Field(3,1,6)
+Field field32t70 = new Field(3,2,4)
+Field field33t70 = new Field(3,3,6)
+Field[] row3 = [field30t70,field31t70,field32t70,field33t70]
+
+Field[][] board70 = [row0,row1,row2,row3]
+Testing testingObject70 = new Testing(board70)
+
+board70 hat folgende Form:
+1 6 5 4
+3 1 2 6
+2 5 1 5
+1 6 4 6
+
+testingObject69.toBoard(board70,0) -> returns false
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=06; testNumber=03; points=30; description=Funktion der Methode toBoard | nur 5 Farben im board]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Feld und mache es public: testing.Testing.board
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.toBoard(Field[][],int) -> Methode ist public
+
+Field field00t71 = new Field(0,0,5)
+Field field01t71 = new Field(0,1,3)
+Field field02t71 = new Field(0,2,1)
+Field field03t71 = new Field(0,3,2)
+Field field04t71 = new Field(0,4,4)
+Field[] row0 = [field00t71,field01t71,field02t71,field03t71,field04t71]
+
+Field field10t71 = new Field(1,0,4)
+Field field11t71 = new Field(1,1,5)
+Field field12t71 = new Field(1,2,2)
+Field field13t71 = new Field(1,3,1)
+Field field14t71 = new Field(1,4,2)
+Field[] row1 = [field10t71,field11t71,field12t71,field13t71,field14t71]
+
+Field field20t71 = new Field(2,0,2)
+Field field21t71 = new Field(2,1,3)
+Field field22t71 = new Field(2,2,4)
+Field field23t71 = new Field(2,3,5)
+Field field24t71 = new Field(2,4,3)
+Field[] row2 = [field20t71,field21t71,field22t71,field23t71,field24t71]
+
+Field[][] board71 = [row0,row1,row2]
+Testing testingObject71 = new Testing(board71)
+
+board71 hat folgende Form:
+5 3 1 2 4
+4 5 2 1 2
+2 3 4 5 3
+
+Field field00t72 = new Field(0,0,5)
+Field field01t72 = new Field(0,1,3)
+Field field02t72 = new Field(0,2,1)
+Field field03t72 = new Field(0,3,2)
+Field field04t72 = new Field(0,4,4)
+Field[] row0 = [field00t72,field01t72,field02t72,field03t72,field04t72]
+
+Field field10t72 = new Field(1,0,4)
+Field field11t72 = new Field(1,1,5)
+Field field12t72 = new Field(1,2,2)
+Field field13t72 = new Field(1,3,1)
+Field field14t72 = new Field(1,4,2)
+Field[] row1 = [field10t72,field11t72,field12t72,field13t72,field14t72]
+
+Field field20t72 = new Field(2,0,6)
+Field field21t72 = new Field(2,1,3)
+Field field22t72 = new Field(2,2,4)
+Field field23t72 = new Field(2,3,5)
+Field field24t72 = new Field(2,4,3)
+Field[] row2 = [field20t72,field21t72,field22t72,field23t72,field24t72]
+
+Field[][] board72 = [row0,row1,row2]
+Testing testingObject72 = new Testing(board72)
+
+board72 hat folgende Form:
+5 3 1 2 4
+4 5 2 1 2
+6 3 4 5 3
+
+testingObject71.toBoard(board72,1) -> returns true
+
+
+Field field00t73 = new Field(0,0,1)
+Field field01t73 = new Field(0,1,2)
+Field field02t73 = new Field(0,2,1)
+Field field03t73 = new Field(0,3,3)
+Field[] row0 = [field00t73,field01t73,field02t73,field03t73]
+
+Field field10t73 = new Field(1,0,2)
+Field field11t73 = new Field(1,1,1)
+Field field12t73 = new Field(1,2,4)
+Field field13t73 = new Field(1,3,5)
+Field[] row1 = [field10t73,field11t73,field12t73,field13t73]
+
+Field field20t73 = new Field(2,0,3)
+Field field21t73 = new Field(2,1,4)
+Field field22t73 = new Field(2,2,5)
+Field field23t73 = new Field(2,3,2)
+Field[] row2 = [field20t73,field21t73,field22t73,field23t73]
+
+Field field30t73 = new Field(3,0,4)
+Field field31t73 = new Field(3,1,3)
+Field field32t73 = new Field(3,2,2)
+Field field33t73 = new Field(3,3,1)
+Field[] row3 = [field30t73,field31t73,field32t73,field33t73]
+
+Field[][] board73 = [row0,row1,row2,row3]
+Testing testingObject73 = new Testing(board73)
+
+board73 hat folgende Form:
+1 2 1 3
+2 1 4 5
+3 4 5 2
+4 3 2 1
+
+Field field00t74 = new Field(0,0,1)
+Field field01t74 = new Field(0,1,2)
+Field field02t74 = new Field(0,2,1)
+Field field03t74 = new Field(0,3,3)
+Field[] row0 = [field00t74,field01t74,field02t74,field03t74]
+
+Field field10t74 = new Field(1,0,2)
+Field field11t74 = new Field(1,1,1)
+Field field12t74 = new Field(1,2,4)
+Field field13t74 = new Field(1,3,5)
+Field[] row1 = [field10t74,field11t74,field12t74,field13t74]
+
+Field field20t74 = new Field(2,0,6)
+Field field21t74 = new Field(2,1,4)
+Field field22t74 = new Field(2,2,5)
+Field field23t74 = new Field(2,3,2)
+Field[] row2 = [field20t74,field21t74,field22t74,field23t74]
+
+Field field30t74 = new Field(3,0,6)
+Field field31t74 = new Field(3,1,6)
+Field field32t74 = new Field(3,2,2)
+Field field33t74 = new Field(3,3,1)
+Field[] row3 = [field30t74,field31t74,field32t74,field33t74]
+
+Field[][] board74 = [row0,row1,row2,row3]
+Testing testingObject74 = new Testing(board74)
+
+board74 hat folgende Form:
+1 2 1 3
+2 1 4 5
+6 4 5 2
+6 6 2 1
+
+testingObject73.toBoard(board74,5) -> returns false
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=06; testNumber=04; points=20; description=Laufzeit der Methode toBoard | timeout = 10s pro Aufruf]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Feld und mache es public: testing.Testing.board
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.toBoard(Field[][],int) -> Methode ist public
+
+Field field00t75 = new Field(0,0,3)
+Field field01t75 = new Field(0,1,4)
+Field field02t75 = new Field(0,2,6)
+Field field03t75 = new Field(0,3,1)
+Field field04t75 = new Field(0,4,2)
+Field field05t75 = new Field(0,5,4)
+Field field06t75 = new Field(0,6,6)
+Field field07t75 = new Field(0,7,3)
+Field field08t75 = new Field(0,8,1)
+Field field09t75 = new Field(0,9,2)
+Field[] row0 = [field00t75,field01t75,field02t75,field03t75,field04t75,field05t75,field06t75,field07t75,field08t75,field09t75]
+
+Field field10t75 = new Field(1,0,6)
+Field field11t75 = new Field(1,1,1)
+Field field12t75 = new Field(1,2,4)
+Field field13t75 = new Field(1,3,2)
+Field field14t75 = new Field(1,4,1)
+Field field15t75 = new Field(1,5,5)
+Field field16t75 = new Field(1,6,2)
+Field field17t75 = new Field(1,7,6)
+Field field18t75 = new Field(1,8,3)
+Field field19t75 = new Field(1,9,5)
+Field[] row1 = [field10t75,field11t75,field12t75,field13t75,field14t75,field15t75,field16t75,field17t75,field18t75,field19t75]
+
+Field field20t75 = new Field(2,0,1)
+Field field21t75 = new Field(2,1,4)
+Field field22t75 = new Field(2,2,2)
+Field field23t75 = new Field(2,3,1)
+Field field24t75 = new Field(2,4,4)
+Field field25t75 = new Field(2,5,3)
+Field field26t75 = new Field(2,6,5)
+Field field27t75 = new Field(2,7,4)
+Field field28t75 = new Field(2,8,6)
+Field field29t75 = new Field(2,9,3)
+Field[] row2 = [field20t75,field21t75,field22t75,field23t75,field24t75,field25t75,field26t75,field27t75,field28t75,field29t75]
+
+Field field30t75 = new Field(3,0,2)
+Field field31t75 = new Field(3,1,3)
+Field field32t75 = new Field(3,2,6)
+Field field33t75 = new Field(3,3,3)
+Field field34t75 = new Field(3,4,5)
+Field field35t75 = new Field(3,5,6)
+Field field36t75 = new Field(3,6,4)
+Field field37t75 = new Field(3,7,3)
+Field field38t75 = new Field(3,8,4)
+Field field39t75 = new Field(3,9,5)
+Field[] row3 = [field30t75,field31t75,field32t75,field33t75,field34t75,field35t75,field36t75,field37t75,field38t75,field39t75]
+
+Field field40t75 = new Field(4,0,3)
+Field field41t75 = new Field(4,1,6)
+Field field42t75 = new Field(4,2,1)
+Field field43t75 = new Field(4,3,5)
+Field field44t75 = new Field(4,4,4)
+Field field45t75 = new Field(4,5,3)
+Field field46t75 = new Field(4,6,2)
+Field field47t75 = new Field(4,7,6)
+Field field48t75 = new Field(4,8,2)
+Field field49t75 = new Field(4,9,3)
+Field[] row4 = [field40t75,field41t75,field42t75,field43t75,field44t75,field45t75,field46t75,field47t75,field48t75,field49t75]
+
+Field field50t75 = new Field(5,0,5)
+Field field51t75 = new Field(5,1,3)
+Field field52t75 = new Field(5,2,6)
+Field field53t75 = new Field(5,3,1)
+Field field54t75 = new Field(5,4,6)
+Field field55t75 = new Field(5,5,2)
+Field field56t75 = new Field(5,6,5)
+Field field57t75 = new Field(5,7,3)
+Field field58t75 = new Field(5,8,4)
+Field field59t75 = new Field(5,9,5)
+Field[] row5 = [field50t75,field51t75,field52t75,field53t75,field54t75,field55t75,field56t75,field57t75,field58t75,field59t75]
+
+Field field60t75 = new Field(6,0,6)
+Field field61t75 = new Field(6,1,4)
+Field field62t75 = new Field(6,2,2)
+Field field63t75 = new Field(6,3,5)
+Field field64t75 = new Field(6,4,1)
+Field field65t75 = new Field(6,5,3)
+Field field66t75 = new Field(6,6,1)
+Field field67t75 = new Field(6,7,2)
+Field field68t75 = new Field(6,8,3)
+Field field69t75 = new Field(6,9,6)
+Field[] row6 = [field60t75,field61t75,field62t75,field63t75,field64t75,field65t75,field66t75,field67t75,field68t75,field69t75]
+
+Field field70t75 = new Field(7,0,1)
+Field field71t75 = new Field(7,1,5)
+Field field72t75 = new Field(7,2,6)
+Field field73t75 = new Field(7,3,3)
+Field field74t75 = new Field(7,4,5)
+Field field75t75 = new Field(7,5,4)
+Field field76t75 = new Field(7,6,2)
+Field field77t75 = new Field(7,7,5)
+Field field78t75 = new Field(7,8,2)
+Field field79t75 = new Field(7,9,4)
+Field[] row7 = [field70t75,field71t75,field72t75,field73t75,field74t75,field75t75,field76t75,field77t75,field78t75,field79t75]
+
+Field field80t75 = new Field(8,0,5)
+Field field81t75 = new Field(8,1,3)
+Field field82t75 = new Field(8,2,1)
+Field field83t75 = new Field(8,3,5)
+Field field84t75 = new Field(8,4,4)
+Field field85t75 = new Field(8,5,5)
+Field field86t75 = new Field(8,6,6)
+Field field87t75 = new Field(8,7,4)
+Field field88t75 = new Field(8,8,6)
+Field field89t75 = new Field(8,9,3)
+Field[] row8 = [field80t75,field81t75,field82t75,field83t75,field84t75,field85t75,field86t75,field87t75,field88t75,field89t75]
+
+Field field90t75 = new Field(9,0,1)
+Field field91t75 = new Field(9,1,4)
+Field field92t75 = new Field(9,2,5)
+Field field93t75 = new Field(9,3,6)
+Field field94t75 = new Field(9,4,2)
+Field field95t75 = new Field(9,5,1)
+Field field96t75 = new Field(9,6,5)
+Field field97t75 = new Field(9,7,6)
+Field field98t75 = new Field(9,8,1)
+Field field99t75 = new Field(9,9,4)
+Field[] row9 = [field90t75,field91t75,field92t75,field93t75,field94t75,field95t75,field96t75,field97t75,field98t75,field99t75]
+
+Field[][] board75 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject75 = new Testing(board75)
+
+board75 hat folgende Form:
+3 4 6 1 2 4 6 3 1 2
+6 1 4 2 1 5 2 6 3 5
+1 4 2 1 4 3 5 4 6 3
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 5 6 3 5 4 2 5 2 4
+5 3 1 5 4 5 6 4 6 3
+1 4 5 6 2 1 5 6 1 4
+
+Field field00t76 = new Field(0,0,3)
+Field field01t76 = new Field(0,1,4)
+Field field02t76 = new Field(0,2,6)
+Field field03t76 = new Field(0,3,1)
+Field field04t76 = new Field(0,4,2)
+Field field05t76 = new Field(0,5,4)
+Field field06t76 = new Field(0,6,6)
+Field field07t76 = new Field(0,7,5)
+Field field08t76 = new Field(0,8,5)
+Field field09t76 = new Field(0,9,5)
+Field[] row0 = [field00t76,field01t76,field02t76,field03t76,field04t76,field05t76,field06t76,field07t76,field08t76,field09t76]
+
+Field field10t76 = new Field(1,0,6)
+Field field11t76 = new Field(1,1,1)
+Field field12t76 = new Field(1,2,4)
+Field field13t76 = new Field(1,3,2)
+Field field14t76 = new Field(1,4,1)
+Field field15t76 = new Field(1,5,5)
+Field field16t76 = new Field(1,6,2)
+Field field17t76 = new Field(1,7,6)
+Field field18t76 = new Field(1,8,5)
+Field field19t76 = new Field(1,9,5)
+Field[] row1 = [field10t76,field11t76,field12t76,field13t76,field14t76,field15t76,field16t76,field17t76,field18t76,field19t76]
+
+Field field20t76 = new Field(2,0,1)
+Field field21t76 = new Field(2,1,4)
+Field field22t76 = new Field(2,2,2)
+Field field23t76 = new Field(2,3,1)
+Field field24t76 = new Field(2,4,4)
+Field field25t76 = new Field(2,5,3)
+Field field26t76 = new Field(2,6,5)
+Field field27t76 = new Field(2,7,4)
+Field field28t76 = new Field(2,8,6)
+Field field29t76 = new Field(2,9,5)
+Field[] row2 = [field20t76,field21t76,field22t76,field23t76,field24t76,field25t76,field26t76,field27t76,field28t76,field29t76]
+
+Field field30t76 = new Field(3,0,2)
+Field field31t76 = new Field(3,1,3)
+Field field32t76 = new Field(3,2,6)
+Field field33t76 = new Field(3,3,3)
+Field field34t76 = new Field(3,4,5)
+Field field35t76 = new Field(3,5,6)
+Field field36t76 = new Field(3,6,4)
+Field field37t76 = new Field(3,7,3)
+Field field38t76 = new Field(3,8,4)
+Field field39t76 = new Field(3,9,5)
+Field[] row3 = [field30t76,field31t76,field32t76,field33t76,field34t76,field35t76,field36t76,field37t76,field38t76,field39t76]
+
+Field field40t76 = new Field(4,0,3)
+Field field41t76 = new Field(4,1,6)
+Field field42t76 = new Field(4,2,1)
+Field field43t76 = new Field(4,3,5)
+Field field44t76 = new Field(4,4,4)
+Field field45t76 = new Field(4,5,3)
+Field field46t76 = new Field(4,6,2)
+Field field47t76 = new Field(4,7,6)
+Field field48t76 = new Field(4,8,2)
+Field field49t76 = new Field(4,9,3)
+Field[] row4 = [field40t76,field41t76,field42t76,field43t76,field44t76,field45t76,field46t76,field47t76,field48t76,field49t76]
+
+Field field50t76 = new Field(5,0,5)
+Field field51t76 = new Field(5,1,3)
+Field field52t76 = new Field(5,2,6)
+Field field53t76 = new Field(5,3,1)
+Field field54t76 = new Field(5,4,6)
+Field field55t76 = new Field(5,5,2)
+Field field56t76 = new Field(5,6,5)
+Field field57t76 = new Field(5,7,3)
+Field field58t76 = new Field(5,8,4)
+Field field59t76 = new Field(5,9,5)
+Field[] row5 = [field50t76,field51t76,field52t76,field53t76,field54t76,field55t76,field56t76,field57t76,field58t76,field59t76]
+
+Field field60t76 = new Field(6,0,6)
+Field field61t76 = new Field(6,1,4)
+Field field62t76 = new Field(6,2,2)
+Field field63t76 = new Field(6,3,5)
+Field field64t76 = new Field(6,4,1)
+Field field65t76 = new Field(6,5,3)
+Field field66t76 = new Field(6,6,1)
+Field field67t76 = new Field(6,7,2)
+Field field68t76 = new Field(6,8,3)
+Field field69t76 = new Field(6,9,6)
+Field[] row6 = [field60t76,field61t76,field62t76,field63t76,field64t76,field65t76,field66t76,field67t76,field68t76,field69t76]
+
+Field field70t76 = new Field(7,0,1)
+Field field71t76 = new Field(7,1,4)
+Field field72t76 = new Field(7,2,4)
+Field field73t76 = new Field(7,3,3)
+Field field74t76 = new Field(7,4,5)
+Field field75t76 = new Field(7,5,4)
+Field field76t76 = new Field(7,6,2)
+Field field77t76 = new Field(7,7,5)
+Field field78t76 = new Field(7,8,2)
+Field field79t76 = new Field(7,9,4)
+Field[] row7 = [field70t76,field71t76,field72t76,field73t76,field74t76,field75t76,field76t76,field77t76,field78t76,field79t76]
+
+Field field80t76 = new Field(8,0,4)
+Field field81t76 = new Field(8,1,4)
+Field field82t76 = new Field(8,2,4)
+Field field83t76 = new Field(8,3,4)
+Field field84t76 = new Field(8,4,4)
+Field field85t76 = new Field(8,5,5)
+Field field86t76 = new Field(8,6,6)
+Field field87t76 = new Field(8,7,4)
+Field field88t76 = new Field(8,8,6)
+Field field89t76 = new Field(8,9,3)
+Field[] row8 = [field80t76,field81t76,field82t76,field83t76,field84t76,field85t76,field86t76,field87t76,field88t76,field89t76]
+
+Field field90t76 = new Field(9,0,4)
+Field field91t76 = new Field(9,1,4)
+Field field92t76 = new Field(9,2,4)
+Field field93t76 = new Field(9,3,4)
+Field field94t76 = new Field(9,4,2)
+Field field95t76 = new Field(9,5,1)
+Field field96t76 = new Field(9,6,5)
+Field field97t76 = new Field(9,7,6)
+Field field98t76 = new Field(9,8,1)
+Field field99t76 = new Field(9,9,4)
+Field[] row9 = [field90t76,field91t76,field92t76,field93t76,field94t76,field95t76,field96t76,field97t76,field98t76,field99t76]
+
+Field[][] board76 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject76 = new Testing(board76)
+
+board76 hat folgende Form:
+3 4 6 1 2 4 6 5 5 5
+6 1 4 2 1 5 2 6 5 5
+1 4 2 1 4 3 5 4 6 5
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 4 4 3 5 4 2 5 2 4
+4 4 4 4 4 5 6 4 6 3
+4 4 4 4 2 1 5 6 1 4
+
+testingObject75.toBoard(board76,10) -> returns false
+
+
+Field field00t77 = new Field(0,0,3)
+Field field01t77 = new Field(0,1,4)
+Field field02t77 = new Field(0,2,6)
+Field field03t77 = new Field(0,3,1)
+Field field04t77 = new Field(0,4,2)
+Field field05t77 = new Field(0,5,4)
+Field field06t77 = new Field(0,6,6)
+Field field07t77 = new Field(0,7,3)
+Field field08t77 = new Field(0,8,1)
+Field field09t77 = new Field(0,9,2)
+Field[] row0 = [field00t77,field01t77,field02t77,field03t77,field04t77,field05t77,field06t77,field07t77,field08t77,field09t77]
+
+Field field10t77 = new Field(1,0,6)
+Field field11t77 = new Field(1,1,1)
+Field field12t77 = new Field(1,2,4)
+Field field13t77 = new Field(1,3,2)
+Field field14t77 = new Field(1,4,1)
+Field field15t77 = new Field(1,5,5)
+Field field16t77 = new Field(1,6,2)
+Field field17t77 = new Field(1,7,6)
+Field field18t77 = new Field(1,8,3)
+Field field19t77 = new Field(1,9,5)
+Field[] row1 = [field10t77,field11t77,field12t77,field13t77,field14t77,field15t77,field16t77,field17t77,field18t77,field19t77]
+
+Field field20t77 = new Field(2,0,1)
+Field field21t77 = new Field(2,1,4)
+Field field22t77 = new Field(2,2,2)
+Field field23t77 = new Field(2,3,1)
+Field field24t77 = new Field(2,4,4)
+Field field25t77 = new Field(2,5,3)
+Field field26t77 = new Field(2,6,5)
+Field field27t77 = new Field(2,7,4)
+Field field28t77 = new Field(2,8,6)
+Field field29t77 = new Field(2,9,3)
+Field[] row2 = [field20t77,field21t77,field22t77,field23t77,field24t77,field25t77,field26t77,field27t77,field28t77,field29t77]
+
+Field field30t77 = new Field(3,0,2)
+Field field31t77 = new Field(3,1,3)
+Field field32t77 = new Field(3,2,6)
+Field field33t77 = new Field(3,3,3)
+Field field34t77 = new Field(3,4,5)
+Field field35t77 = new Field(3,5,6)
+Field field36t77 = new Field(3,6,4)
+Field field37t77 = new Field(3,7,3)
+Field field38t77 = new Field(3,8,4)
+Field field39t77 = new Field(3,9,5)
+Field[] row3 = [field30t77,field31t77,field32t77,field33t77,field34t77,field35t77,field36t77,field37t77,field38t77,field39t77]
+
+Field field40t77 = new Field(4,0,3)
+Field field41t77 = new Field(4,1,6)
+Field field42t77 = new Field(4,2,1)
+Field field43t77 = new Field(4,3,5)
+Field field44t77 = new Field(4,4,4)
+Field field45t77 = new Field(4,5,3)
+Field field46t77 = new Field(4,6,2)
+Field field47t77 = new Field(4,7,6)
+Field field48t77 = new Field(4,8,2)
+Field field49t77 = new Field(4,9,3)
+Field[] row4 = [field40t77,field41t77,field42t77,field43t77,field44t77,field45t77,field46t77,field47t77,field48t77,field49t77]
+
+Field field50t77 = new Field(5,0,5)
+Field field51t77 = new Field(5,1,3)
+Field field52t77 = new Field(5,2,6)
+Field field53t77 = new Field(5,3,1)
+Field field54t77 = new Field(5,4,6)
+Field field55t77 = new Field(5,5,2)
+Field field56t77 = new Field(5,6,5)
+Field field57t77 = new Field(5,7,3)
+Field field58t77 = new Field(5,8,4)
+Field field59t77 = new Field(5,9,5)
+Field[] row5 = [field50t77,field51t77,field52t77,field53t77,field54t77,field55t77,field56t77,field57t77,field58t77,field59t77]
+
+Field field60t77 = new Field(6,0,6)
+Field field61t77 = new Field(6,1,4)
+Field field62t77 = new Field(6,2,2)
+Field field63t77 = new Field(6,3,5)
+Field field64t77 = new Field(6,4,1)
+Field field65t77 = new Field(6,5,3)
+Field field66t77 = new Field(6,6,1)
+Field field67t77 = new Field(6,7,2)
+Field field68t77 = new Field(6,8,3)
+Field field69t77 = new Field(6,9,6)
+Field[] row6 = [field60t77,field61t77,field62t77,field63t77,field64t77,field65t77,field66t77,field67t77,field68t77,field69t77]
+
+Field field70t77 = new Field(7,0,1)
+Field field71t77 = new Field(7,1,5)
+Field field72t77 = new Field(7,2,6)
+Field field73t77 = new Field(7,3,3)
+Field field74t77 = new Field(7,4,5)
+Field field75t77 = new Field(7,5,4)
+Field field76t77 = new Field(7,6,2)
+Field field77t77 = new Field(7,7,5)
+Field field78t77 = new Field(7,8,2)
+Field field79t77 = new Field(7,9,4)
+Field[] row7 = [field70t77,field71t77,field72t77,field73t77,field74t77,field75t77,field76t77,field77t77,field78t77,field79t77]
+
+Field field80t77 = new Field(8,0,5)
+Field field81t77 = new Field(8,1,3)
+Field field82t77 = new Field(8,2,1)
+Field field83t77 = new Field(8,3,5)
+Field field84t77 = new Field(8,4,4)
+Field field85t77 = new Field(8,5,5)
+Field field86t77 = new Field(8,6,6)
+Field field87t77 = new Field(8,7,4)
+Field field88t77 = new Field(8,8,6)
+Field field89t77 = new Field(8,9,3)
+Field[] row8 = [field80t77,field81t77,field82t77,field83t77,field84t77,field85t77,field86t77,field87t77,field88t77,field89t77]
+
+Field field90t77 = new Field(9,0,1)
+Field field91t77 = new Field(9,1,4)
+Field field92t77 = new Field(9,2,5)
+Field field93t77 = new Field(9,3,6)
+Field field94t77 = new Field(9,4,2)
+Field field95t77 = new Field(9,5,1)
+Field field96t77 = new Field(9,6,5)
+Field field97t77 = new Field(9,7,6)
+Field field98t77 = new Field(9,8,1)
+Field field99t77 = new Field(9,9,4)
+Field[] row9 = [field90t77,field91t77,field92t77,field93t77,field94t77,field95t77,field96t77,field97t77,field98t77,field99t77]
+
+Field[][] board77 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject77 = new Testing(board77)
+
+board77 hat folgende Form:
+3 4 6 1 2 4 6 3 1 2
+6 1 4 2 1 5 2 6 3 5
+1 4 2 1 4 3 5 4 6 3
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 5 6 3 5 4 2 5 2 4
+5 3 1 5 4 5 6 4 6 3
+1 4 5 6 2 1 5 6 1 4
+
+Field field00t78 = new Field(0,0,3)
+Field field01t78 = new Field(0,1,4)
+Field field02t78 = new Field(0,2,6)
+Field field03t78 = new Field(0,3,1)
+Field field04t78 = new Field(0,4,2)
+Field field05t78 = new Field(0,5,4)
+Field field06t78 = new Field(0,6,6)
+Field field07t78 = new Field(0,7,5)
+Field field08t78 = new Field(0,8,5)
+Field field09t78 = new Field(0,9,5)
+Field[] row0 = [field00t78,field01t78,field02t78,field03t78,field04t78,field05t78,field06t78,field07t78,field08t78,field09t78]
+
+Field field10t78 = new Field(1,0,6)
+Field field11t78 = new Field(1,1,1)
+Field field12t78 = new Field(1,2,4)
+Field field13t78 = new Field(1,3,2)
+Field field14t78 = new Field(1,4,1)
+Field field15t78 = new Field(1,5,5)
+Field field16t78 = new Field(1,6,2)
+Field field17t78 = new Field(1,7,6)
+Field field18t78 = new Field(1,8,5)
+Field field19t78 = new Field(1,9,5)
+Field[] row1 = [field10t78,field11t78,field12t78,field13t78,field14t78,field15t78,field16t78,field17t78,field18t78,field19t78]
+
+Field field20t78 = new Field(2,0,1)
+Field field21t78 = new Field(2,1,4)
+Field field22t78 = new Field(2,2,2)
+Field field23t78 = new Field(2,3,1)
+Field field24t78 = new Field(2,4,4)
+Field field25t78 = new Field(2,5,3)
+Field field26t78 = new Field(2,6,5)
+Field field27t78 = new Field(2,7,4)
+Field field28t78 = new Field(2,8,6)
+Field field29t78 = new Field(2,9,5)
+Field[] row2 = [field20t78,field21t78,field22t78,field23t78,field24t78,field25t78,field26t78,field27t78,field28t78,field29t78]
+
+Field field30t78 = new Field(3,0,2)
+Field field31t78 = new Field(3,1,3)
+Field field32t78 = new Field(3,2,6)
+Field field33t78 = new Field(3,3,3)
+Field field34t78 = new Field(3,4,5)
+Field field35t78 = new Field(3,5,6)
+Field field36t78 = new Field(3,6,4)
+Field field37t78 = new Field(3,7,3)
+Field field38t78 = new Field(3,8,4)
+Field field39t78 = new Field(3,9,5)
+Field[] row3 = [field30t78,field31t78,field32t78,field33t78,field34t78,field35t78,field36t78,field37t78,field38t78,field39t78]
+
+Field field40t78 = new Field(4,0,3)
+Field field41t78 = new Field(4,1,6)
+Field field42t78 = new Field(4,2,1)
+Field field43t78 = new Field(4,3,5)
+Field field44t78 = new Field(4,4,4)
+Field field45t78 = new Field(4,5,3)
+Field field46t78 = new Field(4,6,2)
+Field field47t78 = new Field(4,7,6)
+Field field48t78 = new Field(4,8,2)
+Field field49t78 = new Field(4,9,3)
+Field[] row4 = [field40t78,field41t78,field42t78,field43t78,field44t78,field45t78,field46t78,field47t78,field48t78,field49t78]
+
+Field field50t78 = new Field(5,0,5)
+Field field51t78 = new Field(5,1,3)
+Field field52t78 = new Field(5,2,6)
+Field field53t78 = new Field(5,3,1)
+Field field54t78 = new Field(5,4,6)
+Field field55t78 = new Field(5,5,2)
+Field field56t78 = new Field(5,6,5)
+Field field57t78 = new Field(5,7,3)
+Field field58t78 = new Field(5,8,4)
+Field field59t78 = new Field(5,9,5)
+Field[] row5 = [field50t78,field51t78,field52t78,field53t78,field54t78,field55t78,field56t78,field57t78,field58t78,field59t78]
+
+Field field60t78 = new Field(6,0,6)
+Field field61t78 = new Field(6,1,4)
+Field field62t78 = new Field(6,2,2)
+Field field63t78 = new Field(6,3,5)
+Field field64t78 = new Field(6,4,1)
+Field field65t78 = new Field(6,5,3)
+Field field66t78 = new Field(6,6,1)
+Field field67t78 = new Field(6,7,2)
+Field field68t78 = new Field(6,8,3)
+Field field69t78 = new Field(6,9,6)
+Field[] row6 = [field60t78,field61t78,field62t78,field63t78,field64t78,field65t78,field66t78,field67t78,field68t78,field69t78]
+
+Field field70t78 = new Field(7,0,1)
+Field field71t78 = new Field(7,1,6)
+Field field72t78 = new Field(7,2,6)
+Field field73t78 = new Field(7,3,3)
+Field field74t78 = new Field(7,4,5)
+Field field75t78 = new Field(7,5,4)
+Field field76t78 = new Field(7,6,2)
+Field field77t78 = new Field(7,7,5)
+Field field78t78 = new Field(7,8,2)
+Field field79t78 = new Field(7,9,4)
+Field[] row7 = [field70t78,field71t78,field72t78,field73t78,field74t78,field75t78,field76t78,field77t78,field78t78,field79t78]
+
+Field field80t78 = new Field(8,0,6)
+Field field81t78 = new Field(8,1,6)
+Field field82t78 = new Field(8,2,6)
+Field field83t78 = new Field(8,3,6)
+Field field84t78 = new Field(8,4,4)
+Field field85t78 = new Field(8,5,5)
+Field field86t78 = new Field(8,6,6)
+Field field87t78 = new Field(8,7,4)
+Field field88t78 = new Field(8,8,6)
+Field field89t78 = new Field(8,9,3)
+Field[] row8 = [field80t78,field81t78,field82t78,field83t78,field84t78,field85t78,field86t78,field87t78,field88t78,field89t78]
+
+Field field90t78 = new Field(9,0,6)
+Field field91t78 = new Field(9,1,6)
+Field field92t78 = new Field(9,2,6)
+Field field93t78 = new Field(9,3,6)
+Field field94t78 = new Field(9,4,2)
+Field field95t78 = new Field(9,5,1)
+Field field96t78 = new Field(9,6,5)
+Field field97t78 = new Field(9,7,6)
+Field field98t78 = new Field(9,8,1)
+Field field99t78 = new Field(9,9,4)
+Field[] row9 = [field90t78,field91t78,field92t78,field93t78,field94t78,field95t78,field96t78,field97t78,field98t78,field99t78]
+
+Field[][] board78 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject78 = new Testing(board78)
+
+board78 hat folgende Form:
+3 4 6 1 2 4 6 5 5 5
+6 1 4 2 1 5 2 6 5 5
+1 4 2 1 4 3 5 4 6 5
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 6 6 3 5 4 2 5 2 4
+6 6 6 6 4 5 6 4 6 3
+6 6 6 6 2 1 5 6 1 4
+
+testingObject77.toBoard(board78,10) -> returns true
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=06; testNumber=05; points=20; description=Laufzeit der Methode toBoard | timeout = 6s pro Aufruf]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Feld und mache es public: testing.Testing.board
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.toBoard(Field[][],int) -> Methode ist public
+
+Field field00t79 = new Field(0,0,3)
+Field field01t79 = new Field(0,1,4)
+Field field02t79 = new Field(0,2,6)
+Field field03t79 = new Field(0,3,1)
+Field field04t79 = new Field(0,4,2)
+Field field05t79 = new Field(0,5,4)
+Field field06t79 = new Field(0,6,6)
+Field field07t79 = new Field(0,7,3)
+Field field08t79 = new Field(0,8,1)
+Field field09t79 = new Field(0,9,2)
+Field[] row0 = [field00t79,field01t79,field02t79,field03t79,field04t79,field05t79,field06t79,field07t79,field08t79,field09t79]
+
+Field field10t79 = new Field(1,0,6)
+Field field11t79 = new Field(1,1,1)
+Field field12t79 = new Field(1,2,4)
+Field field13t79 = new Field(1,3,2)
+Field field14t79 = new Field(1,4,1)
+Field field15t79 = new Field(1,5,5)
+Field field16t79 = new Field(1,6,2)
+Field field17t79 = new Field(1,7,6)
+Field field18t79 = new Field(1,8,3)
+Field field19t79 = new Field(1,9,5)
+Field[] row1 = [field10t79,field11t79,field12t79,field13t79,field14t79,field15t79,field16t79,field17t79,field18t79,field19t79]
+
+Field field20t79 = new Field(2,0,1)
+Field field21t79 = new Field(2,1,4)
+Field field22t79 = new Field(2,2,2)
+Field field23t79 = new Field(2,3,1)
+Field field24t79 = new Field(2,4,4)
+Field field25t79 = new Field(2,5,3)
+Field field26t79 = new Field(2,6,5)
+Field field27t79 = new Field(2,7,4)
+Field field28t79 = new Field(2,8,6)
+Field field29t79 = new Field(2,9,3)
+Field[] row2 = [field20t79,field21t79,field22t79,field23t79,field24t79,field25t79,field26t79,field27t79,field28t79,field29t79]
+
+Field field30t79 = new Field(3,0,2)
+Field field31t79 = new Field(3,1,3)
+Field field32t79 = new Field(3,2,6)
+Field field33t79 = new Field(3,3,3)
+Field field34t79 = new Field(3,4,5)
+Field field35t79 = new Field(3,5,6)
+Field field36t79 = new Field(3,6,4)
+Field field37t79 = new Field(3,7,3)
+Field field38t79 = new Field(3,8,4)
+Field field39t79 = new Field(3,9,5)
+Field[] row3 = [field30t79,field31t79,field32t79,field33t79,field34t79,field35t79,field36t79,field37t79,field38t79,field39t79]
+
+Field field40t79 = new Field(4,0,3)
+Field field41t79 = new Field(4,1,6)
+Field field42t79 = new Field(4,2,1)
+Field field43t79 = new Field(4,3,5)
+Field field44t79 = new Field(4,4,4)
+Field field45t79 = new Field(4,5,3)
+Field field46t79 = new Field(4,6,2)
+Field field47t79 = new Field(4,7,6)
+Field field48t79 = new Field(4,8,2)
+Field field49t79 = new Field(4,9,3)
+Field[] row4 = [field40t79,field41t79,field42t79,field43t79,field44t79,field45t79,field46t79,field47t79,field48t79,field49t79]
+
+Field field50t79 = new Field(5,0,5)
+Field field51t79 = new Field(5,1,3)
+Field field52t79 = new Field(5,2,6)
+Field field53t79 = new Field(5,3,1)
+Field field54t79 = new Field(5,4,6)
+Field field55t79 = new Field(5,5,2)
+Field field56t79 = new Field(5,6,5)
+Field field57t79 = new Field(5,7,3)
+Field field58t79 = new Field(5,8,4)
+Field field59t79 = new Field(5,9,5)
+Field[] row5 = [field50t79,field51t79,field52t79,field53t79,field54t79,field55t79,field56t79,field57t79,field58t79,field59t79]
+
+Field field60t79 = new Field(6,0,6)
+Field field61t79 = new Field(6,1,4)
+Field field62t79 = new Field(6,2,2)
+Field field63t79 = new Field(6,3,5)
+Field field64t79 = new Field(6,4,1)
+Field field65t79 = new Field(6,5,3)
+Field field66t79 = new Field(6,6,1)
+Field field67t79 = new Field(6,7,2)
+Field field68t79 = new Field(6,8,3)
+Field field69t79 = new Field(6,9,6)
+Field[] row6 = [field60t79,field61t79,field62t79,field63t79,field64t79,field65t79,field66t79,field67t79,field68t79,field69t79]
+
+Field field70t79 = new Field(7,0,1)
+Field field71t79 = new Field(7,1,5)
+Field field72t79 = new Field(7,2,6)
+Field field73t79 = new Field(7,3,3)
+Field field74t79 = new Field(7,4,5)
+Field field75t79 = new Field(7,5,4)
+Field field76t79 = new Field(7,6,2)
+Field field77t79 = new Field(7,7,5)
+Field field78t79 = new Field(7,8,2)
+Field field79t79 = new Field(7,9,4)
+Field[] row7 = [field70t79,field71t79,field72t79,field73t79,field74t79,field75t79,field76t79,field77t79,field78t79,field79t79]
+
+Field field80t79 = new Field(8,0,5)
+Field field81t79 = new Field(8,1,3)
+Field field82t79 = new Field(8,2,1)
+Field field83t79 = new Field(8,3,5)
+Field field84t79 = new Field(8,4,4)
+Field field85t79 = new Field(8,5,5)
+Field field86t79 = new Field(8,6,6)
+Field field87t79 = new Field(8,7,4)
+Field field88t79 = new Field(8,8,6)
+Field field89t79 = new Field(8,9,3)
+Field[] row8 = [field80t79,field81t79,field82t79,field83t79,field84t79,field85t79,field86t79,field87t79,field88t79,field89t79]
+
+Field field90t79 = new Field(9,0,1)
+Field field91t79 = new Field(9,1,4)
+Field field92t79 = new Field(9,2,5)
+Field field93t79 = new Field(9,3,6)
+Field field94t79 = new Field(9,4,2)
+Field field95t79 = new Field(9,5,1)
+Field field96t79 = new Field(9,6,5)
+Field field97t79 = new Field(9,7,6)
+Field field98t79 = new Field(9,8,1)
+Field field99t79 = new Field(9,9,4)
+Field[] row9 = [field90t79,field91t79,field92t79,field93t79,field94t79,field95t79,field96t79,field97t79,field98t79,field99t79]
+
+Field[][] board79 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject79 = new Testing(board79)
+
+board79 hat folgende Form:
+3 4 6 1 2 4 6 3 1 2
+6 1 4 2 1 5 2 6 3 5
+1 4 2 1 4 3 5 4 6 3
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 5 6 3 5 4 2 5 2 4
+5 3 1 5 4 5 6 4 6 3
+1 4 5 6 2 1 5 6 1 4
+
+Field field00t80 = new Field(0,0,3)
+Field field01t80 = new Field(0,1,4)
+Field field02t80 = new Field(0,2,6)
+Field field03t80 = new Field(0,3,1)
+Field field04t80 = new Field(0,4,2)
+Field field05t80 = new Field(0,5,4)
+Field field06t80 = new Field(0,6,6)
+Field field07t80 = new Field(0,7,5)
+Field field08t80 = new Field(0,8,5)
+Field field09t80 = new Field(0,9,5)
+Field[] row0 = [field00t80,field01t80,field02t80,field03t80,field04t80,field05t80,field06t80,field07t80,field08t80,field09t80]
+
+Field field10t80 = new Field(1,0,6)
+Field field11t80 = new Field(1,1,1)
+Field field12t80 = new Field(1,2,4)
+Field field13t80 = new Field(1,3,2)
+Field field14t80 = new Field(1,4,1)
+Field field15t80 = new Field(1,5,5)
+Field field16t80 = new Field(1,6,2)
+Field field17t80 = new Field(1,7,6)
+Field field18t80 = new Field(1,8,5)
+Field field19t80 = new Field(1,9,5)
+Field[] row1 = [field10t80,field11t80,field12t80,field13t80,field14t80,field15t80,field16t80,field17t80,field18t80,field19t80]
+
+Field field20t80 = new Field(2,0,1)
+Field field21t80 = new Field(2,1,4)
+Field field22t80 = new Field(2,2,2)
+Field field23t80 = new Field(2,3,1)
+Field field24t80 = new Field(2,4,4)
+Field field25t80 = new Field(2,5,3)
+Field field26t80 = new Field(2,6,5)
+Field field27t80 = new Field(2,7,4)
+Field field28t80 = new Field(2,8,6)
+Field field29t80 = new Field(2,9,5)
+Field[] row2 = [field20t80,field21t80,field22t80,field23t80,field24t80,field25t80,field26t80,field27t80,field28t80,field29t80]
+
+Field field30t80 = new Field(3,0,2)
+Field field31t80 = new Field(3,1,3)
+Field field32t80 = new Field(3,2,6)
+Field field33t80 = new Field(3,3,3)
+Field field34t80 = new Field(3,4,5)
+Field field35t80 = new Field(3,5,6)
+Field field36t80 = new Field(3,6,4)
+Field field37t80 = new Field(3,7,3)
+Field field38t80 = new Field(3,8,4)
+Field field39t80 = new Field(3,9,5)
+Field[] row3 = [field30t80,field31t80,field32t80,field33t80,field34t80,field35t80,field36t80,field37t80,field38t80,field39t80]
+
+Field field40t80 = new Field(4,0,3)
+Field field41t80 = new Field(4,1,6)
+Field field42t80 = new Field(4,2,1)
+Field field43t80 = new Field(4,3,5)
+Field field44t80 = new Field(4,4,4)
+Field field45t80 = new Field(4,5,3)
+Field field46t80 = new Field(4,6,2)
+Field field47t80 = new Field(4,7,6)
+Field field48t80 = new Field(4,8,2)
+Field field49t80 = new Field(4,9,3)
+Field[] row4 = [field40t80,field41t80,field42t80,field43t80,field44t80,field45t80,field46t80,field47t80,field48t80,field49t80]
+
+Field field50t80 = new Field(5,0,5)
+Field field51t80 = new Field(5,1,3)
+Field field52t80 = new Field(5,2,6)
+Field field53t80 = new Field(5,3,1)
+Field field54t80 = new Field(5,4,6)
+Field field55t80 = new Field(5,5,2)
+Field field56t80 = new Field(5,6,5)
+Field field57t80 = new Field(5,7,3)
+Field field58t80 = new Field(5,8,4)
+Field field59t80 = new Field(5,9,5)
+Field[] row5 = [field50t80,field51t80,field52t80,field53t80,field54t80,field55t80,field56t80,field57t80,field58t80,field59t80]
+
+Field field60t80 = new Field(6,0,6)
+Field field61t80 = new Field(6,1,4)
+Field field62t80 = new Field(6,2,2)
+Field field63t80 = new Field(6,3,5)
+Field field64t80 = new Field(6,4,1)
+Field field65t80 = new Field(6,5,3)
+Field field66t80 = new Field(6,6,1)
+Field field67t80 = new Field(6,7,2)
+Field field68t80 = new Field(6,8,3)
+Field field69t80 = new Field(6,9,6)
+Field[] row6 = [field60t80,field61t80,field62t80,field63t80,field64t80,field65t80,field66t80,field67t80,field68t80,field69t80]
+
+Field field70t80 = new Field(7,0,1)
+Field field71t80 = new Field(7,1,4)
+Field field72t80 = new Field(7,2,4)
+Field field73t80 = new Field(7,3,3)
+Field field74t80 = new Field(7,4,5)
+Field field75t80 = new Field(7,5,4)
+Field field76t80 = new Field(7,6,2)
+Field field77t80 = new Field(7,7,5)
+Field field78t80 = new Field(7,8,2)
+Field field79t80 = new Field(7,9,4)
+Field[] row7 = [field70t80,field71t80,field72t80,field73t80,field74t80,field75t80,field76t80,field77t80,field78t80,field79t80]
+
+Field field80t80 = new Field(8,0,4)
+Field field81t80 = new Field(8,1,4)
+Field field82t80 = new Field(8,2,4)
+Field field83t80 = new Field(8,3,4)
+Field field84t80 = new Field(8,4,4)
+Field field85t80 = new Field(8,5,5)
+Field field86t80 = new Field(8,6,6)
+Field field87t80 = new Field(8,7,4)
+Field field88t80 = new Field(8,8,6)
+Field field89t80 = new Field(8,9,3)
+Field[] row8 = [field80t80,field81t80,field82t80,field83t80,field84t80,field85t80,field86t80,field87t80,field88t80,field89t80]
+
+Field field90t80 = new Field(9,0,4)
+Field field91t80 = new Field(9,1,4)
+Field field92t80 = new Field(9,2,4)
+Field field93t80 = new Field(9,3,4)
+Field field94t80 = new Field(9,4,2)
+Field field95t80 = new Field(9,5,1)
+Field field96t80 = new Field(9,6,5)
+Field field97t80 = new Field(9,7,6)
+Field field98t80 = new Field(9,8,1)
+Field field99t80 = new Field(9,9,4)
+Field[] row9 = [field90t80,field91t80,field92t80,field93t80,field94t80,field95t80,field96t80,field97t80,field98t80,field99t80]
+
+Field[][] board80 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject80 = new Testing(board80)
+
+board80 hat folgende Form:
+3 4 6 1 2 4 6 5 5 5
+6 1 4 2 1 5 2 6 5 5
+1 4 2 1 4 3 5 4 6 5
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 4 4 3 5 4 2 5 2 4
+4 4 4 4 4 5 6 4 6 3
+4 4 4 4 2 1 5 6 1 4
+
+testingObject79.toBoard(board80,10) -> returns false
+
+
+Field field00t81 = new Field(0,0,3)
+Field field01t81 = new Field(0,1,4)
+Field field02t81 = new Field(0,2,6)
+Field field03t81 = new Field(0,3,1)
+Field field04t81 = new Field(0,4,2)
+Field field05t81 = new Field(0,5,4)
+Field field06t81 = new Field(0,6,6)
+Field field07t81 = new Field(0,7,3)
+Field field08t81 = new Field(0,8,1)
+Field field09t81 = new Field(0,9,2)
+Field[] row0 = [field00t81,field01t81,field02t81,field03t81,field04t81,field05t81,field06t81,field07t81,field08t81,field09t81]
+
+Field field10t81 = new Field(1,0,6)
+Field field11t81 = new Field(1,1,1)
+Field field12t81 = new Field(1,2,4)
+Field field13t81 = new Field(1,3,2)
+Field field14t81 = new Field(1,4,1)
+Field field15t81 = new Field(1,5,5)
+Field field16t81 = new Field(1,6,2)
+Field field17t81 = new Field(1,7,6)
+Field field18t81 = new Field(1,8,3)
+Field field19t81 = new Field(1,9,5)
+Field[] row1 = [field10t81,field11t81,field12t81,field13t81,field14t81,field15t81,field16t81,field17t81,field18t81,field19t81]
+
+Field field20t81 = new Field(2,0,1)
+Field field21t81 = new Field(2,1,4)
+Field field22t81 = new Field(2,2,2)
+Field field23t81 = new Field(2,3,1)
+Field field24t81 = new Field(2,4,4)
+Field field25t81 = new Field(2,5,3)
+Field field26t81 = new Field(2,6,5)
+Field field27t81 = new Field(2,7,4)
+Field field28t81 = new Field(2,8,6)
+Field field29t81 = new Field(2,9,3)
+Field[] row2 = [field20t81,field21t81,field22t81,field23t81,field24t81,field25t81,field26t81,field27t81,field28t81,field29t81]
+
+Field field30t81 = new Field(3,0,2)
+Field field31t81 = new Field(3,1,3)
+Field field32t81 = new Field(3,2,6)
+Field field33t81 = new Field(3,3,3)
+Field field34t81 = new Field(3,4,5)
+Field field35t81 = new Field(3,5,6)
+Field field36t81 = new Field(3,6,4)
+Field field37t81 = new Field(3,7,3)
+Field field38t81 = new Field(3,8,4)
+Field field39t81 = new Field(3,9,5)
+Field[] row3 = [field30t81,field31t81,field32t81,field33t81,field34t81,field35t81,field36t81,field37t81,field38t81,field39t81]
+
+Field field40t81 = new Field(4,0,3)
+Field field41t81 = new Field(4,1,6)
+Field field42t81 = new Field(4,2,1)
+Field field43t81 = new Field(4,3,5)
+Field field44t81 = new Field(4,4,4)
+Field field45t81 = new Field(4,5,3)
+Field field46t81 = new Field(4,6,2)
+Field field47t81 = new Field(4,7,6)
+Field field48t81 = new Field(4,8,2)
+Field field49t81 = new Field(4,9,3)
+Field[] row4 = [field40t81,field41t81,field42t81,field43t81,field44t81,field45t81,field46t81,field47t81,field48t81,field49t81]
+
+Field field50t81 = new Field(5,0,5)
+Field field51t81 = new Field(5,1,3)
+Field field52t81 = new Field(5,2,6)
+Field field53t81 = new Field(5,3,1)
+Field field54t81 = new Field(5,4,6)
+Field field55t81 = new Field(5,5,2)
+Field field56t81 = new Field(5,6,5)
+Field field57t81 = new Field(5,7,3)
+Field field58t81 = new Field(5,8,4)
+Field field59t81 = new Field(5,9,5)
+Field[] row5 = [field50t81,field51t81,field52t81,field53t81,field54t81,field55t81,field56t81,field57t81,field58t81,field59t81]
+
+Field field60t81 = new Field(6,0,6)
+Field field61t81 = new Field(6,1,4)
+Field field62t81 = new Field(6,2,2)
+Field field63t81 = new Field(6,3,5)
+Field field64t81 = new Field(6,4,1)
+Field field65t81 = new Field(6,5,3)
+Field field66t81 = new Field(6,6,1)
+Field field67t81 = new Field(6,7,2)
+Field field68t81 = new Field(6,8,3)
+Field field69t81 = new Field(6,9,6)
+Field[] row6 = [field60t81,field61t81,field62t81,field63t81,field64t81,field65t81,field66t81,field67t81,field68t81,field69t81]
+
+Field field70t81 = new Field(7,0,1)
+Field field71t81 = new Field(7,1,5)
+Field field72t81 = new Field(7,2,6)
+Field field73t81 = new Field(7,3,3)
+Field field74t81 = new Field(7,4,5)
+Field field75t81 = new Field(7,5,4)
+Field field76t81 = new Field(7,6,2)
+Field field77t81 = new Field(7,7,5)
+Field field78t81 = new Field(7,8,2)
+Field field79t81 = new Field(7,9,4)
+Field[] row7 = [field70t81,field71t81,field72t81,field73t81,field74t81,field75t81,field76t81,field77t81,field78t81,field79t81]
+
+Field field80t81 = new Field(8,0,5)
+Field field81t81 = new Field(8,1,3)
+Field field82t81 = new Field(8,2,1)
+Field field83t81 = new Field(8,3,5)
+Field field84t81 = new Field(8,4,4)
+Field field85t81 = new Field(8,5,5)
+Field field86t81 = new Field(8,6,6)
+Field field87t81 = new Field(8,7,4)
+Field field88t81 = new Field(8,8,6)
+Field field89t81 = new Field(8,9,3)
+Field[] row8 = [field80t81,field81t81,field82t81,field83t81,field84t81,field85t81,field86t81,field87t81,field88t81,field89t81]
+
+Field field90t81 = new Field(9,0,1)
+Field field91t81 = new Field(9,1,4)
+Field field92t81 = new Field(9,2,5)
+Field field93t81 = new Field(9,3,6)
+Field field94t81 = new Field(9,4,2)
+Field field95t81 = new Field(9,5,1)
+Field field96t81 = new Field(9,6,5)
+Field field97t81 = new Field(9,7,6)
+Field field98t81 = new Field(9,8,1)
+Field field99t81 = new Field(9,9,4)
+Field[] row9 = [field90t81,field91t81,field92t81,field93t81,field94t81,field95t81,field96t81,field97t81,field98t81,field99t81]
+
+Field[][] board81 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject81 = new Testing(board81)
+
+board81 hat folgende Form:
+3 4 6 1 2 4 6 3 1 2
+6 1 4 2 1 5 2 6 3 5
+1 4 2 1 4 3 5 4 6 3
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 5 6 3 5 4 2 5 2 4
+5 3 1 5 4 5 6 4 6 3
+1 4 5 6 2 1 5 6 1 4
+
+Field field00t82 = new Field(0,0,3)
+Field field01t82 = new Field(0,1,4)
+Field field02t82 = new Field(0,2,6)
+Field field03t82 = new Field(0,3,1)
+Field field04t82 = new Field(0,4,2)
+Field field05t82 = new Field(0,5,4)
+Field field06t82 = new Field(0,6,6)
+Field field07t82 = new Field(0,7,5)
+Field field08t82 = new Field(0,8,5)
+Field field09t82 = new Field(0,9,5)
+Field[] row0 = [field00t82,field01t82,field02t82,field03t82,field04t82,field05t82,field06t82,field07t82,field08t82,field09t82]
+
+Field field10t82 = new Field(1,0,6)
+Field field11t82 = new Field(1,1,1)
+Field field12t82 = new Field(1,2,4)
+Field field13t82 = new Field(1,3,2)
+Field field14t82 = new Field(1,4,1)
+Field field15t82 = new Field(1,5,5)
+Field field16t82 = new Field(1,6,2)
+Field field17t82 = new Field(1,7,6)
+Field field18t82 = new Field(1,8,5)
+Field field19t82 = new Field(1,9,5)
+Field[] row1 = [field10t82,field11t82,field12t82,field13t82,field14t82,field15t82,field16t82,field17t82,field18t82,field19t82]
+
+Field field20t82 = new Field(2,0,1)
+Field field21t82 = new Field(2,1,4)
+Field field22t82 = new Field(2,2,2)
+Field field23t82 = new Field(2,3,1)
+Field field24t82 = new Field(2,4,4)
+Field field25t82 = new Field(2,5,3)
+Field field26t82 = new Field(2,6,5)
+Field field27t82 = new Field(2,7,4)
+Field field28t82 = new Field(2,8,6)
+Field field29t82 = new Field(2,9,5)
+Field[] row2 = [field20t82,field21t82,field22t82,field23t82,field24t82,field25t82,field26t82,field27t82,field28t82,field29t82]
+
+Field field30t82 = new Field(3,0,2)
+Field field31t82 = new Field(3,1,3)
+Field field32t82 = new Field(3,2,6)
+Field field33t82 = new Field(3,3,3)
+Field field34t82 = new Field(3,4,5)
+Field field35t82 = new Field(3,5,6)
+Field field36t82 = new Field(3,6,4)
+Field field37t82 = new Field(3,7,3)
+Field field38t82 = new Field(3,8,4)
+Field field39t82 = new Field(3,9,5)
+Field[] row3 = [field30t82,field31t82,field32t82,field33t82,field34t82,field35t82,field36t82,field37t82,field38t82,field39t82]
+
+Field field40t82 = new Field(4,0,3)
+Field field41t82 = new Field(4,1,6)
+Field field42t82 = new Field(4,2,1)
+Field field43t82 = new Field(4,3,5)
+Field field44t82 = new Field(4,4,4)
+Field field45t82 = new Field(4,5,3)
+Field field46t82 = new Field(4,6,2)
+Field field47t82 = new Field(4,7,6)
+Field field48t82 = new Field(4,8,2)
+Field field49t82 = new Field(4,9,3)
+Field[] row4 = [field40t82,field41t82,field42t82,field43t82,field44t82,field45t82,field46t82,field47t82,field48t82,field49t82]
+
+Field field50t82 = new Field(5,0,5)
+Field field51t82 = new Field(5,1,3)
+Field field52t82 = new Field(5,2,6)
+Field field53t82 = new Field(5,3,1)
+Field field54t82 = new Field(5,4,6)
+Field field55t82 = new Field(5,5,2)
+Field field56t82 = new Field(5,6,5)
+Field field57t82 = new Field(5,7,3)
+Field field58t82 = new Field(5,8,4)
+Field field59t82 = new Field(5,9,5)
+Field[] row5 = [field50t82,field51t82,field52t82,field53t82,field54t82,field55t82,field56t82,field57t82,field58t82,field59t82]
+
+Field field60t82 = new Field(6,0,6)
+Field field61t82 = new Field(6,1,4)
+Field field62t82 = new Field(6,2,2)
+Field field63t82 = new Field(6,3,5)
+Field field64t82 = new Field(6,4,1)
+Field field65t82 = new Field(6,5,3)
+Field field66t82 = new Field(6,6,1)
+Field field67t82 = new Field(6,7,2)
+Field field68t82 = new Field(6,8,3)
+Field field69t82 = new Field(6,9,6)
+Field[] row6 = [field60t82,field61t82,field62t82,field63t82,field64t82,field65t82,field66t82,field67t82,field68t82,field69t82]
+
+Field field70t82 = new Field(7,0,1)
+Field field71t82 = new Field(7,1,6)
+Field field72t82 = new Field(7,2,6)
+Field field73t82 = new Field(7,3,3)
+Field field74t82 = new Field(7,4,5)
+Field field75t82 = new Field(7,5,4)
+Field field76t82 = new Field(7,6,2)
+Field field77t82 = new Field(7,7,5)
+Field field78t82 = new Field(7,8,2)
+Field field79t82 = new Field(7,9,4)
+Field[] row7 = [field70t82,field71t82,field72t82,field73t82,field74t82,field75t82,field76t82,field77t82,field78t82,field79t82]
+
+Field field80t82 = new Field(8,0,6)
+Field field81t82 = new Field(8,1,6)
+Field field82t82 = new Field(8,2,6)
+Field field83t82 = new Field(8,3,6)
+Field field84t82 = new Field(8,4,4)
+Field field85t82 = new Field(8,5,5)
+Field field86t82 = new Field(8,6,6)
+Field field87t82 = new Field(8,7,4)
+Field field88t82 = new Field(8,8,6)
+Field field89t82 = new Field(8,9,3)
+Field[] row8 = [field80t82,field81t82,field82t82,field83t82,field84t82,field85t82,field86t82,field87t82,field88t82,field89t82]
+
+Field field90t82 = new Field(9,0,6)
+Field field91t82 = new Field(9,1,6)
+Field field92t82 = new Field(9,2,6)
+Field field93t82 = new Field(9,3,6)
+Field field94t82 = new Field(9,4,2)
+Field field95t82 = new Field(9,5,1)
+Field field96t82 = new Field(9,6,5)
+Field field97t82 = new Field(9,7,6)
+Field field98t82 = new Field(9,8,1)
+Field field99t82 = new Field(9,9,4)
+Field[] row9 = [field90t82,field91t82,field92t82,field93t82,field94t82,field95t82,field96t82,field97t82,field98t82,field99t82]
+
+Field[][] board82 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject82 = new Testing(board82)
+
+board82 hat folgende Form:
+3 4 6 1 2 4 6 5 5 5
+6 1 4 2 1 5 2 6 5 5
+1 4 2 1 4 3 5 4 6 5
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 6 6 3 5 4 2 5 2 4
+6 6 6 6 4 5 6 4 6 3
+6 6 6 6 2 1 5 6 1 4
+
+testingObject81.toBoard(board82,10) -> returns true
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=06; testNumber=06; points=20; description=Laufzeit der Methode toBoard | timeout = 4s pro Aufruf]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Feld und mache es public: testing.Testing.board
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.toBoard(Field[][],int) -> Methode ist public
+
+Field field00t83 = new Field(0,0,3)
+Field field01t83 = new Field(0,1,4)
+Field field02t83 = new Field(0,2,6)
+Field field03t83 = new Field(0,3,1)
+Field field04t83 = new Field(0,4,2)
+Field field05t83 = new Field(0,5,4)
+Field field06t83 = new Field(0,6,6)
+Field field07t83 = new Field(0,7,3)
+Field field08t83 = new Field(0,8,1)
+Field field09t83 = new Field(0,9,2)
+Field[] row0 = [field00t83,field01t83,field02t83,field03t83,field04t83,field05t83,field06t83,field07t83,field08t83,field09t83]
+
+Field field10t83 = new Field(1,0,6)
+Field field11t83 = new Field(1,1,1)
+Field field12t83 = new Field(1,2,4)
+Field field13t83 = new Field(1,3,2)
+Field field14t83 = new Field(1,4,1)
+Field field15t83 = new Field(1,5,5)
+Field field16t83 = new Field(1,6,2)
+Field field17t83 = new Field(1,7,6)
+Field field18t83 = new Field(1,8,3)
+Field field19t83 = new Field(1,9,5)
+Field[] row1 = [field10t83,field11t83,field12t83,field13t83,field14t83,field15t83,field16t83,field17t83,field18t83,field19t83]
+
+Field field20t83 = new Field(2,0,1)
+Field field21t83 = new Field(2,1,4)
+Field field22t83 = new Field(2,2,2)
+Field field23t83 = new Field(2,3,1)
+Field field24t83 = new Field(2,4,4)
+Field field25t83 = new Field(2,5,3)
+Field field26t83 = new Field(2,6,5)
+Field field27t83 = new Field(2,7,4)
+Field field28t83 = new Field(2,8,6)
+Field field29t83 = new Field(2,9,3)
+Field[] row2 = [field20t83,field21t83,field22t83,field23t83,field24t83,field25t83,field26t83,field27t83,field28t83,field29t83]
+
+Field field30t83 = new Field(3,0,2)
+Field field31t83 = new Field(3,1,3)
+Field field32t83 = new Field(3,2,6)
+Field field33t83 = new Field(3,3,3)
+Field field34t83 = new Field(3,4,5)
+Field field35t83 = new Field(3,5,6)
+Field field36t83 = new Field(3,6,4)
+Field field37t83 = new Field(3,7,3)
+Field field38t83 = new Field(3,8,4)
+Field field39t83 = new Field(3,9,5)
+Field[] row3 = [field30t83,field31t83,field32t83,field33t83,field34t83,field35t83,field36t83,field37t83,field38t83,field39t83]
+
+Field field40t83 = new Field(4,0,3)
+Field field41t83 = new Field(4,1,6)
+Field field42t83 = new Field(4,2,1)
+Field field43t83 = new Field(4,3,5)
+Field field44t83 = new Field(4,4,4)
+Field field45t83 = new Field(4,5,3)
+Field field46t83 = new Field(4,6,2)
+Field field47t83 = new Field(4,7,6)
+Field field48t83 = new Field(4,8,2)
+Field field49t83 = new Field(4,9,3)
+Field[] row4 = [field40t83,field41t83,field42t83,field43t83,field44t83,field45t83,field46t83,field47t83,field48t83,field49t83]
+
+Field field50t83 = new Field(5,0,5)
+Field field51t83 = new Field(5,1,3)
+Field field52t83 = new Field(5,2,6)
+Field field53t83 = new Field(5,3,1)
+Field field54t83 = new Field(5,4,6)
+Field field55t83 = new Field(5,5,2)
+Field field56t83 = new Field(5,6,5)
+Field field57t83 = new Field(5,7,3)
+Field field58t83 = new Field(5,8,4)
+Field field59t83 = new Field(5,9,5)
+Field[] row5 = [field50t83,field51t83,field52t83,field53t83,field54t83,field55t83,field56t83,field57t83,field58t83,field59t83]
+
+Field field60t83 = new Field(6,0,6)
+Field field61t83 = new Field(6,1,4)
+Field field62t83 = new Field(6,2,2)
+Field field63t83 = new Field(6,3,5)
+Field field64t83 = new Field(6,4,1)
+Field field65t83 = new Field(6,5,3)
+Field field66t83 = new Field(6,6,1)
+Field field67t83 = new Field(6,7,2)
+Field field68t83 = new Field(6,8,3)
+Field field69t83 = new Field(6,9,6)
+Field[] row6 = [field60t83,field61t83,field62t83,field63t83,field64t83,field65t83,field66t83,field67t83,field68t83,field69t83]
+
+Field field70t83 = new Field(7,0,1)
+Field field71t83 = new Field(7,1,5)
+Field field72t83 = new Field(7,2,6)
+Field field73t83 = new Field(7,3,3)
+Field field74t83 = new Field(7,4,5)
+Field field75t83 = new Field(7,5,4)
+Field field76t83 = new Field(7,6,2)
+Field field77t83 = new Field(7,7,5)
+Field field78t83 = new Field(7,8,2)
+Field field79t83 = new Field(7,9,4)
+Field[] row7 = [field70t83,field71t83,field72t83,field73t83,field74t83,field75t83,field76t83,field77t83,field78t83,field79t83]
+
+Field field80t83 = new Field(8,0,5)
+Field field81t83 = new Field(8,1,3)
+Field field82t83 = new Field(8,2,1)
+Field field83t83 = new Field(8,3,5)
+Field field84t83 = new Field(8,4,4)
+Field field85t83 = new Field(8,5,5)
+Field field86t83 = new Field(8,6,6)
+Field field87t83 = new Field(8,7,4)
+Field field88t83 = new Field(8,8,6)
+Field field89t83 = new Field(8,9,3)
+Field[] row8 = [field80t83,field81t83,field82t83,field83t83,field84t83,field85t83,field86t83,field87t83,field88t83,field89t83]
+
+Field field90t83 = new Field(9,0,1)
+Field field91t83 = new Field(9,1,4)
+Field field92t83 = new Field(9,2,5)
+Field field93t83 = new Field(9,3,6)
+Field field94t83 = new Field(9,4,2)
+Field field95t83 = new Field(9,5,1)
+Field field96t83 = new Field(9,6,5)
+Field field97t83 = new Field(9,7,6)
+Field field98t83 = new Field(9,8,1)
+Field field99t83 = new Field(9,9,4)
+Field[] row9 = [field90t83,field91t83,field92t83,field93t83,field94t83,field95t83,field96t83,field97t83,field98t83,field99t83]
+
+Field[][] board83 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject83 = new Testing(board83)
+
+board83 hat folgende Form:
+3 4 6 1 2 4 6 3 1 2
+6 1 4 2 1 5 2 6 3 5
+1 4 2 1 4 3 5 4 6 3
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 5 6 3 5 4 2 5 2 4
+5 3 1 5 4 5 6 4 6 3
+1 4 5 6 2 1 5 6 1 4
+
+Field field00t84 = new Field(0,0,3)
+Field field01t84 = new Field(0,1,4)
+Field field02t84 = new Field(0,2,6)
+Field field03t84 = new Field(0,3,1)
+Field field04t84 = new Field(0,4,2)
+Field field05t84 = new Field(0,5,4)
+Field field06t84 = new Field(0,6,6)
+Field field07t84 = new Field(0,7,5)
+Field field08t84 = new Field(0,8,5)
+Field field09t84 = new Field(0,9,5)
+Field[] row0 = [field00t84,field01t84,field02t84,field03t84,field04t84,field05t84,field06t84,field07t84,field08t84,field09t84]
+
+Field field10t84 = new Field(1,0,6)
+Field field11t84 = new Field(1,1,1)
+Field field12t84 = new Field(1,2,4)
+Field field13t84 = new Field(1,3,2)
+Field field14t84 = new Field(1,4,1)
+Field field15t84 = new Field(1,5,5)
+Field field16t84 = new Field(1,6,2)
+Field field17t84 = new Field(1,7,6)
+Field field18t84 = new Field(1,8,5)
+Field field19t84 = new Field(1,9,5)
+Field[] row1 = [field10t84,field11t84,field12t84,field13t84,field14t84,field15t84,field16t84,field17t84,field18t84,field19t84]
+
+Field field20t84 = new Field(2,0,1)
+Field field21t84 = new Field(2,1,4)
+Field field22t84 = new Field(2,2,2)
+Field field23t84 = new Field(2,3,1)
+Field field24t84 = new Field(2,4,4)
+Field field25t84 = new Field(2,5,3)
+Field field26t84 = new Field(2,6,5)
+Field field27t84 = new Field(2,7,4)
+Field field28t84 = new Field(2,8,6)
+Field field29t84 = new Field(2,9,5)
+Field[] row2 = [field20t84,field21t84,field22t84,field23t84,field24t84,field25t84,field26t84,field27t84,field28t84,field29t84]
+
+Field field30t84 = new Field(3,0,2)
+Field field31t84 = new Field(3,1,3)
+Field field32t84 = new Field(3,2,6)
+Field field33t84 = new Field(3,3,3)
+Field field34t84 = new Field(3,4,5)
+Field field35t84 = new Field(3,5,6)
+Field field36t84 = new Field(3,6,4)
+Field field37t84 = new Field(3,7,3)
+Field field38t84 = new Field(3,8,4)
+Field field39t84 = new Field(3,9,5)
+Field[] row3 = [field30t84,field31t84,field32t84,field33t84,field34t84,field35t84,field36t84,field37t84,field38t84,field39t84]
+
+Field field40t84 = new Field(4,0,3)
+Field field41t84 = new Field(4,1,6)
+Field field42t84 = new Field(4,2,1)
+Field field43t84 = new Field(4,3,5)
+Field field44t84 = new Field(4,4,4)
+Field field45t84 = new Field(4,5,3)
+Field field46t84 = new Field(4,6,2)
+Field field47t84 = new Field(4,7,6)
+Field field48t84 = new Field(4,8,2)
+Field field49t84 = new Field(4,9,3)
+Field[] row4 = [field40t84,field41t84,field42t84,field43t84,field44t84,field45t84,field46t84,field47t84,field48t84,field49t84]
+
+Field field50t84 = new Field(5,0,5)
+Field field51t84 = new Field(5,1,3)
+Field field52t84 = new Field(5,2,6)
+Field field53t84 = new Field(5,3,1)
+Field field54t84 = new Field(5,4,6)
+Field field55t84 = new Field(5,5,2)
+Field field56t84 = new Field(5,6,5)
+Field field57t84 = new Field(5,7,3)
+Field field58t84 = new Field(5,8,4)
+Field field59t84 = new Field(5,9,5)
+Field[] row5 = [field50t84,field51t84,field52t84,field53t84,field54t84,field55t84,field56t84,field57t84,field58t84,field59t84]
+
+Field field60t84 = new Field(6,0,6)
+Field field61t84 = new Field(6,1,4)
+Field field62t84 = new Field(6,2,2)
+Field field63t84 = new Field(6,3,5)
+Field field64t84 = new Field(6,4,1)
+Field field65t84 = new Field(6,5,3)
+Field field66t84 = new Field(6,6,1)
+Field field67t84 = new Field(6,7,2)
+Field field68t84 = new Field(6,8,3)
+Field field69t84 = new Field(6,9,6)
+Field[] row6 = [field60t84,field61t84,field62t84,field63t84,field64t84,field65t84,field66t84,field67t84,field68t84,field69t84]
+
+Field field70t84 = new Field(7,0,1)
+Field field71t84 = new Field(7,1,4)
+Field field72t84 = new Field(7,2,4)
+Field field73t84 = new Field(7,3,3)
+Field field74t84 = new Field(7,4,5)
+Field field75t84 = new Field(7,5,4)
+Field field76t84 = new Field(7,6,2)
+Field field77t84 = new Field(7,7,5)
+Field field78t84 = new Field(7,8,2)
+Field field79t84 = new Field(7,9,4)
+Field[] row7 = [field70t84,field71t84,field72t84,field73t84,field74t84,field75t84,field76t84,field77t84,field78t84,field79t84]
+
+Field field80t84 = new Field(8,0,4)
+Field field81t84 = new Field(8,1,4)
+Field field82t84 = new Field(8,2,4)
+Field field83t84 = new Field(8,3,4)
+Field field84t84 = new Field(8,4,4)
+Field field85t84 = new Field(8,5,5)
+Field field86t84 = new Field(8,6,6)
+Field field87t84 = new Field(8,7,4)
+Field field88t84 = new Field(8,8,6)
+Field field89t84 = new Field(8,9,3)
+Field[] row8 = [field80t84,field81t84,field82t84,field83t84,field84t84,field85t84,field86t84,field87t84,field88t84,field89t84]
+
+Field field90t84 = new Field(9,0,4)
+Field field91t84 = new Field(9,1,4)
+Field field92t84 = new Field(9,2,4)
+Field field93t84 = new Field(9,3,4)
+Field field94t84 = new Field(9,4,2)
+Field field95t84 = new Field(9,5,1)
+Field field96t84 = new Field(9,6,5)
+Field field97t84 = new Field(9,7,6)
+Field field98t84 = new Field(9,8,1)
+Field field99t84 = new Field(9,9,4)
+Field[] row9 = [field90t84,field91t84,field92t84,field93t84,field94t84,field95t84,field96t84,field97t84,field98t84,field99t84]
+
+Field[][] board84 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject84 = new Testing(board84)
+
+board84 hat folgende Form:
+3 4 6 1 2 4 6 5 5 5
+6 1 4 2 1 5 2 6 5 5
+1 4 2 1 4 3 5 4 6 5
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 4 4 3 5 4 2 5 2 4
+4 4 4 4 4 5 6 4 6 3
+4 4 4 4 2 1 5 6 1 4
+
+testingObject83.toBoard(board84,10) -> returns false
+
+
+Field field00t85 = new Field(0,0,3)
+Field field01t85 = new Field(0,1,4)
+Field field02t85 = new Field(0,2,6)
+Field field03t85 = new Field(0,3,1)
+Field field04t85 = new Field(0,4,2)
+Field field05t85 = new Field(0,5,4)
+Field field06t85 = new Field(0,6,6)
+Field field07t85 = new Field(0,7,3)
+Field field08t85 = new Field(0,8,1)
+Field field09t85 = new Field(0,9,2)
+Field[] row0 = [field00t85,field01t85,field02t85,field03t85,field04t85,field05t85,field06t85,field07t85,field08t85,field09t85]
+
+Field field10t85 = new Field(1,0,6)
+Field field11t85 = new Field(1,1,1)
+Field field12t85 = new Field(1,2,4)
+Field field13t85 = new Field(1,3,2)
+Field field14t85 = new Field(1,4,1)
+Field field15t85 = new Field(1,5,5)
+Field field16t85 = new Field(1,6,2)
+Field field17t85 = new Field(1,7,6)
+Field field18t85 = new Field(1,8,3)
+Field field19t85 = new Field(1,9,5)
+Field[] row1 = [field10t85,field11t85,field12t85,field13t85,field14t85,field15t85,field16t85,field17t85,field18t85,field19t85]
+
+Field field20t85 = new Field(2,0,1)
+Field field21t85 = new Field(2,1,4)
+Field field22t85 = new Field(2,2,2)
+Field field23t85 = new Field(2,3,1)
+Field field24t85 = new Field(2,4,4)
+Field field25t85 = new Field(2,5,3)
+Field field26t85 = new Field(2,6,5)
+Field field27t85 = new Field(2,7,4)
+Field field28t85 = new Field(2,8,6)
+Field field29t85 = new Field(2,9,3)
+Field[] row2 = [field20t85,field21t85,field22t85,field23t85,field24t85,field25t85,field26t85,field27t85,field28t85,field29t85]
+
+Field field30t85 = new Field(3,0,2)
+Field field31t85 = new Field(3,1,3)
+Field field32t85 = new Field(3,2,6)
+Field field33t85 = new Field(3,3,3)
+Field field34t85 = new Field(3,4,5)
+Field field35t85 = new Field(3,5,6)
+Field field36t85 = new Field(3,6,4)
+Field field37t85 = new Field(3,7,3)
+Field field38t85 = new Field(3,8,4)
+Field field39t85 = new Field(3,9,5)
+Field[] row3 = [field30t85,field31t85,field32t85,field33t85,field34t85,field35t85,field36t85,field37t85,field38t85,field39t85]
+
+Field field40t85 = new Field(4,0,3)
+Field field41t85 = new Field(4,1,6)
+Field field42t85 = new Field(4,2,1)
+Field field43t85 = new Field(4,3,5)
+Field field44t85 = new Field(4,4,4)
+Field field45t85 = new Field(4,5,3)
+Field field46t85 = new Field(4,6,2)
+Field field47t85 = new Field(4,7,6)
+Field field48t85 = new Field(4,8,2)
+Field field49t85 = new Field(4,9,3)
+Field[] row4 = [field40t85,field41t85,field42t85,field43t85,field44t85,field45t85,field46t85,field47t85,field48t85,field49t85]
+
+Field field50t85 = new Field(5,0,5)
+Field field51t85 = new Field(5,1,3)
+Field field52t85 = new Field(5,2,6)
+Field field53t85 = new Field(5,3,1)
+Field field54t85 = new Field(5,4,6)
+Field field55t85 = new Field(5,5,2)
+Field field56t85 = new Field(5,6,5)
+Field field57t85 = new Field(5,7,3)
+Field field58t85 = new Field(5,8,4)
+Field field59t85 = new Field(5,9,5)
+Field[] row5 = [field50t85,field51t85,field52t85,field53t85,field54t85,field55t85,field56t85,field57t85,field58t85,field59t85]
+
+Field field60t85 = new Field(6,0,6)
+Field field61t85 = new Field(6,1,4)
+Field field62t85 = new Field(6,2,2)
+Field field63t85 = new Field(6,3,5)
+Field field64t85 = new Field(6,4,1)
+Field field65t85 = new Field(6,5,3)
+Field field66t85 = new Field(6,6,1)
+Field field67t85 = new Field(6,7,2)
+Field field68t85 = new Field(6,8,3)
+Field field69t85 = new Field(6,9,6)
+Field[] row6 = [field60t85,field61t85,field62t85,field63t85,field64t85,field65t85,field66t85,field67t85,field68t85,field69t85]
+
+Field field70t85 = new Field(7,0,1)
+Field field71t85 = new Field(7,1,5)
+Field field72t85 = new Field(7,2,6)
+Field field73t85 = new Field(7,3,3)
+Field field74t85 = new Field(7,4,5)
+Field field75t85 = new Field(7,5,4)
+Field field76t85 = new Field(7,6,2)
+Field field77t85 = new Field(7,7,5)
+Field field78t85 = new Field(7,8,2)
+Field field79t85 = new Field(7,9,4)
+Field[] row7 = [field70t85,field71t85,field72t85,field73t85,field74t85,field75t85,field76t85,field77t85,field78t85,field79t85]
+
+Field field80t85 = new Field(8,0,5)
+Field field81t85 = new Field(8,1,3)
+Field field82t85 = new Field(8,2,1)
+Field field83t85 = new Field(8,3,5)
+Field field84t85 = new Field(8,4,4)
+Field field85t85 = new Field(8,5,5)
+Field field86t85 = new Field(8,6,6)
+Field field87t85 = new Field(8,7,4)
+Field field88t85 = new Field(8,8,6)
+Field field89t85 = new Field(8,9,3)
+Field[] row8 = [field80t85,field81t85,field82t85,field83t85,field84t85,field85t85,field86t85,field87t85,field88t85,field89t85]
+
+Field field90t85 = new Field(9,0,1)
+Field field91t85 = new Field(9,1,4)
+Field field92t85 = new Field(9,2,5)
+Field field93t85 = new Field(9,3,6)
+Field field94t85 = new Field(9,4,2)
+Field field95t85 = new Field(9,5,1)
+Field field96t85 = new Field(9,6,5)
+Field field97t85 = new Field(9,7,6)
+Field field98t85 = new Field(9,8,1)
+Field field99t85 = new Field(9,9,4)
+Field[] row9 = [field90t85,field91t85,field92t85,field93t85,field94t85,field95t85,field96t85,field97t85,field98t85,field99t85]
+
+Field[][] board85 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject85 = new Testing(board85)
+
+board85 hat folgende Form:
+3 4 6 1 2 4 6 3 1 2
+6 1 4 2 1 5 2 6 3 5
+1 4 2 1 4 3 5 4 6 3
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 5 6 3 5 4 2 5 2 4
+5 3 1 5 4 5 6 4 6 3
+1 4 5 6 2 1 5 6 1 4
+
+Field field00t86 = new Field(0,0,3)
+Field field01t86 = new Field(0,1,4)
+Field field02t86 = new Field(0,2,6)
+Field field03t86 = new Field(0,3,1)
+Field field04t86 = new Field(0,4,2)
+Field field05t86 = new Field(0,5,4)
+Field field06t86 = new Field(0,6,6)
+Field field07t86 = new Field(0,7,5)
+Field field08t86 = new Field(0,8,5)
+Field field09t86 = new Field(0,9,5)
+Field[] row0 = [field00t86,field01t86,field02t86,field03t86,field04t86,field05t86,field06t86,field07t86,field08t86,field09t86]
+
+Field field10t86 = new Field(1,0,6)
+Field field11t86 = new Field(1,1,1)
+Field field12t86 = new Field(1,2,4)
+Field field13t86 = new Field(1,3,2)
+Field field14t86 = new Field(1,4,1)
+Field field15t86 = new Field(1,5,5)
+Field field16t86 = new Field(1,6,2)
+Field field17t86 = new Field(1,7,6)
+Field field18t86 = new Field(1,8,5)
+Field field19t86 = new Field(1,9,5)
+Field[] row1 = [field10t86,field11t86,field12t86,field13t86,field14t86,field15t86,field16t86,field17t86,field18t86,field19t86]
+
+Field field20t86 = new Field(2,0,1)
+Field field21t86 = new Field(2,1,4)
+Field field22t86 = new Field(2,2,2)
+Field field23t86 = new Field(2,3,1)
+Field field24t86 = new Field(2,4,4)
+Field field25t86 = new Field(2,5,3)
+Field field26t86 = new Field(2,6,5)
+Field field27t86 = new Field(2,7,4)
+Field field28t86 = new Field(2,8,6)
+Field field29t86 = new Field(2,9,5)
+Field[] row2 = [field20t86,field21t86,field22t86,field23t86,field24t86,field25t86,field26t86,field27t86,field28t86,field29t86]
+
+Field field30t86 = new Field(3,0,2)
+Field field31t86 = new Field(3,1,3)
+Field field32t86 = new Field(3,2,6)
+Field field33t86 = new Field(3,3,3)
+Field field34t86 = new Field(3,4,5)
+Field field35t86 = new Field(3,5,6)
+Field field36t86 = new Field(3,6,4)
+Field field37t86 = new Field(3,7,3)
+Field field38t86 = new Field(3,8,4)
+Field field39t86 = new Field(3,9,5)
+Field[] row3 = [field30t86,field31t86,field32t86,field33t86,field34t86,field35t86,field36t86,field37t86,field38t86,field39t86]
+
+Field field40t86 = new Field(4,0,3)
+Field field41t86 = new Field(4,1,6)
+Field field42t86 = new Field(4,2,1)
+Field field43t86 = new Field(4,3,5)
+Field field44t86 = new Field(4,4,4)
+Field field45t86 = new Field(4,5,3)
+Field field46t86 = new Field(4,6,2)
+Field field47t86 = new Field(4,7,6)
+Field field48t86 = new Field(4,8,2)
+Field field49t86 = new Field(4,9,3)
+Field[] row4 = [field40t86,field41t86,field42t86,field43t86,field44t86,field45t86,field46t86,field47t86,field48t86,field49t86]
+
+Field field50t86 = new Field(5,0,5)
+Field field51t86 = new Field(5,1,3)
+Field field52t86 = new Field(5,2,6)
+Field field53t86 = new Field(5,3,1)
+Field field54t86 = new Field(5,4,6)
+Field field55t86 = new Field(5,5,2)
+Field field56t86 = new Field(5,6,5)
+Field field57t86 = new Field(5,7,3)
+Field field58t86 = new Field(5,8,4)
+Field field59t86 = new Field(5,9,5)
+Field[] row5 = [field50t86,field51t86,field52t86,field53t86,field54t86,field55t86,field56t86,field57t86,field58t86,field59t86]
+
+Field field60t86 = new Field(6,0,6)
+Field field61t86 = new Field(6,1,4)
+Field field62t86 = new Field(6,2,2)
+Field field63t86 = new Field(6,3,5)
+Field field64t86 = new Field(6,4,1)
+Field field65t86 = new Field(6,5,3)
+Field field66t86 = new Field(6,6,1)
+Field field67t86 = new Field(6,7,2)
+Field field68t86 = new Field(6,8,3)
+Field field69t86 = new Field(6,9,6)
+Field[] row6 = [field60t86,field61t86,field62t86,field63t86,field64t86,field65t86,field66t86,field67t86,field68t86,field69t86]
+
+Field field70t86 = new Field(7,0,1)
+Field field71t86 = new Field(7,1,6)
+Field field72t86 = new Field(7,2,6)
+Field field73t86 = new Field(7,3,3)
+Field field74t86 = new Field(7,4,5)
+Field field75t86 = new Field(7,5,4)
+Field field76t86 = new Field(7,6,2)
+Field field77t86 = new Field(7,7,5)
+Field field78t86 = new Field(7,8,2)
+Field field79t86 = new Field(7,9,4)
+Field[] row7 = [field70t86,field71t86,field72t86,field73t86,field74t86,field75t86,field76t86,field77t86,field78t86,field79t86]
+
+Field field80t86 = new Field(8,0,6)
+Field field81t86 = new Field(8,1,6)
+Field field82t86 = new Field(8,2,6)
+Field field83t86 = new Field(8,3,6)
+Field field84t86 = new Field(8,4,4)
+Field field85t86 = new Field(8,5,5)
+Field field86t86 = new Field(8,6,6)
+Field field87t86 = new Field(8,7,4)
+Field field88t86 = new Field(8,8,6)
+Field field89t86 = new Field(8,9,3)
+Field[] row8 = [field80t86,field81t86,field82t86,field83t86,field84t86,field85t86,field86t86,field87t86,field88t86,field89t86]
+
+Field field90t86 = new Field(9,0,6)
+Field field91t86 = new Field(9,1,6)
+Field field92t86 = new Field(9,2,6)
+Field field93t86 = new Field(9,3,6)
+Field field94t86 = new Field(9,4,2)
+Field field95t86 = new Field(9,5,1)
+Field field96t86 = new Field(9,6,5)
+Field field97t86 = new Field(9,7,6)
+Field field98t86 = new Field(9,8,1)
+Field field99t86 = new Field(9,9,4)
+Field[] row9 = [field90t86,field91t86,field92t86,field93t86,field94t86,field95t86,field96t86,field97t86,field98t86,field99t86]
+
+Field[][] board86 = [row0,row1,row2,row3,row4,row5,row6,row7,row8,row9]
+Testing testingObject86 = new Testing(board86)
+
+board86 hat folgende Form:
+3 4 6 1 2 4 6 5 5 5
+6 1 4 2 1 5 2 6 5 5
+1 4 2 1 4 3 5 4 6 5
+2 3 6 3 5 6 4 3 4 5
+3 6 1 5 4 3 2 6 2 3
+5 3 6 1 6 2 5 3 4 5
+6 4 2 5 1 3 1 2 3 6
+1 6 6 3 5 4 2 5 2 4
+6 6 6 6 4 5 6 4 6 3
+6 6 6 6 2 1 5 6 1 4
+
+testingObject85.toBoard(board86,10) -> returns true
+
+--- Der Test endet hier. ---
+
+
+
+---------------------------------------Aufgabe 7--------------------------------------------
+TestInfo [taskNumber=07; testNumber=01; points=30; description=Funktion der Methode minMoves | nur startklare boards]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Feld und mache es public: testing.Testing.board
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.minMoves(int,int) -> Methode ist public
+
+Field field00t87 = new Field(0,0,3)
+Field field01t87 = new Field(0,1,2)
+Field field02t87 = new Field(0,2,4)
+Field field03t87 = new Field(0,3,3)
+Field field04t87 = new Field(0,4,6)
+Field field05t87 = new Field(0,5,3)
+Field field06t87 = new Field(0,6,5)
+Field field07t87 = new Field(0,7,3)
+Field[] row0 = [field00t87,field01t87,field02t87,field03t87,field04t87,field05t87,field06t87,field07t87]
+
+Field field10t87 = new Field(1,0,6)
+Field field11t87 = new Field(1,1,1)
+Field field12t87 = new Field(1,2,2)
+Field field13t87 = new Field(1,3,6)
+Field field14t87 = new Field(1,4,3)
+Field field15t87 = new Field(1,5,5)
+Field field16t87 = new Field(1,6,3)
+Field field17t87 = new Field(1,7,4)
+Field[] row1 = [field10t87,field11t87,field12t87,field13t87,field14t87,field15t87,field16t87,field17t87]
+
+Field field20t87 = new Field(2,0,4)
+Field field21t87 = new Field(2,1,6)
+Field field22t87 = new Field(2,2,4)
+Field field23t87 = new Field(2,3,2)
+Field field24t87 = new Field(2,4,5)
+Field field25t87 = new Field(2,5,2)
+Field field26t87 = new Field(2,6,4)
+Field field27t87 = new Field(2,7,2)
+Field[] row2 = [field20t87,field21t87,field22t87,field23t87,field24t87,field25t87,field26t87,field27t87]
+
+Field field30t87 = new Field(3,0,3)
+Field field31t87 = new Field(3,1,4)
+Field field32t87 = new Field(3,2,6)
+Field field33t87 = new Field(3,3,3)
+Field field34t87 = new Field(3,4,2)
+Field field35t87 = new Field(3,5,6)
+Field field36t87 = new Field(3,6,3)
+Field field37t87 = new Field(3,7,4)
+Field[] row3 = [field30t87,field31t87,field32t87,field33t87,field34t87,field35t87,field36t87,field37t87]
+
+Field field40t87 = new Field(4,0,1)
+Field field41t87 = new Field(4,1,5)
+Field field42t87 = new Field(4,2,3)
+Field field43t87 = new Field(4,3,5)
+Field field44t87 = new Field(4,4,1)
+Field field45t87 = new Field(4,5,5)
+Field field46t87 = new Field(4,6,6)
+Field field47t87 = new Field(4,7,5)
+Field[] row4 = [field40t87,field41t87,field42t87,field43t87,field44t87,field45t87,field46t87,field47t87]
+
+Field[][] board87 = [row0,row1,row2,row3,row4]
+Testing testingObject87 = new Testing(board87)
+
+board87 hat folgende Form:
+3 2 4 3 6 3 5 3
+6 1 2 6 3 5 3 4
+4 6 4 2 5 2 4 2
+3 4 6 3 2 6 3 4
+1 5 3 5 1 5 6 5
+
+testingObject87.minMoves(3,6) -> returns 17
+
+
+Field field00t88 = new Field(0,0,4)
+Field field01t88 = new Field(0,1,3)
+Field field02t88 = new Field(0,2,5)
+Field field03t88 = new Field(0,3,3)
+Field[] row0 = [field00t88,field01t88,field02t88,field03t88]
+
+Field field10t88 = new Field(1,0,1)
+Field field11t88 = new Field(1,1,4)
+Field field12t88 = new Field(1,2,1)
+Field field13t88 = new Field(1,3,4)
+Field[] row1 = [field10t88,field11t88,field12t88,field13t88]
+
+Field field20t88 = new Field(2,0,6)
+Field field21t88 = new Field(2,1,5)
+Field field22t88 = new Field(2,2,3)
+Field field23t88 = new Field(2,3,6)
+Field[] row2 = [field20t88,field21t88,field22t88,field23t88]
+
+Field field30t88 = new Field(3,0,2)
+Field field31t88 = new Field(3,1,4)
+Field field32t88 = new Field(3,2,2)
+Field field33t88 = new Field(3,3,5)
+Field[] row3 = [field30t88,field31t88,field32t88,field33t88]
+
+Field[][] board88 = [row0,row1,row2,row3]
+Testing testingObject88 = new Testing(board88)
+
+board88 hat folgende Form:
+4 3 5 3
+1 4 1 4
+6 5 3 6
+2 4 2 5
+
+testingObject88.minMoves(3,0) -> returns 0
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=07; testNumber=02; points=20; description=Funktion der Methode minMoves | nicht startklare boards]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Feld und mache es public: testing.Testing.board
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.minMoves(int,int) -> Methode ist public
+
+Field field00t89 = new Field(0,0,3)
+Field field01t89 = new Field(0,1,5)
+Field field02t89 = new Field(0,2,4)
+Field[] row0 = [field00t89,field01t89,field02t89]
+
+Field field10t89 = new Field(1,0,6)
+Field field11t89 = new Field(1,1,4)
+Field field12t89 = new Field(1,2,2)
+Field[] row1 = [field10t89,field11t89,field12t89]
+
+Field field20t89 = new Field(2,0,2)
+Field field21t89 = new Field(2,1,1)
+Field field22t89 = new Field(2,2,6)
+Field[] row2 = [field20t89,field21t89,field22t89]
+
+Field field30t89 = new Field(3,0,4)
+Field field31t89 = new Field(3,1,1)
+Field field32t89 = new Field(3,2,3)
+Field[] row3 = [field30t89,field31t89,field32t89]
+
+Field field40t89 = new Field(4,0,5)
+Field field41t89 = new Field(4,1,1)
+Field field42t89 = new Field(4,2,4)
+Field[] row4 = [field40t89,field41t89,field42t89]
+
+Field field50t89 = new Field(5,0,1)
+Field field51t89 = new Field(5,1,1)
+Field field52t89 = new Field(5,2,2)
+Field[] row5 = [field50t89,field51t89,field52t89]
+
+Field field60t89 = new Field(6,0,1)
+Field field61t89 = new Field(6,1,2)
+Field field62t89 = new Field(6,2,6)
+Field[] row6 = [field60t89,field61t89,field62t89]
+
+Field[][] board89 = [row0,row1,row2,row3,row4,row5,row6]
+Testing testingObject89 = new Testing(board89)
+
+board89 hat folgende Form:
+3 5 4
+6 4 2
+2 1 6
+4 1 3
+5 1 4
+1 1 2
+1 2 6
+
+testingObject89.minMoves(2,1) -> returns 0
+
+
+Field field00t90 = new Field(0,0,3)
+Field field01t90 = new Field(0,1,1)
+Field field02t90 = new Field(0,2,4)
+Field field03t90 = new Field(0,3,2)
+Field[] row0 = [field00t90,field01t90,field02t90,field03t90]
+
+Field field10t90 = new Field(1,0,6)
+Field field11t90 = new Field(1,1,5)
+Field field12t90 = new Field(1,2,5)
+Field field13t90 = new Field(1,3,3)
+Field[] row1 = [field10t90,field11t90,field12t90,field13t90]
+
+Field field20t90 = new Field(2,0,4)
+Field field21t90 = new Field(2,1,1)
+Field field22t90 = new Field(2,2,5)
+Field field23t90 = new Field(2,3,4)
+Field[] row2 = [field20t90,field21t90,field22t90,field23t90]
+
+Field field30t90 = new Field(3,0,5)
+Field field31t90 = new Field(3,1,5)
+Field field32t90 = new Field(3,2,5)
+Field field33t90 = new Field(3,3,6)
+Field[] row3 = [field30t90,field31t90,field32t90,field33t90]
+
+Field field40t90 = new Field(4,0,5)
+Field field41t90 = new Field(4,1,5)
+Field field42t90 = new Field(4,2,3)
+Field field43t90 = new Field(4,3,2)
+Field[] row4 = [field40t90,field41t90,field42t90,field43t90]
+
+Field[][] board90 = [row0,row1,row2,row3,row4]
+Testing testingObject90 = new Testing(board90)
+
+board90 hat folgende Form:
+3 1 4 2
+6 5 5 3
+4 1 5 4
+5 5 5 6
+5 5 3 2
+
+testingObject90.minMoves(0,0) -> returns 3
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=07; testNumber=03; points=10; description=Funktion der Methode minMoves | Sonderfaelle]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Feld und mache es public: testing.Testing.board
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.minMoves(int,int) -> Methode ist public
+
+Field field00t91 = new Field(0,0,1)
+Field field01t91 = new Field(0,1,6)
+Field field02t91 = new Field(0,2,1)
+Field field03t91 = new Field(0,3,3)
+Field field04t91 = new Field(0,4,1)
+Field field05t91 = new Field(0,5,6)
+Field[] row0 = [field00t91,field01t91,field02t91,field03t91,field04t91,field05t91]
+
+Field field10t91 = new Field(1,0,3)
+Field field11t91 = new Field(1,1,4)
+Field field12t91 = new Field(1,2,6)
+Field field13t91 = new Field(1,3,4)
+Field field14t91 = new Field(1,4,6)
+Field field15t91 = new Field(1,5,1)
+Field[] row1 = [field10t91,field11t91,field12t91,field13t91,field14t91,field15t91]
+
+Field field20t91 = new Field(2,0,2)
+Field field21t91 = new Field(2,1,5)
+Field field22t91 = new Field(2,2,3)
+Field field23t91 = new Field(2,3,2)
+Field field24t91 = new Field(2,4,1)
+Field field25t91 = new Field(2,5,4)
+Field[] row2 = [field20t91,field21t91,field22t91,field23t91,field24t91,field25t91]
+
+Field[][] board91 = [row0,row1,row2]
+Testing testingObject91 = new Testing(board91)
+
+board91 hat folgende Form:
+1 6 1 3 1 6
+3 4 6 4 6 1
+2 5 3 2 1 4
+
+testingObject91.minMoves(0,5) -> returns 16
+
+
+Field field00t92 = new Field(0,0,2)
+Field field01t92 = new Field(0,1,5)
+Field field02t92 = new Field(0,2,4)
+Field field03t92 = new Field(0,3,1)
+Field[] row0 = [field00t92,field01t92,field02t92,field03t92]
+
+Field field10t92 = new Field(1,0,3)
+Field field11t92 = new Field(1,1,2)
+Field field12t92 = new Field(1,2,5)
+Field field13t92 = new Field(1,3,3)
+Field[] row1 = [field10t92,field11t92,field12t92,field13t92]
+
+Field field20t92 = new Field(2,0,2)
+Field field21t92 = new Field(2,1,4)
+Field field22t92 = new Field(2,2,2)
+Field field23t92 = new Field(2,3,4)
+Field[] row2 = [field20t92,field21t92,field22t92,field23t92]
+
+Field field30t92 = new Field(3,0,1)
+Field field31t92 = new Field(3,1,2)
+Field field32t92 = new Field(3,2,3)
+Field field33t92 = new Field(3,3,2)
+Field[] row3 = [field30t92,field31t92,field32t92,field33t92]
+
+Field field40t92 = new Field(4,0,5)
+Field field41t92 = new Field(4,1,1)
+Field field42t92 = new Field(4,2,4)
+Field field43t92 = new Field(4,3,1)
+Field[] row4 = [field40t92,field41t92,field42t92,field43t92]
+
+Field[][] board92 = [row0,row1,row2,row3,row4]
+Testing testingObject92 = new Testing(board92)
+
+board92 hat folgende Form:
+2 5 4 1
+3 2 5 3
+2 4 2 4
+1 2 3 2
+5 1 4 1
+
+testingObject92.minMoves(3,3) -> returns 8
+
+--- Der Test endet hier. ---
+
+
+
+---------------------------------------Aufgabe 8--------------------------------------------
+TestInfo [taskNumber=08; testNumber=01; points=35; description=Funktion der Methode minMovesFull]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Feld und mache es public: testing.Testing.board
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.minMovesFull() -> Methode ist public
+
+Field field00t93 = new Field(0,0,3)
+Field field01t93 = new Field(0,1,2)
+Field field02t93 = new Field(0,2,4)
+Field field03t93 = new Field(0,3,3)
+Field field04t93 = new Field(0,4,6)
+Field field05t93 = new Field(0,5,3)
+Field field06t93 = new Field(0,6,5)
+Field field07t93 = new Field(0,7,3)
+Field[] row0 = [field00t93,field01t93,field02t93,field03t93,field04t93,field05t93,field06t93,field07t93]
+
+Field field10t93 = new Field(1,0,6)
+Field field11t93 = new Field(1,1,1)
+Field field12t93 = new Field(1,2,2)
+Field field13t93 = new Field(1,3,6)
+Field field14t93 = new Field(1,4,3)
+Field field15t93 = new Field(1,5,5)
+Field field16t93 = new Field(1,6,3)
+Field field17t93 = new Field(1,7,4)
+Field[] row1 = [field10t93,field11t93,field12t93,field13t93,field14t93,field15t93,field16t93,field17t93]
+
+Field field20t93 = new Field(2,0,4)
+Field field21t93 = new Field(2,1,6)
+Field field22t93 = new Field(2,2,4)
+Field field23t93 = new Field(2,3,2)
+Field field24t93 = new Field(2,4,5)
+Field field25t93 = new Field(2,5,2)
+Field field26t93 = new Field(2,6,4)
+Field field27t93 = new Field(2,7,2)
+Field[] row2 = [field20t93,field21t93,field22t93,field23t93,field24t93,field25t93,field26t93,field27t93]
+
+Field field30t93 = new Field(3,0,3)
+Field field31t93 = new Field(3,1,4)
+Field field32t93 = new Field(3,2,6)
+Field field33t93 = new Field(3,3,3)
+Field field34t93 = new Field(3,4,2)
+Field field35t93 = new Field(3,5,6)
+Field field36t93 = new Field(3,6,3)
+Field field37t93 = new Field(3,7,4)
+Field[] row3 = [field30t93,field31t93,field32t93,field33t93,field34t93,field35t93,field36t93,field37t93]
+
+Field field40t93 = new Field(4,0,1)
+Field field41t93 = new Field(4,1,5)
+Field field42t93 = new Field(4,2,3)
+Field field43t93 = new Field(4,3,5)
+Field field44t93 = new Field(4,4,1)
+Field field45t93 = new Field(4,5,5)
+Field field46t93 = new Field(4,6,6)
+Field field47t93 = new Field(4,7,5)
+Field[] row4 = [field40t93,field41t93,field42t93,field43t93,field44t93,field45t93,field46t93,field47t93]
+
+Field[][] board93 = [row0,row1,row2,row3,row4]
+Testing testingObject93 = new Testing(board93)
+
+board93 hat folgende Form:
+3 2 4 3 6 3 5 3
+6 1 2 6 3 5 3 4
+4 6 4 2 5 2 4 2
+3 4 6 3 2 6 3 4
+1 5 3 5 1 5 6 5
+
+testingObject93.minMovesFull() -> returns 26
+
+
+Field field00t94 = new Field(0,0,4)
+Field field01t94 = new Field(0,1,3)
+Field field02t94 = new Field(0,2,5)
+Field field03t94 = new Field(0,3,3)
+Field[] row0 = [field00t94,field01t94,field02t94,field03t94]
+
+Field field10t94 = new Field(1,0,1)
+Field field11t94 = new Field(1,1,4)
+Field field12t94 = new Field(1,2,1)
+Field field13t94 = new Field(1,3,4)
+Field[] row1 = [field10t94,field11t94,field12t94,field13t94]
+
+Field field20t94 = new Field(2,0,6)
+Field field21t94 = new Field(2,1,5)
+Field field22t94 = new Field(2,2,3)
+Field field23t94 = new Field(2,3,6)
+Field[] row2 = [field20t94,field21t94,field22t94,field23t94]
+
+Field field30t94 = new Field(3,0,2)
+Field field31t94 = new Field(3,1,4)
+Field field32t94 = new Field(3,2,2)
+Field field33t94 = new Field(3,3,5)
+Field[] row3 = [field30t94,field31t94,field32t94,field33t94]
+
+Field[][] board94 = [row0,row1,row2,row3]
+Testing testingObject94 = new Testing(board94)
+
+board94 hat folgende Form:
+4 3 5 3
+1 4 1 4
+6 5 3 6
+2 4 2 5
+
+testingObject94.minMovesFull() -> returns 16
+
+--- Der Test endet hier. ---
+
+TestInfo [taskNumber=08; testNumber=02; points=25; description=Funktion der Methode minMovesFull | Sonderfaelle]
+
+Hole Klasse: testing.Testing -> Klasse ist public
+Hole Klasse: logic.Field -> Klasse ist public
+Hole Feld und mache es public: logic.Field.color
+Hole Feld und mache es public: testing.Testing.board
+Hole Konstructor und mache public: Testing(Field[][])
+Hole Konstructor und mache public: Field(int,int,int)
+Suche Methode Testing.minMovesFull() -> Methode ist public
+
+Field field00t95 = new Field(0,0,1)
+Field field01t95 = new Field(0,1,1)
+Field field02t95 = new Field(0,2,1)
+Field field03t95 = new Field(0,3,1)
+Field[] row0 = [field00t95,field01t95,field02t95,field03t95]
+
+Field field10t95 = new Field(1,0,1)
+Field field11t95 = new Field(1,1,1)
+Field field12t95 = new Field(1,2,1)
+Field field13t95 = new Field(1,3,1)
+Field[] row1 = [field10t95,field11t95,field12t95,field13t95]
+
+Field field20t95 = new Field(2,0,1)
+Field field21t95 = new Field(2,1,1)
+Field field22t95 = new Field(2,2,1)
+Field field23t95 = new Field(2,3,1)
+Field[] row2 = [field20t95,field21t95,field22t95,field23t95]
+
+Field field30t95 = new Field(3,0,1)
+Field field31t95 = new Field(3,1,1)
+Field field32t95 = new Field(3,2,1)
+Field field33t95 = new Field(3,3,1)
+Field[] row3 = [field30t95,field31t95,field32t95,field33t95]
+
+Field field40t95 = new Field(4,0,1)
+Field field41t95 = new Field(4,1,1)
+Field field42t95 = new Field(4,2,1)
+Field field43t95 = new Field(4,3,1)
+Field[] row4 = [field40t95,field41t95,field42t95,field43t95]
+
+Field[][] board95 = [row0,row1,row2,row3,row4]
+Testing testingObject95 = new Testing(board95)
+
+board95 hat folgende Form:
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
+testingObject95.minMovesFull() -> returns 0
+
+
+Field field00t96 = new Field(0,0,2)
+Field field01t96 = new Field(0,1,2)
+Field field02t96 = new Field(0,2,2)
+Field field03t96 = new Field(0,3,6)
+Field[] row0 = [field00t96,field01t96,field02t96,field03t96]
+
+Field field10t96 = new Field(1,0,2)
+Field field11t96 = new Field(1,1,2)
+Field field12t96 = new Field(1,2,2)
+Field field13t96 = new Field(1,3,2)
+Field[] row1 = [field10t96,field11t96,field12t96,field13t96]
+
+Field field20t96 = new Field(2,0,2)
+Field field21t96 = new Field(2,1,2)
+Field field22t96 = new Field(2,2,2)
+Field field23t96 = new Field(2,3,2)
+Field[] row2 = [field20t96,field21t96,field22t96,field23t96]
+
+Field[][] board96 = [row0,row1,row2]
+Testing testingObject96 = new Testing(board96)
+
+board96 hat folgende Form:
+2 2 2 6
+2 2 2 2
+2 2 2 2
+
+testingObject96.minMovesFull() -> returns 2
+
+
+Field field00t97 = new Field(0,0,5)
+Field field01t97 = new Field(0,1,2)
+Field field02t97 = new Field(0,2,1)
+Field field03t97 = new Field(0,3,5)
+Field[] row0 = [field00t97,field01t97,field02t97,field03t97]
+
+Field field10t97 = new Field(1,0,6)
+Field field11t97 = new Field(1,1,2)
+Field field12t97 = new Field(1,2,2)
+Field field13t97 = new Field(1,3,3)
+Field[] row1 = [field10t97,field11t97,field12t97,field13t97]
+
+Field field20t97 = new Field(2,0,2)
+Field field21t97 = new Field(2,1,2)
+Field field22t97 = new Field(2,2,6)
+Field field23t97 = new Field(2,3,5)
+Field[] row2 = [field20t97,field21t97,field22t97,field23t97]
+
+Field[][] board97 = [row0,row1,row2]
+Testing testingObject97 = new Testing(board97)
+
+board97 hat folgende Form:
+5 2 1 5
+6 2 2 3
+2 2 6 5
+
+testingObject97.minMovesFull() -> returns 5
+
+
+Field field00t98 = new Field(0,0,5)
+Field field01t98 = new Field(0,1,2)
+Field field02t98 = new Field(0,2,1)
+Field field03t98 = new Field(0,3,5)
+Field[] row0 = [field00t98,field01t98,field02t98,field03t98]
+
+Field field10t98 = new Field(1,0,1)
+Field field11t98 = new Field(1,1,5)
+Field field12t98 = new Field(1,2,2)
+Field field13t98 = new Field(1,3,3)
+Field[] row1 = [field10t98,field11t98,field12t98,field13t98]
+
+Field field20t98 = new Field(2,0,2)
+Field field21t98 = new Field(2,1,4)
+Field field22t98 = new Field(2,2,3)
+Field field23t98 = new Field(2,3,5)
+Field[] row2 = [field20t98,field21t98,field22t98,field23t98]
+
+Field[][] board98 = [row0,row1,row2]
+Testing testingObject98 = new Testing(board98)
+
+board98 hat folgende Form:
+5 2 1 5
+1 5 2 3
+2 4 3 5
+
+testingObject98.minMovesFull() -> returns 10
+
+--- Der Test endet hier. ---
+

@@ -91,7 +91,6 @@ public class Component {
     public void tracePath(Game game, Player player) {
         var topRight = game.getBoard()[0][game.getRows() - 1];
         var lowLeft = game.getBoard()[game.getColumns() - 1][0];
-     
 
         Field mainComponent;
         if (player.getName().equalsIgnoreCase("S1"))
@@ -125,3 +124,4 @@ public class Component {
 
 
 }
+

@@ -272,7 +272,6 @@ public class Utility {
         game.getBoard()[column][row] = field;
         cellPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         previousColor = fieldColor;
-
     }
 
     /**
@@ -365,4 +364,3 @@ public class Utility {
         Utility.setSelectedColors(randomColors);
     }
 }
-

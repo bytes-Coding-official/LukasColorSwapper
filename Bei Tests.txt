@@ -1,0 +1,17 @@
+Bei Tests:
+
+Bei der erstellung einer Field instanz muss:
+Field.wrongField
+Statt:
+new Field();
+
+genutzt werden
+
+Bei allen Forschleifen in Test die über eine extentionale Darstellung arbeiten (for loop keine for each) muss die innere der beiden Forschleifen die Obergrenze board[0].length statt board.length nutzen. 
+
+
+Für denn fall das bei der Methode bothAreEqual, calculateAllMoves oder toBoard 2 unterschiedlich große Felder genutzt werden, muss folgender Code direkt nach beginn der Methode eingefügt werden, da die Methode im urzustand nur bei gleichgroßen Spielfeldern funktioniert.
+   //Check if these boards are identical to each other
+        if (board1.length != board2.length || board1[0].length != board2[0].length) {
+            return false;
+        }

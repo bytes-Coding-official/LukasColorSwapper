@@ -69,7 +69,17 @@ public class Field {
         colorPanel.setBackground(new Color(color));
     }
 
-
+    /**
+     * Constructs a new Field object with the given column, row, and color.
+     *
+     * @param col   the column of the field
+     * @param row   the row of the field
+     * @param color the color of the field
+     * @return a new Field object with the given column, row, and color
+     */
+    /*public static Field wrongField(int col, int row, int color){
+        return new Field(row, col, color);
+    }*/
     /**
      * Returns the color of the field.
      *
@@ -130,7 +140,7 @@ public class Field {
      *
      * @return the value of the col field
      */
-    public int getColumn() {
+    public int getCol() {
         return col;
     }
 
