@@ -1,4 +1,4 @@
-//Niklas Nesseler 7367375
+
 package start;
 
 import logic.AIPlayer;
@@ -43,5 +43,3 @@ public class KeyboardControlListener extends AbstractAction {
     }
 
 }
-
-

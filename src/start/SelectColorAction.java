@@ -1,4 +1,4 @@
-//Niklas Nesseler 7367375
+
 package start;
 
 import logic.Game;
@@ -35,4 +35,3 @@ public class SelectColorAction extends MouseAdapter {
 
     }
 }
-

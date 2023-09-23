@@ -1,4 +1,4 @@
-//Niklas Nesseler 7367375
+
 package start;
 
 
@@ -158,4 +158,3 @@ public class ColorPanel extends JPanel {
         this.colorCount = colorCount;
     }
 }
-

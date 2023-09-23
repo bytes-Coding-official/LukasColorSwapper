@@ -1,4 +1,4 @@
-//Niklas Nesseler 7367375
+
 package logic;
 
 import start.GameWindow;

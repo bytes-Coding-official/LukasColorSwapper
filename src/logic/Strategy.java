@@ -1,4 +1,4 @@
-//Niklas Nesseler 7367375
+
 package logic;
 
 public interface Strategy {
@@ -30,4 +30,3 @@ public interface Strategy {
     int[] stagnationStrategy(Game game);
 
 }
-

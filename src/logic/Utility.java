@@ -1,4 +1,4 @@
-//Niklas Nesseler 7367375
+
 package logic;
 
 
@@ -14,12 +14,12 @@ import java.util.*;
 public class Utility {
     /**
      * An array of predefined colors.
-     *
+     * <p>
      * This array contains the following colors:
      * Red, Green, Blue, Yellow, Black, Orange, Pink, Magenta, Cyan.
-     *
+     * <p>
      * It is a constant array of type Color[].
-     *
+     * <p>
      * Example usage:
      * Color selectedColor = COLORS[0];
      *
@@ -38,17 +38,17 @@ public class Utility {
             Color.CYAN, "Cyan"));
     /**
      * A static final instance of the {@link Random} class, used for generating random numbers.
-     *
+     * <p>
      * The {@code random} variable is an instance of the {@link Random} class, which provides methods for generating random numbers of various types. It is marked as {@code static final}, meaning that the variable is a class-level constant and its value cannot be modified after initialization.
-     *
+     * <p>
      * This variable is useful for generating random numbers in applications where randomization is required, such as generating random passwords, simulating game events, or generating test data.
-     *
+     * <p>
      * Usage example:
      * <pre>{@code
      *     int randomNumber = random.nextInt(100); // Generates a random integer between 0 and 99 (inclusive)
      *     double randomDouble = random.nextDouble(); // Generates a random double between 0.0 (inclusive) and 1.0 (exclusive)
      * }</pre>
-     *
+     * <p>
      * This variable has a scope of class-level, meaning it can be accessed by any method of the class it is defined in.
      *
      * @see Random
@@ -62,18 +62,18 @@ public class Utility {
     private static ColorPanel colorPanel;
     /**
      * Represents an array of colors that have been selected.
-     *
+     * <p>
      * This variable is declared as private static, meaning that it is accessible within the class only.
-     *
+     * <p>
      * The type of each element in the array is Color.
      */
     private static Color[] selectedColors;
     /**
      * A static variable representing a timer object.
-     *
+     * <p>
      * This variable can be used to schedule and cancel scheduled tasks. It is shared among all instances of the class
      * and can be accessed from any method of the class.
-     *
+     * <p>
      * The Timer class allows to schedule tasks to be executed after a certain delay, or to execute them repeatedly with a fixed delay
      * between executions. The timer can be cancelled at any time, and the scheduled tasks will not be executed anymore.
      */
@@ -145,7 +145,7 @@ public class Utility {
 
     /**
      * Returns the Timer instance.
-     *
+     * <p>
      * The Timer instance is a static variable that is shared across the application.
      *
      * @return the Timer instance
@@ -228,7 +228,7 @@ public class Utility {
     /**
      * Assign unique colors to the top right and bottom left cell panels,
      * making sure that they have different colors.
-     *
+     * <p>
      * This method does not return any value.
      */
     public static void colorEdges(Game game) {

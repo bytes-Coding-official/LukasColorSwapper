@@ -1,4 +1,4 @@
-//Niklas Nesseler 7367375
+
 package start;/*
  * Siehe Hinweise auf dem Aufgabenblatt.
  */

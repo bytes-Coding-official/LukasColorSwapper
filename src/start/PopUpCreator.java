@@ -1,4 +1,4 @@
-//Niklas Nesseler 7367375
+
 package start;
 
 import logic.Utility;
@@ -19,4 +19,3 @@ public class PopUpCreator {
         javax.swing.JOptionPane.showMessageDialog(frame, message, title, javax.swing.JOptionPane.INFORMATION_MESSAGE);
     }
 }
-

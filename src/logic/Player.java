@@ -1,4 +1,4 @@
-//Niklas Nesseler 7367375
+
 package logic;
 
 
@@ -177,4 +177,3 @@ public class Player implements MoveValidator {
         return component.isAdjacent(field);
     }
 }
-

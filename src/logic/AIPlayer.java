@@ -1,4 +1,4 @@
-//Niklas Nesseler 7367375
+
 package logic;
 
 import start.PopUpCreator;
@@ -196,4 +196,3 @@ public class AIPlayer extends Player implements Strategy {
         return strategy;
     }
 }
-
